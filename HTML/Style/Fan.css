@@ -1,0 +1,175 @@
+﻿body {
+    background-color: #EDEDEF;
+}
+
+a, div {
+    font-family: 微软雅黑;
+}
+
+.test {
+    border: 1px solid red;
+}
+
+.header {
+    height: 60px;
+    width: 100%;
+    background-color: #2F353E;
+}
+
+.header-content {
+    height: 60px;
+    width: 1030px;
+}
+
+.content {
+    width: 1030px;
+}
+
+.banner {
+}
+
+    .banner a {
+        width: 77px;
+        height: 60px;
+        float: left;
+        color: white;
+        line-height: 60px;
+        text-align: center;
+        font-size: 15px;
+        cursor: pointer;
+        text-decoration: none;
+    }
+
+        .banner a:hover {
+            font-weight: bold;
+        }
+
+.search {
+    height: 60px;
+}
+
+.search-div {
+    width: 210px;
+    height: 34px;
+    background-color: #25282E;
+    margin-top: 13px;
+    border-radius: 5px;
+    padding-top: 5px;
+}
+
+.search-input {
+    width: 173px;
+    height: 25px;
+    float: left;
+    padding-left: 5px;
+    line-height: 25px;
+    color: #9A9DA3;
+    background-color: #25282E;
+    border: 0;
+    font-size: 14px;
+}
+
+.search-img {
+    float: right;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+}
+
+.search-input:focus {
+    outline: none;
+}
+
+.user-img {
+    width: 65px;
+    height: 65px;
+    margin-top: 12px;
+}
+
+.c-img {
+    background: transparent url("../Image/c-arrow.png") no-repeat scroll 11px 11px;
+    height: 30px;
+}
+
+.c-div {
+    background: transparent url("../Image/c-arrow.png") repeat-y scroll -1006px 0px;
+    width: 576px;
+    padding-bottom: 5px;
+}
+
+.c-div-b {
+    background: transparent url("../Image/c-arrow.png") no-repeat scroll -1641px 0px;
+    height: 10px;
+    width: 576px;
+}
+
+.col-pad-left {
+    padding-left: 0px;
+}
+
+.c-title {
+    height: 30px;
+    width: 530px;
+    margin-left: 35px;
+    line-height: 30px;
+    padding-left: 10px;
+    margin-bottom: 5px;
+}
+
+    .c-title a {
+        color: #888888;
+    }
+
+        .c-title a:hover {
+            text-decoration: none;
+        }
+
+.c-content {
+    width: 545px;
+    margin-left: 30px;
+}
+
+.u-img {
+    width: 170px;
+}
+
+.content-a {
+    color: black;
+    font-size: 14px;
+}
+
+    .content-a:hover {
+        text-decoration: none;
+        color: black;
+    }
+
+.c-content-op {
+    width: 540px;
+    height: 30px;
+    margin-left: 30px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-top:10px;
+}
+
+.op-word {
+    color: #AAAAAA;
+    font-size: 12px;
+    float: left;
+    margin-top: 5px;
+    margin-right: 10px;
+}
+
+.op-user {
+    float: right;
+    margin-top: 5px;
+    margin-left: 10px;
+    font-size: 12px;
+    color: #AAAAAA;
+    display: block;
+}
+
+    .op-user:hover {
+        text-decoration: none;
+        color: #7594B3;
+    }
