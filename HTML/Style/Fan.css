@@ -6,6 +6,10 @@ a, div {
     font-family: 微软雅黑;
 }
 
+.clear {
+    clear: both;
+}
+
 .test {
     border: 1px solid red;
 }
@@ -19,6 +23,11 @@ a, div {
 .header-content {
     height: 60px;
     width: 1030px;
+}
+
+.logo {
+    width: 140px;
+    height: 55px;
 }
 
 .content {
@@ -86,6 +95,10 @@ a, div {
     margin-top: 12px;
 }
 
+.c-img-div {
+    width: 85px;
+}
+
 .c-img {
     background: transparent url("../Image/c-arrow.png") no-repeat scroll 11px 11px;
     height: 30px;
@@ -93,18 +106,19 @@ a, div {
 
 .c-div {
     background: transparent url("../Image/c-arrow.png") repeat-y scroll -1006px 0px;
-    width: 576px;
+    width: 565px;
     padding-bottom: 5px;
 }
 
 .c-div-b {
     background: transparent url("../Image/c-arrow.png") no-repeat scroll -1641px 0px;
     height: 10px;
-    width: 576px;
+    width: 565px;
 }
 
 .col-pad-left {
     padding-left: 0px;
+    width: 580px;
 }
 
 .c-title {
@@ -149,7 +163,7 @@ a, div {
     margin-left: 30px;
     padding-left: 15px;
     padding-right: 15px;
-    margin-top:10px;
+    margin-top: 10px;
 }
 
 .op-word {
@@ -173,3 +187,95 @@ a, div {
         text-decoration: none;
         color: #7594B3;
     }
+
+.word-p {
+    padding-right: 30px;
+    padding-left: 30px;
+}
+
+.name-div {
+    width: 220px;
+    margin-top: 12px;
+    border: 1px solid #DDDDDD;
+}
+
+.name-div-top {
+    height: 95px;
+    border-bottom: 1px solid #DDDDDD;
+}
+
+.name-div-left {
+    width: 100px;
+    height: 95px;
+    float: left;
+}
+
+    .name-div-left img {
+        width: 75px;
+        height: 75px;
+        margin-left: 11px;
+        margin-top: 10px;
+    }
+
+.name-div-right {
+    width: 115px;
+    height: 95px;
+    float: right;
+}
+
+.name-div-right-top {
+    height: 30px;
+    font-size: 14px;
+    line-height: 30px;
+}
+
+    .name-div-right-top a {
+        color: #568BC9;
+    }
+
+        .name-div-right-top a:hover {
+            text-decoration: none;
+        }
+
+.name-div-right-bot {
+    height: 60px;
+    font-size: 12px;
+    color: #71768B;
+    padding-right: 5px;
+}
+
+
+.name-div-bot-left {
+    width: 80px;
+    float: left;
+}
+
+.name-div-bot-right {
+    width: 135px;
+    float: right;
+}
+
+.info-div {
+    height: 25px;
+    font-size: 13px;
+    line-height: 25px;
+    color: #71768B;
+    padding-left: 10px;
+    font-family: 宋体;
+}
+
+    .info-div a {
+        color: #71768B;
+        font-size: 13px;
+        font-family: 宋体;
+    }
+
+        .info-div a:hover {
+            text-decoration: none;
+        }
+
+        .info-div a span {
+            color: red;
+            font-family:微软雅黑;
+            font-size: 12px;
+        }
