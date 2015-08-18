@@ -197,11 +197,13 @@ a, div {
     width: 220px;
     margin-top: 12px;
     border: 1px solid #DDDDDD;
+    padding-bottom:5px;
 }
 
 .name-div-top {
     height: 95px;
     border-bottom: 1px solid #DDDDDD;
+    margin-bottom:5px;
 }
 
 .name-div-left {
