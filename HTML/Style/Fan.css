@@ -1,5 +1,5 @@
 ﻿body {
-    background-color: #EEF0F3;
+    background-color: #EDEDEF;
 }
 
 a, div {
@@ -37,20 +37,19 @@ a, div {
 .banner {
 }
 
-    .banner a {
-        width: 77px;
+    .banner div {
         height: 60px;
         float: left;
-        color: white;
         line-height: 60px;
         text-align: center;
-        font-size: 15px;
-        cursor: pointer;
-        text-decoration: none;
+        padding-left: 20px;
+        padding-right: 20px;
     }
 
-        .banner a:hover {
-            font-weight: bold;
+        .banner div a {
+            text-decoration: none;
+            font-size: 15px;
+            color: white;
         }
 
 .search {
@@ -198,6 +197,7 @@ a, div {
     margin-top: 12px;
     border: 1px solid #DFE1E4;
     padding-bottom: 5px;
+    background-color: #FFFFFF;
 }
 
 .name-div-top {
@@ -291,19 +291,17 @@ a, div {
     border-left: 1px solid #DFE1E4;
     border-right: 1px solid #DFE1E4;
     border-bottom: 1px solid #DFE1E4;
-    height: 251px;
+    height: 283px;
     margin-top: 20px;
+    background-color: #FFFFFF;
 }
 
 .recom-div-d {
-    height: 50px;
+    height: 56px;
     border-bottom: 1px solid white;
     border-top: 1px solid #DFE1E4;
+    padding-top: 4px;
 }
-
-    .recom-div-d:hover {
-        background-color:white;
-    }
 
 .recom-img {
     float: left;
