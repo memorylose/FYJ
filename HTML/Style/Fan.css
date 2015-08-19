@@ -1,5 +1,5 @@
 ﻿body {
-    background-color: #EDEDEF;
+    background-color: #EEF0F3;
 }
 
 a, div {
@@ -196,14 +196,18 @@ a, div {
 .name-div {
     width: 220px;
     margin-top: 12px;
-    border: 1px solid #DDDDDD;
-    padding-bottom:5px;
+    border: 1px solid #DFE1E4;
+    padding-bottom: 5px;
 }
 
 .name-div-top {
     height: 95px;
-    border-bottom: 1px solid #DDDDDD;
-    margin-bottom:5px;
+    border-bottom: 1px solid #DFE1E4;
+}
+
+.name-div-bot {
+    border-top: 1px solid white;
+    padding-top: 5px;
 }
 
 .name-div-left {
@@ -278,6 +282,75 @@ a, div {
 
         .info-div a span {
             color: red;
-            font-family:微软雅黑;
+            font-family: 微软雅黑;
             font-size: 12px;
         }
+
+.recom-div {
+    width: 220px;
+    border-left: 1px solid #DFE1E4;
+    border-right: 1px solid #DFE1E4;
+    border-bottom: 1px solid #DFE1E4;
+    height: 251px;
+    margin-top: 20px;
+}
+
+.recom-div-d {
+    height: 50px;
+    border-bottom: 1px solid white;
+    border-top: 1px solid #DFE1E4;
+}
+
+    .recom-div-d:hover {
+        background-color:white;
+    }
+
+.recom-img {
+    float: left;
+    width: 50px;
+    height: 50px;
+    padding-top: 4px;
+    padding-left: 4px;
+}
+
+    .recom-img img {
+        width: 40px;
+        height: 40px;
+    }
+
+.recom-name {
+    width: 135px;
+    height: 50px;
+    float: left;
+}
+
+.recom-add {
+    height: 50px;
+    float: left;
+}
+
+    .recom-add img {
+        margin-top: 15px;
+    }
+
+.recom-name-top {
+    height: 20px;
+    line-height: 20px;
+}
+
+    .recom-name-top a {
+        color: #71768B;
+        font-size: 13px;
+        text-decoration: none;
+    }
+
+.recom-name-bot {
+    height: 27px;
+    line-height: 27px;
+}
+
+    .recom-name-bot a {
+        color: #BFBFBF;
+        font-size: 12px;
+        text-decoration: none;
+    }
