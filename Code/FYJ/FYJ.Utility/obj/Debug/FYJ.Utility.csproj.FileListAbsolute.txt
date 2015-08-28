@@ -1,0 +1,5 @@
+D:\MyGit\FYJ\Code\FYJ\FYJ.Utility\bin\Debug\FYJ.Utility.dll
+D:\MyGit\FYJ\Code\FYJ\FYJ.Utility\bin\Debug\FYJ.Utility.pdb
+D:\MyGit\FYJ\Code\FYJ\FYJ.Utility\obj\Debug\FYJ.Utility.csprojResolveAssemblyReference.cache
+D:\MyGit\FYJ\Code\FYJ\FYJ.Utility\obj\Debug\FYJ.Utility.dll
+D:\MyGit\FYJ\Code\FYJ\FYJ.Utility\obj\Debug\FYJ.Utility.pdb

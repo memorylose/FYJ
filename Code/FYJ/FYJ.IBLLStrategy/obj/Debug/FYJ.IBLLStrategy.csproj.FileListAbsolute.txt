@@ -1,0 +1,5 @@
+D:\MyGit\FYJ\Code\FYJ\FYJ.IBLLStrategy\bin\Debug\FYJ.IBLLStrategy.dll
+D:\MyGit\FYJ\Code\FYJ\FYJ.IBLLStrategy\bin\Debug\FYJ.IBLLStrategy.pdb
+D:\MyGit\FYJ\Code\FYJ\FYJ.IBLLStrategy\obj\Debug\FYJ.IBLLStrategy.csprojResolveAssemblyReference.cache
+D:\MyGit\FYJ\Code\FYJ\FYJ.IBLLStrategy\obj\Debug\FYJ.IBLLStrategy.dll
+D:\MyGit\FYJ\Code\FYJ\FYJ.IBLLStrategy\obj\Debug\FYJ.IBLLStrategy.pdb
