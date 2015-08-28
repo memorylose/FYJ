@@ -81,10 +81,26 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />
+    <Content Include="Image\Add.png" />
+    <Content Include="Image\AddP.jpg" />
+    <Content Include="Image\adroid.png" />
+    <Content Include="Image\apple.png" />
+    <Content Include="Image\c-arrow.png" />
+    <Content Include="Image\icon1.png" />
+    <Content Include="Image\login_logo.png" />
+    <Content Include="Image\logo.png" />
+    <Content Include="Image\search.png" />
+    <Content Include="Script\bootstrap.min.js" />
+    <Content Include="Script\jquery-1.11.3.min.js" />
+    <Content Include="Style\bootstrap.min.css" />
+    <Content Include="Style\Detail.css" />
+    <Content Include="Style\Fan.css" />
+    <Content Include="Style\Login.css" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -93,6 +109,7 @@
   <ItemGroup>
     <Content Include="Views\web.config" />
     <Content Include="packages.config" />
+    <Content Include="Views\User\Register.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -102,7 +119,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Controllers\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <PropertyGroup>
