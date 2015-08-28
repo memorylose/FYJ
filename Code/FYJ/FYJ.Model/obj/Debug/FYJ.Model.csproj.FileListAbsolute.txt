@@ -3,3 +3,8 @@ D:\MyGit\FYJ\Code\FYJ\FYJ.Model\bin\Debug\FYJ.Model.pdb
 D:\MyGit\FYJ\Code\FYJ\FYJ.Model\obj\Debug\FYJ.Model.csprojResolveAssemblyReference.cache
 D:\MyGit\FYJ\Code\FYJ\FYJ.Model\obj\Debug\FYJ.Model.dll
 D:\MyGit\FYJ\Code\FYJ\FYJ.Model\obj\Debug\FYJ.Model.pdb
+D:\MyGit\FYJ\Code\FYJ\FYJ.Model\bin\Debug\FYJ.Model.dll.config
+D:\MyGit\FYJ\Code\FYJ\FYJ.Model\bin\Debug\EntityFramework.dll
+D:\MyGit\FYJ\Code\FYJ\FYJ.Model\bin\Debug\EntityFramework.SqlServer.dll
+D:\MyGit\FYJ\Code\FYJ\FYJ.Model\bin\Debug\EntityFramework.xml
+D:\MyGit\FYJ\Code\FYJ\FYJ.Model\bin\Debug\EntityFramework.SqlServer.xml
