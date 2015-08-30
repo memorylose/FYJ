@@ -10,10 +10,13 @@ namespace FYJ.App_Start
                         "~/Script/jquery-1.11.3.min.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
-                        "~/Script/bootstrap.min.js"));
+                        "~/Script/bootstrap.min.js",
+                        "~/Script/bootstrapValidator.min.js",//form validate
+                        "~/Script/login.js"));//form validate
 
             bundles.Add(new StyleBundle("~/Content/logincss").Include(
                       "~/Style/bootstrap.min.css",
+                      "~/Style/bootstrapValidator.min.css",//form validate
                       "~/Style/Login.css"));
 
             BundleTable.EnableOptimizations = true;

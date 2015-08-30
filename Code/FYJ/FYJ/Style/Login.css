@@ -35,6 +35,7 @@ a, div {
 .l-main {
     width: 700px;
     margin: 0 auto;
+    padding-left:150px;
 }
 
 .txt-i {
@@ -42,11 +43,11 @@ a, div {
 }
 
 .btn-i {
-    width: 200px;
+    width: 210px;
 }
 
 .m-img {
-    margin-bottom: 10px;
+    margin-bottom:10px;
 }
 
 .addtion-w {
