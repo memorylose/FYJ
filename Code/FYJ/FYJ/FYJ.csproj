@@ -93,6 +93,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AjaxHandler\VerifyCode.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Image\Add.png" />
     <Content Include="Image\AddP.jpg" />
@@ -115,6 +116,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AjaxHandler\VerifyCode.aspx.cs">
+      <DependentUpon>VerifyCode.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AjaxHandler\VerifyCode.aspx.designer.cs">
+      <DependentUpon>VerifyCode.aspx</DependentUpon>
+    </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\UserController.cs" />

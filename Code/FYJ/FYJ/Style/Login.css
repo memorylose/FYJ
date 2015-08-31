@@ -35,7 +35,7 @@ a, div {
 .l-main {
     width: 700px;
     margin: 0 auto;
-    padding-left:150px;
+    padding-left: 150px;
 }
 
 .txt-i {
@@ -47,7 +47,7 @@ a, div {
 }
 
 .m-img {
-    margin-bottom:10px;
+    margin-bottom: 10px;
 }
 
 .addtion-w {
@@ -68,7 +68,13 @@ a, div {
 
 .bot-div {
     color: #999999;
-    text-align:center;
-    font-size:13px;
-    margin-top:15px;
+    text-align: center;
+    font-size: 13px;
+    margin-top: 15px;
+}
+
+.mobile-img {
+    float: left;
+    width: 200px;
+    margin-left: 20px;
 }

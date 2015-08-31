@@ -41,3 +41,10 @@ D:\MyGit\MyGit\FYJ\Code\FYJ\FYJ\bin\Antlr3.Runtime.pdb
 D:\MyGit\MyGit\FYJ\Code\FYJ\FYJ\bin\Newtonsoft.Json.xml
 D:\MyGit\MyGit\FYJ\Code\FYJ\FYJ\bin\System.Web.Optimization.xml
 D:\MyGit\MyGit\FYJ\Code\FYJ\FYJ\obj\Debug\FYJ.csprojResolveAssemblyReference.cache
+D:\MyGit\FYJ\Code\FYJ\FYJ\bin\Antlr3.Runtime.dll
+D:\MyGit\FYJ\Code\FYJ\FYJ\bin\Newtonsoft.Json.dll
+D:\MyGit\FYJ\Code\FYJ\FYJ\bin\System.Web.Optimization.dll
+D:\MyGit\FYJ\Code\FYJ\FYJ\bin\WebGrease.dll
+D:\MyGit\FYJ\Code\FYJ\FYJ\bin\Antlr3.Runtime.pdb
+D:\MyGit\FYJ\Code\FYJ\FYJ\bin\Newtonsoft.Json.xml
+D:\MyGit\FYJ\Code\FYJ\FYJ\bin\System.Web.Optimization.xml

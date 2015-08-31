@@ -1,9 +1,7 @@
 ﻿@{
     Layout = null;
 }
-
 <!DOCTYPE html>
-
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
@@ -21,17 +19,6 @@
             </div>
         </div>
         <div class="row l-main">
-
-            @*<div class="col-md-4" style="border-right: 1px solid #464646;" id="defaultForm">
-                    <input type="text" class="form-control txt-i" id="txtUsername" placeholder="用户名" name="username">
-                    <input type="password" class="form-control txt-i" id="txtUsername" placeholder="密码">
-                    <input type="password" class="form-control txt-i" id="txtUsername" placeholder="重复密码">
-                    <input type="password" class="form-control txt-i" id="txtUsername" placeholder="邮箱">
-                    <button type="button" class="btn btn-success btn-i">注册</button>
-                    <div class="addtion-w"><a href="">已有账号？</a></div>
-
-                </div>*@
-
             <div id="defaultForm1" class="form-horizontal" style="width:210px; float:left;">
                 <div class="form-group">
                     <div class="col-md-12">
@@ -49,45 +36,31 @@
                     </div>
                 </div>
                 <div class="form-group">
+                    <div class="col-md-12">
+                        <img id="imgVerify" src="/AjaxHandler/VerifyCode.aspx?" class="" alt="看不清？点击更换" onclick="this.src=this.src+'?'" />
+                    </div>
+                </div>
+                <div class="form-group">
                     <div class="col-md-5">
                         <button type="button" class="btn btn-success btn-i">注册</button>
                     </div>
                 </div>
-
             </div>
-            <div class="" style="float:left;width:200px;margin-left:20px;">
-
+            <div class="mobile-img">
                 <img src="Image/apple.png" class="m-img" />
                 <img src="Image/adroid.png" class="m-img" />
             </div>
-
-            @*<div class="col-md-4">
-                    <img src="Image/apple.png" class="m-img" />
-                    <img src="Image/adroid.png" class="m-img" />
-                </div>
-                <div class="col-md-2">
-
-                </div>*@
-
-
-
         </div>
 
         <div class="row">
             <div class="l-main">
                 <div class="bot-div">梵游记，记录您旅途中的点点滴滴</div>
                 <div class="bot-div">营业执照注册号：210204000071792 备案号：辽ICP备14012672号-1 ©2014 tianjiew.com,All Rights Reserved.</div>
-
             </div>
-
         </div>
-
     </div>
-
-
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
-
 </body>
 </html>
