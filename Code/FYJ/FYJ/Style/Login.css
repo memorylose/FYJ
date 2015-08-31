@@ -10,6 +10,10 @@ a, div {
     clear: both;
 }
 
+.clear-col-pad {
+    padding: 0;
+}
+
 .test {
     border: 1px solid red;
 }
@@ -77,4 +81,9 @@ a, div {
     float: left;
     width: 200px;
     margin-left: 20px;
+}
+
+.verify-code {
+    height: 32px;
+    width: 105px;
 }

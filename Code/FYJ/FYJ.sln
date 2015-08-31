@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.31101.0
+VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FYJ", "FYJ\FYJ.csproj", "{F165449E-E223-4F55-A751-295F41811562}"
 EndProject
@@ -12,6 +12,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FYJ.BLL", "FYJ.BLL\FYJ.BLL.csproj", "{D64A7BAC-D9F4-414F-934E-46AB440E5174}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FYJ.IBLLStrategy", "FYJ.IBLLStrategy\FYJ.IBLLStrategy.csproj", "{2DCEAE90-54B2-4DFF-B686-758BC2F147B5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FYJ.Constant", "FYJ.Constant\FYJ.Constant.csproj", "{9C9C3C83-2392-47D3-A2AD-97A65D2F6351}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{2DCEAE90-54B2-4DFF-B686-758BC2F147B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2DCEAE90-54B2-4DFF-B686-758BC2F147B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2DCEAE90-54B2-4DFF-B686-758BC2F147B5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9C9C3C83-2392-47D3-A2AD-97A65D2F6351}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C9C3C83-2392-47D3-A2AD-97A65D2F6351}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C9C3C83-2392-47D3-A2AD-97A65D2F6351}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C9C3C83-2392-47D3-A2AD-97A65D2F6351}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
