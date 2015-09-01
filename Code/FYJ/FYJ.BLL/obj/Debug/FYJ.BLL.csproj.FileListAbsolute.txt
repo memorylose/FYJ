@@ -19,3 +19,14 @@ D:\MyGit\FYJ\Code\FYJ\FYJ.BLL\bin\Debug\EntityFramework.xml
 D:\MyGit\FYJ\Code\FYJ\FYJ.BLL\bin\Debug\FYJ.BLL.dll.config
 D:\MyGit\FYJ\Code\FYJ\FYJ.BLL\bin\Debug\EntityFramework.SqlServer.dll
 D:\MyGit\FYJ\Code\FYJ\FYJ.BLL\bin\Debug\EntityFramework.SqlServer.xml
+D:\MyGit\MyGit\FYJ\Code\FYJ\FYJ.BLL\bin\Debug\FYJ.BLL.dll.config
+D:\MyGit\MyGit\FYJ\Code\FYJ\FYJ.BLL\bin\Debug\EntityFramework.dll
+D:\MyGit\MyGit\FYJ\Code\FYJ\FYJ.BLL\bin\Debug\EntityFramework.SqlServer.dll
+D:\MyGit\MyGit\FYJ\Code\FYJ\FYJ.BLL\bin\Debug\FYJ.IBLLStrategy.dll
+D:\MyGit\MyGit\FYJ\Code\FYJ\FYJ.BLL\bin\Debug\FYJ.Model.dll
+D:\MyGit\MyGit\FYJ\Code\FYJ\FYJ.BLL\bin\Debug\Newtonsoft.Json.dll
+D:\MyGit\MyGit\FYJ\Code\FYJ\FYJ.BLL\bin\Debug\FYJ.IBLLStrategy.pdb
+D:\MyGit\MyGit\FYJ\Code\FYJ\FYJ.BLL\bin\Debug\FYJ.Model.pdb
+D:\MyGit\MyGit\FYJ\Code\FYJ\FYJ.BLL\bin\Debug\EntityFramework.xml
+D:\MyGit\MyGit\FYJ\Code\FYJ\FYJ.BLL\bin\Debug\EntityFramework.SqlServer.xml
+D:\MyGit\MyGit\FYJ\Code\FYJ\FYJ.BLL\bin\Debug\Newtonsoft.Json.xml

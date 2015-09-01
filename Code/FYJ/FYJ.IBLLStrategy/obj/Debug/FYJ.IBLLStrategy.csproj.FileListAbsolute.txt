@@ -12,3 +12,7 @@ D:\MyGit\FYJ\Code\FYJ\FYJ.IBLLStrategy\bin\Debug\FYJ.Model.dll
 D:\MyGit\FYJ\Code\FYJ\FYJ.IBLLStrategy\bin\Debug\EntityFramework.dll
 D:\MyGit\FYJ\Code\FYJ\FYJ.IBLLStrategy\bin\Debug\FYJ.Model.pdb
 D:\MyGit\FYJ\Code\FYJ\FYJ.IBLLStrategy\bin\Debug\EntityFramework.xml
+D:\MyGit\MyGit\FYJ\Code\FYJ\FYJ.IBLLStrategy\bin\Debug\FYJ.Model.dll
+D:\MyGit\MyGit\FYJ\Code\FYJ\FYJ.IBLLStrategy\bin\Debug\EntityFramework.dll
+D:\MyGit\MyGit\FYJ\Code\FYJ\FYJ.IBLLStrategy\bin\Debug\FYJ.Model.pdb
+D:\MyGit\MyGit\FYJ\Code\FYJ\FYJ.IBLLStrategy\bin\Debug\EntityFramework.xml
