@@ -7,8 +7,10 @@ namespace FYJ.App_Start
         public static void RegisterBundles(BundleCollection bundles)
         {
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
-                        "~/Script/jquery-1.11.3.min.js"));
+                        "~/Script/jquery-1.11.3.min.js",
+                        "~/Script/Common.js"));
 
+            //TODO : NEED TO SEPERATE
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
                         "~/Script/bootstrap.min.js",
                         "~/Script/bootstrapValidator.min.js",//form validate

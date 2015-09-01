@@ -32,43 +32,35 @@
                 email: {
                     validators: {
                         notEmpty: {
-                            message: 'The email address is required and can\'t be empty'
+                            message: '邮件地址不能为空'
                         },
                         emailAddress: {
-                            message: 'The input is not a valid email address'
+                            message: '邮件格式错误'
                         }
                     }
                 },
                 password: {
                     validators: {
                         notEmpty: {
-                            message: 'The password is required and cannot be empty'
+                            message: '密码不能为空'
                         },
                         identical: {
                             field: 'confirmPassword',
-                            message: 'The password and its confirm are not the same'
+                            message: '两次密码不一致'
                         }
                     }
                 },
                 confirmPassword: {
                     validators: {
                         notEmpty: {
-                            message: 'The confirm password is required and cannot be empty'
+                            message: '重复密码不能为空'
                         },
                         identical: {
                             field: 'password',
-                            message: 'The password and its confirm are not the same'
+                            message: '两次密码不一致'
                         }
                     }
                 }
             }
         });
 });
-
-function getCookie(objName) {
-    var arrStr = document.cookie.split("; ");
-    for (var i = 0; i < arrStr.length; i++) {
-        var temp = arrStr[i].split("=");
-        if (temp[0] == objName) return unescape(temp[1]);
-    }
-}

@@ -103,6 +103,7 @@
     <Content Include="Image\search.png" />
     <Content Include="Script\bootstrap.min.js" />
     <Content Include="Script\bootstrapValidator.min.js" />
+    <Content Include="Script\Common.js" />
     <Content Include="Script\jquery-1.11.3.min.js" />
     <Content Include="Script\Login.js" />
     <Content Include="Style\bootstrap.min.css" />
