@@ -8,3 +8,14 @@ D:\MyGit\MyGit\FYJ\Code\FYJ\FYJ.BLL\bin\Debug\FYJ.BLL.pdb
 D:\MyGit\MyGit\FYJ\Code\FYJ\FYJ.BLL\obj\Debug\FYJ.BLL.csprojResolveAssemblyReference.cache
 D:\MyGit\MyGit\FYJ\Code\FYJ\FYJ.BLL\obj\Debug\FYJ.BLL.dll
 D:\MyGit\MyGit\FYJ\Code\FYJ\FYJ.BLL\obj\Debug\FYJ.BLL.pdb
+D:\MyGit\FYJ\Code\FYJ\FYJ.BLL\bin\Debug\FYJ.IBLLStrategy.dll
+D:\MyGit\FYJ\Code\FYJ\FYJ.BLL\bin\Debug\FYJ.IBLLStrategy.pdb
+D:\MyGit\FYJ\Code\FYJ\FYJ.BLL\bin\Debug\FYJ.Model.dll
+D:\MyGit\FYJ\Code\FYJ\FYJ.BLL\bin\Debug\Newtonsoft.Json.dll
+D:\MyGit\FYJ\Code\FYJ\FYJ.BLL\bin\Debug\EntityFramework.dll
+D:\MyGit\FYJ\Code\FYJ\FYJ.BLL\bin\Debug\FYJ.Model.pdb
+D:\MyGit\FYJ\Code\FYJ\FYJ.BLL\bin\Debug\Newtonsoft.Json.xml
+D:\MyGit\FYJ\Code\FYJ\FYJ.BLL\bin\Debug\EntityFramework.xml
+D:\MyGit\FYJ\Code\FYJ\FYJ.BLL\bin\Debug\FYJ.BLL.dll.config
+D:\MyGit\FYJ\Code\FYJ\FYJ.BLL\bin\Debug\EntityFramework.SqlServer.dll
+D:\MyGit\FYJ\Code\FYJ\FYJ.BLL\bin\Debug\EntityFramework.SqlServer.xml

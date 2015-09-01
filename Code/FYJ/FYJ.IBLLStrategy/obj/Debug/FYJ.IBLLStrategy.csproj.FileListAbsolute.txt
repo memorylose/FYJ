@@ -8,3 +8,7 @@ D:\MyGit\MyGit\FYJ\Code\FYJ\FYJ.IBLLStrategy\bin\Debug\FYJ.IBLLStrategy.pdb
 D:\MyGit\MyGit\FYJ\Code\FYJ\FYJ.IBLLStrategy\obj\Debug\FYJ.IBLLStrategy.csprojResolveAssemblyReference.cache
 D:\MyGit\MyGit\FYJ\Code\FYJ\FYJ.IBLLStrategy\obj\Debug\FYJ.IBLLStrategy.dll
 D:\MyGit\MyGit\FYJ\Code\FYJ\FYJ.IBLLStrategy\obj\Debug\FYJ.IBLLStrategy.pdb
+D:\MyGit\FYJ\Code\FYJ\FYJ.IBLLStrategy\bin\Debug\FYJ.Model.dll
+D:\MyGit\FYJ\Code\FYJ\FYJ.IBLLStrategy\bin\Debug\EntityFramework.dll
+D:\MyGit\FYJ\Code\FYJ\FYJ.IBLLStrategy\bin\Debug\FYJ.Model.pdb
+D:\MyGit\FYJ\Code\FYJ\FYJ.IBLLStrategy\bin\Debug\EntityFramework.xml
