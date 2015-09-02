@@ -45,5 +45,4 @@ D:\MyGit\FYJ\Code\FYJ\FYJ\bin\Newtonsoft.Json.dll
 D:\MyGit\FYJ\Code\FYJ\FYJ\bin\System.Web.Optimization.dll
 D:\MyGit\FYJ\Code\FYJ\FYJ\bin\WebGrease.dll
 D:\MyGit\FYJ\Code\FYJ\FYJ\bin\Antlr3.Runtime.pdb
-D:\MyGit\FYJ\Code\FYJ\FYJ\bin\Newtonsoft.Json.xml
 D:\MyGit\FYJ\Code\FYJ\FYJ\bin\System.Web.Optimization.xml
