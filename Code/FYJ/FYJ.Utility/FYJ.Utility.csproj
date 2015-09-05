@@ -41,6 +41,8 @@
   <ItemGroup>
     <Compile Include="Encryption.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RegExp.cs" />
+    <Compile Include="StringTool.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\FYJ.Constant\FYJ.Constant.csproj">

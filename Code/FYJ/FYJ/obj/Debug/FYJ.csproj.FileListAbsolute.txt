@@ -46,3 +46,16 @@ D:\MyGit\FYJ\Code\FYJ\FYJ\bin\System.Web.Optimization.dll
 D:\MyGit\FYJ\Code\FYJ\FYJ\bin\WebGrease.dll
 D:\MyGit\FYJ\Code\FYJ\FYJ\bin\Antlr3.Runtime.pdb
 D:\MyGit\FYJ\Code\FYJ\FYJ\bin\System.Web.Optimization.xml
+D:\MyGit\MyGit\FYJ\Code\FYJ\FYJ\bin\FYJ.BLL.dll
+D:\MyGit\MyGit\FYJ\Code\FYJ\FYJ\bin\FYJ.IBLLStrategy.dll
+D:\MyGit\MyGit\FYJ\Code\FYJ\FYJ\bin\FYJ.Model.dll
+D:\MyGit\MyGit\FYJ\Code\FYJ\FYJ\bin\EntityFramework.dll
+D:\MyGit\MyGit\FYJ\Code\FYJ\FYJ\bin\FYJ.BLL.pdb
+D:\MyGit\MyGit\FYJ\Code\FYJ\FYJ\bin\FYJ.IBLLStrategy.pdb
+D:\MyGit\MyGit\FYJ\Code\FYJ\FYJ\bin\FYJ.Model.pdb
+D:\MyGit\MyGit\FYJ\Code\FYJ\FYJ\bin\EntityFramework.xml
+D:\MyGit\MyGit\FYJ\Code\FYJ\FYJ\bin\Newtonsoft.Json.xml
+D:\MyGit\MyGit\FYJ\Code\FYJ\FYJ\bin\EntityFramework.SqlServer.dll
+D:\MyGit\MyGit\FYJ\Code\FYJ\FYJ\bin\EntityFramework.SqlServer.xml
+D:\MyGit\MyGit\FYJ\Code\FYJ\FYJ\bin\FYJ.Utility.dll
+D:\MyGit\MyGit\FYJ\Code\FYJ\FYJ\bin\FYJ.Utility.pdb

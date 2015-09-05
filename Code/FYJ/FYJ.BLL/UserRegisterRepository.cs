@@ -1,7 +1,11 @@
-﻿using FYJ.IBLLStrategy;
+﻿using FYJ.Constant;
+using FYJ.IBLLStrategy;
 using FYJ.Model;
+using FYJ.Utility;
+using System.Linq;
 using Newtonsoft.Json;
 using System;
+using System.Data.Entity;
 
 namespace FYJ.BLL
 {
@@ -15,21 +19,28 @@ namespace FYJ.BLL
         /// <param name="model"></param>
         public void Register(RegisterModel model)
         {
+            //create user
             User dbUser = new User();
             dbUser.UserName = model.Email;
-            dbUser.Password = model.Passoword;
+            dbUser.Password = Encryption.CreateSHA256HashString(model.Passoword + Encryption.GetRandomSalt(Security.SALT_BYTE_NUMBER));
             dbUser.Email = model.Email;
-            dbUser.EmailCode = "";
             dbUser.EmailConfirm = false;
             dbUser.IsLock = false;
             dbUser.IsDelete = false;
             dbUser.LockDate = null;
-            dbUser.RoleId = 1;//User
+            dbUser.RoleId = 3;//User
             dbUser.CrDate = DateTime.Now;
             dbUser.CrUserId = 0;
 
-            db.User.Add(dbUser);
+            db.Entry(dbUser).State = EntityState.Added;
             db.SaveChanges();
+
+            //update maile confirm code
+            if (dbUser != null)
+            {
+                dbUser.EmailCode = dbUser.UserId.ToString();
+                db.SaveChanges();
+            }
         }
 
         /// <summary>

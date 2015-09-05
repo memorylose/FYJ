@@ -53,8 +53,13 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UserRegisterRepository.cs" />
+    <Compile Include="UserRepository.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\FYJ.Constant\FYJ.Constant.csproj">
+      <Project>{9c9c3c83-2392-47d3-a2ad-97a65d2f6351}</Project>
+      <Name>FYJ.Constant</Name>
+    </ProjectReference>
     <ProjectReference Include="..\FYJ.IBLLStrategy\FYJ.IBLLStrategy.csproj">
       <Project>{2dceae90-54b2-4dff-b686-758bc2f147b5}</Project>
       <Name>FYJ.IBLLStrategy</Name>
@@ -62,6 +67,10 @@
     <ProjectReference Include="..\FYJ.Model\FYJ.Model.csproj">
       <Project>{f72cc735-cdd6-4156-9781-8736ea9e2035}</Project>
       <Name>FYJ.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FYJ.Utility\FYJ.Utility.csproj">
+      <Project>{a5bf6db2-85a9-48b4-a630-e613c3fbd9c6}</Project>
+      <Name>FYJ.Utility</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
