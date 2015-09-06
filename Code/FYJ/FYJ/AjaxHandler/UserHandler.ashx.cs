@@ -1,5 +1,6 @@
 ﻿using FYJ.BLL;
 using FYJ.IBLLStrategy;
+using FYJ.Model;
 using FYJ.Utility;
 using Newtonsoft.Json;
 using System.Web;
@@ -51,15 +52,37 @@ namespace FYJ.AjaxHandler
         {
             string mail = context.Request.Params["email"] == null ? "" : context.Request.Params["email"].ToString();
             string password = context.Request.Params["password"] == null ? "" : context.Request.Params["password"].ToString();
-            string code = context.Request.Params["code"] == null ? "" : context.Request.Params["code"].ToString();
+            string v_code = context.Request.Params["code"] == null ? "" : context.Request.Params["code"].ToString();
+            string g_code = context.Request.Cookies["CheckCode"] == null ? "NOT SUPPORTED" : context.Request.Cookies["CheckCode"].Value;
 
-            string g_code = context.Request.Cookies["CheckCode"].Value;
+            UserRegisterValidation userVal = new UserRegisterValidation();
+            if (userVal.CheckUserInput(mail, g_code.ToLower(), v_code.ToLower()))
+            {
+                RegisterModel registerModel = new RegisterModel();
+                registerModel.Email = mail;
+                registerModel.Password = password;
 
-            //IRegister register = new UserRegisterRepository();
+                //TODO : NINJECT
+                IRegister register = new UserRegisterRepository();
+                register.Register(registerModel);
+
+                //TODO:add seesion
 
 
 
-            //register.Register();
+
+                var rtnJsonModel = new { message = "success" };
+                string json = JsonConvert.SerializeObject(rtnJsonModel);
+
+                context.Response.Write(json);
+            }
+            else
+            {
+                var rtnJsonModel = new { message = "failed" };
+                string json = JsonConvert.SerializeObject(rtnJsonModel);
+
+                context.Response.Write(json);
+            }
         }
 
         public bool IsReusable

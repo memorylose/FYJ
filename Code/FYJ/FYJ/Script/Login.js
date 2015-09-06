@@ -73,15 +73,19 @@
             }
         })
         .on('success.form.bv', function (e) {
-            // Prevent form submission
             e.preventDefault();
-            // Get the form instance
             var $form = $(e.target);
-            // Get the BootstrapValidator instance
             var bv = $form.data('bootstrapValidator');
-            // Use Ajax to submit form data
             $.post($form.attr('action'), $form.serialize(), function (result) {
-                console.log(result);
+                for (var i in result) {
+                    if (result[i] == 'failed') {
+                        $('#errorMsg').css('display', 'block');
+                        $('#errorMsg').text('验证信息有误，请重试');
+                    }
+                    else if (result[i] == 'success') {
+                        location.href = '/Article/Index';
+                    }
+                }
             }, 'json');
         });
 });

@@ -138,6 +138,7 @@
     </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\ArticleController.cs" />
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -153,6 +154,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="AjaxHandler\UserHandler.ashx" />
+    <Content Include="Views\Article\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -175,6 +177,10 @@
     <ProjectReference Include="..\FYJ.IBLLStrategy\FYJ.IBLLStrategy.csproj">
       <Project>{2dceae90-54b2-4dff-b686-758bc2f147b5}</Project>
       <Name>FYJ.IBLLStrategy</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FYJ.Model\FYJ.Model.csproj">
+      <Project>{f72cc735-cdd6-4156-9781-8736ea9e2035}</Project>
+      <Name>FYJ.Model</Name>
     </ProjectReference>
     <ProjectReference Include="..\FYJ.Utility\FYJ.Utility.csproj">
       <Project>{a5bf6db2-85a9-48b4-a630-e613c3fbd9c6}</Project>

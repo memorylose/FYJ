@@ -99,18 +99,18 @@ a, div {
 }
 
 .c-img {
-    background: transparent url("../Image/c-arrow.png") no-repeat scroll 11px 11px;
+    background: transparent url("/Image/c-arrow.png") no-repeat scroll 11px 11px;
     height: 30px;
 }
 
 .c-div {
-    background: transparent url("../Image/c-arrow.png") repeat-y scroll -1006px 0px;
+    background: transparent url("/Image/c-arrow.png") repeat-y scroll -1006px 0px;
     width: 565px;
     padding-bottom: 5px;
 }
 
 .c-div-b {
-    background: transparent url("../Image/c-arrow.png") no-repeat scroll -1641px 0px;
+    background: transparent url("/Image/c-arrow.png") no-repeat scroll -1641px 0px;
     height: 10px;
     width: 565px;
 }

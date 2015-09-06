@@ -36,6 +36,16 @@ a, div {
     line-height: 100px;
 }
 
+.l-message {
+    height: 50px;
+    font-size: 14px;
+    color: #9D3934;
+    text-align: center;
+    line-height: 50px;
+    margin-bottom:10px;
+    display:none;
+}
+
 .l-main {
     width: 700px;
     margin: 0 auto;

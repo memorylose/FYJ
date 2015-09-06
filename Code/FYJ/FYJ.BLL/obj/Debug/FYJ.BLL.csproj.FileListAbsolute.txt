@@ -34,3 +34,7 @@ D:\MyGit\MyGit\FYJ\Code\FYJ\FYJ.BLL\bin\Debug\FYJ.Constant.dll
 D:\MyGit\MyGit\FYJ\Code\FYJ\FYJ.BLL\bin\Debug\FYJ.Utility.dll
 D:\MyGit\MyGit\FYJ\Code\FYJ\FYJ.BLL\bin\Debug\FYJ.Constant.pdb
 D:\MyGit\MyGit\FYJ\Code\FYJ\FYJ.BLL\bin\Debug\FYJ.Utility.pdb
+D:\MyGit\FYJ\Code\FYJ\FYJ.BLL\bin\Debug\FYJ.Constant.dll
+D:\MyGit\FYJ\Code\FYJ\FYJ.BLL\bin\Debug\FYJ.Utility.dll
+D:\MyGit\FYJ\Code\FYJ\FYJ.BLL\bin\Debug\FYJ.Constant.pdb
+D:\MyGit\FYJ\Code\FYJ\FYJ.BLL\bin\Debug\FYJ.Utility.pdb
