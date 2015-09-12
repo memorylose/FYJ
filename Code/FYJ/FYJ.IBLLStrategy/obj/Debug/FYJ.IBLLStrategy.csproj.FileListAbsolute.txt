@@ -16,3 +16,12 @@ D:\MyGit\MyGit\FYJ\Code\FYJ\FYJ.IBLLStrategy\bin\Debug\FYJ.Model.dll
 D:\MyGit\MyGit\FYJ\Code\FYJ\FYJ.IBLLStrategy\bin\Debug\EntityFramework.dll
 D:\MyGit\MyGit\FYJ\Code\FYJ\FYJ.IBLLStrategy\bin\Debug\FYJ.Model.pdb
 D:\MyGit\MyGit\FYJ\Code\FYJ\FYJ.IBLLStrategy\bin\Debug\EntityFramework.xml
+D:\MyGit\TestForFYJ\FYJ\Code\FYJ\FYJ.IBLLStrategy\bin\Debug\FYJ.IBLLStrategy.dll
+D:\MyGit\TestForFYJ\FYJ\Code\FYJ\FYJ.IBLLStrategy\bin\Debug\FYJ.IBLLStrategy.pdb
+D:\MyGit\TestForFYJ\FYJ\Code\FYJ\FYJ.IBLLStrategy\bin\Debug\FYJ.Model.dll
+D:\MyGit\TestForFYJ\FYJ\Code\FYJ\FYJ.IBLLStrategy\bin\Debug\EntityFramework.dll
+D:\MyGit\TestForFYJ\FYJ\Code\FYJ\FYJ.IBLLStrategy\bin\Debug\FYJ.Model.pdb
+D:\MyGit\TestForFYJ\FYJ\Code\FYJ\FYJ.IBLLStrategy\bin\Debug\EntityFramework.xml
+D:\MyGit\TestForFYJ\FYJ\Code\FYJ\FYJ.IBLLStrategy\obj\Debug\FYJ.IBLLStrategy.csprojResolveAssemblyReference.cache
+D:\MyGit\TestForFYJ\FYJ\Code\FYJ\FYJ.IBLLStrategy\obj\Debug\FYJ.IBLLStrategy.dll
+D:\MyGit\TestForFYJ\FYJ\Code\FYJ\FYJ.IBLLStrategy\obj\Debug\FYJ.IBLLStrategy.pdb

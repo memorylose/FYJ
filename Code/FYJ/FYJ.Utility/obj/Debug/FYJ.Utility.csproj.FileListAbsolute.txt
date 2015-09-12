@@ -12,3 +12,10 @@ D:\MyGit\MyGit\FYJ\Code\FYJ\FYJ.Utility\bin\Debug\FYJ.Constant.dll
 D:\MyGit\MyGit\FYJ\Code\FYJ\FYJ.Utility\bin\Debug\FYJ.Constant.pdb
 D:\MyGit\FYJ\Code\FYJ\FYJ.Utility\bin\Debug\FYJ.Constant.dll
 D:\MyGit\FYJ\Code\FYJ\FYJ.Utility\bin\Debug\FYJ.Constant.pdb
+D:\MyGit\TestForFYJ\FYJ\Code\FYJ\FYJ.Utility\bin\Debug\FYJ.Utility.dll
+D:\MyGit\TestForFYJ\FYJ\Code\FYJ\FYJ.Utility\bin\Debug\FYJ.Utility.pdb
+D:\MyGit\TestForFYJ\FYJ\Code\FYJ\FYJ.Utility\bin\Debug\FYJ.Constant.dll
+D:\MyGit\TestForFYJ\FYJ\Code\FYJ\FYJ.Utility\bin\Debug\FYJ.Constant.pdb
+D:\MyGit\TestForFYJ\FYJ\Code\FYJ\FYJ.Utility\obj\Debug\FYJ.Utility.csprojResolveAssemblyReference.cache
+D:\MyGit\TestForFYJ\FYJ\Code\FYJ\FYJ.Utility\obj\Debug\FYJ.Utility.dll
+D:\MyGit\TestForFYJ\FYJ\Code\FYJ\FYJ.Utility\obj\Debug\FYJ.Utility.pdb

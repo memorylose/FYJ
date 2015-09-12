@@ -15,11 +15,13 @@ namespace FYJ.Model
         [Column(TypeName = "nvarchar")]
         [MaxLength(200)]
         public string Password { get; set; }
+        [MaxLength(200)]
+        public string Salt { get; set; }
         [Column(TypeName = "nvarchar")]
         [MaxLength(50)]
         public string Email { get; set; }
         [Column(TypeName = "nvarchar")]
-        [MaxLength(20)]
+        [MaxLength(30)]
         public string EmailCode { get; set; }
         public bool? EmailConfirm { get; set; }
         public bool? IsLock { get; set; }

@@ -24,7 +24,8 @@ namespace FYJ.BLL
                     //create user
                     User dbUser = new User();
                     dbUser.UserName = model.Email;
-                    dbUser.Password = Encryption.CreateSHA256HashString(model.Password + Encryption.GetRandomSalt(Security.SALT_BYTE_NUMBER));
+                    dbUser.Salt = Encryption.GetRandomSalt(Security.SALT_BYTE_NUMBER);
+                    dbUser.Password = Encryption.CreateSHA256HashString(model.Password + dbUser.Salt);
                     dbUser.Email = model.Email;
                     dbUser.EmailConfirm = false;
                     dbUser.IsLock = false;
@@ -40,8 +41,7 @@ namespace FYJ.BLL
                     //update maile confirm code
                     if (dbUser != null)
                     {
-                        //TODO:
-                        dbUser.EmailCode = dbUser.UserId.ToString();
+                        dbUser.EmailCode = StringTool.GenerateMailCode() + dbUser.UserId.ToString();
                         db.SaveChanges();
                     }
                     dbContextTransaction.Commit();
