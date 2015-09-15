@@ -13,3 +13,8 @@ D:\MyGit\TestForFYJ\FYJ\Code\FYJ\FYJ.Constant\bin\Debug\FYJ.Constant.pdb
 D:\MyGit\TestForFYJ\FYJ\Code\FYJ\FYJ.Constant\obj\Debug\FYJ.Constant.csprojResolveAssemblyReference.cache
 D:\MyGit\TestForFYJ\FYJ\Code\FYJ\FYJ.Constant\obj\Debug\FYJ.Constant.dll
 D:\MyGit\TestForFYJ\FYJ\Code\FYJ\FYJ.Constant\obj\Debug\FYJ.Constant.pdb
+E:\Personal\MyGit\FYJ\Code\FYJ\FYJ.Constant\bin\Debug\FYJ.Constant.dll
+E:\Personal\MyGit\FYJ\Code\FYJ\FYJ.Constant\bin\Debug\FYJ.Constant.pdb
+E:\Personal\MyGit\FYJ\Code\FYJ\FYJ.Constant\obj\Debug\FYJ.Constant.csprojResolveAssemblyReference.cache
+E:\Personal\MyGit\FYJ\Code\FYJ\FYJ.Constant\obj\Debug\FYJ.Constant.dll
+E:\Personal\MyGit\FYJ\Code\FYJ\FYJ.Constant\obj\Debug\FYJ.Constant.pdb

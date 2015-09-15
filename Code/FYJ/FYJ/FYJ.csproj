@@ -155,6 +155,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="AjaxHandler\UserHandler.ashx" />
     <Content Include="Views\Article\Index.cshtml" />
+    <Content Include="Views\Shared\Partial1.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
