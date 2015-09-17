@@ -1,0 +1,67 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>用户注册</title>
+    @Styles.Render("~/Content/logincss")
+</head>
+<body>
+    @using (Html.BeginForm())
+    {
+        <div class="container">
+            <div class="row">
+                <div class="logo">
+                    <img src="/Image/login_logo.png" />
+                </div>
+                <div class="l-info">
+                    用户注册
+                </div>
+
+            </div>
+            <div class="row l-main">
+                <div id="test" class="form-horizontal" style="width:210px; float:left;">
+                    <div class="form-group">
+                        <div class="col-md-12">
+                            <input type="text" class="form-control" name="email" placeholder="邮箱" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-12">
+                            <input type="password" class="form-control" placeholder="密码" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-7">
+                            <input type="text" class="form-control" placeholder="验证码" id="vCode" name="code" />
+                        </div>
+                        <div class="col-md-5 clear-col-pad">
+                            <img id="imgVerify" src="/AjaxHandler/VerifyCode.aspx?" class="verify-code" alt="看不清？点击更换" onclick="this.src=this.src+'?'" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-5">
+                            <button type="submit" class="btn btn-success btn-i">注册</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mobile-img">
+                    <img src="/Image/apple.png" class="m-img" />
+                    <img src="/Image/adroid.png" class="m-img" />
+                </div>
+            </div>
+            <div class="l-message" id="errorMsg"></div>
+            <div class="row">
+                <div class="l-main">
+                    <div class="bot-div">梵游记，记录您旅途中的点点滴滴</div>
+                    <div class="bot-div">营业执照注册号：210204000071792 备案号：辽ICP备14012672号-1 ©2014 tianjiew.com,All Rights Reserved.</div>
+                </div>
+            </div>
+        </div>
+    }
+    @Scripts.Render("~/bundles/bootstrap")
+</body>
+</html>

@@ -158,6 +158,7 @@
     <Content Include="AjaxHandler\UserHandler.ashx" />
     <Content Include="Views\Article\Index.cshtml" />
     <Content Include="Views\Shared\Partial1.cshtml" />
+    <Content Include="Views\User\Login.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -176,6 +177,10 @@
     <ProjectReference Include="..\FYJ.BLL\FYJ.BLL.csproj">
       <Project>{d64a7bac-d9f4-414f-934e-46ab440e5174}</Project>
       <Name>FYJ.BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FYJ.Constant\FYJ.Constant.csproj">
+      <Project>{9c9c3c83-2392-47d3-a2ad-97a65d2f6351}</Project>
+      <Name>FYJ.Constant</Name>
     </ProjectReference>
     <ProjectReference Include="..\FYJ.IBLLStrategy\FYJ.IBLLStrategy.csproj">
       <Project>{2dceae90-54b2-4dff-b686-758bc2f147b5}</Project>

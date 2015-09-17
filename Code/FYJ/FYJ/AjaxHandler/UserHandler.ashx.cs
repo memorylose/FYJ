@@ -1,4 +1,5 @@
 ﻿using FYJ.BLL;
+using FYJ.Constant;
 using FYJ.IBLLStrategy;
 using FYJ.Model;
 using FYJ.Utility;
@@ -65,11 +66,6 @@ namespace FYJ.AjaxHandler
                 //TODO : NINJECT
                 IRegister register = new UserRegisterRepository();
                 register.Register(registerModel);
-
-                //TODO:add seesion
-
-
-
 
                 var rtnJsonModel = new { message = "success" };
                 string json = JsonConvert.SerializeObject(rtnJsonModel);

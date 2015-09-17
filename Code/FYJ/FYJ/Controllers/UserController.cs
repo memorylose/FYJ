@@ -1,4 +1,6 @@
 ﻿using FYJ.BLL;
+using FYJ.Model;
+using FYJ.Utility;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,11 +18,29 @@ namespace FYJ.Controllers
             return View();
         }
 
-        ////POST: User register
-        //[HttpPost]
-        //public ActionResult Register()
-        //{
-        //    return View();
-        //}
+        [HttpGet]
+        public ActionResult Login()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult Login(RegisterModel model)
+        {
+            UserLoginRepository userLogin = new UserLoginRepository();
+            string message = string.Empty;
+
+            if (userLogin.CheckUserLogin(model.Email, model.VerifyCode, ref message))
+            {
+
+            }
+            else
+            {
+
+            }
+
+            ViewBag.Message = message;
+            return View();
+        }
     }
 }

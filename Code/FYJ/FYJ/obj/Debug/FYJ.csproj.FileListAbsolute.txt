@@ -147,3 +147,5 @@ E:\Personal\MyGit\FYJ\Code\FYJ\FYJ\obj\Debug\FYJ.csprojResolveAssemblyReference.
 E:\Personal\MyGit\FYJ\Code\FYJ\FYJ\obj\Debug\FYJ.dll
 E:\Personal\MyGit\FYJ\Code\FYJ\FYJ\obj\Debug\FYJ.pdb
 E:\Personal\MyGit\FYJ\Code\FYJ\FYJ\bin\Microsoft.Web.Infrastructure.dll
+E:\Personal\MyGit\FYJ\Code\FYJ\FYJ\bin\FYJ.Constant.dll
+E:\Personal\MyGit\FYJ\Code\FYJ\FYJ\bin\FYJ.Constant.pdb
