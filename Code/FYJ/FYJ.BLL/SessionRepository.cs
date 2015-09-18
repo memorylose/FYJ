@@ -10,12 +10,5 @@ namespace FYJ.BLL
 {
     public class SessionRepository
     {
-        public static void CreateUserSession(string userId)
-        {
-            if (System.Web.HttpContext.Current.Session[Session.USER_SESSION] == null)
-            {
-                System.Web.HttpContext.Current.Session[Session.USER_SESSION] = userId;
-            }
-        }
     }
 }

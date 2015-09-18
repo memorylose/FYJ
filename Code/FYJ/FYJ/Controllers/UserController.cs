@@ -1,4 +1,5 @@
 ﻿using FYJ.BLL;
+using FYJ.Constant;
 using FYJ.Model;
 using FYJ.Utility;
 using System;
@@ -30,15 +31,18 @@ namespace FYJ.Controllers
             UserLoginRepository userLogin = new UserLoginRepository();
             string message = string.Empty;
 
-            if (userLogin.CheckUserLogin(model.Email, model.VerifyCode, ref message))
+            if (userLogin.ValidateLogin(model.Email, model.VerifyCode, ref message))
             {
-
+                if (userLogin.IsLogin(model.Email, model.Password))
+                {
+                    Session[SystemSession.USER_SESSION] = model.Email;
+                    return RedirectToAction("../Article/Index");
+                }
+                else
+                {
+                    message = "用户名密码错误";
+                }
             }
-            else
-            {
-
-            }
-
             ViewBag.Message = message;
             return View();
         }

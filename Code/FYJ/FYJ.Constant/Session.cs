@@ -1,6 +1,6 @@
 ﻿namespace FYJ.Constant
 {
-    public class Session
+    public class SystemSession
     {
         public const string USER_SESSION = "LoginSession";
     }

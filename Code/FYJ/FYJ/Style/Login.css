@@ -45,6 +45,14 @@ a, div {
     margin-bottom:10px;
     display:none;
 }
+.l-message_login {
+    height: 50px;
+    font-size: 14px;
+    color: #9D3934;
+    text-align: center;
+    line-height: 50px;
+    margin-bottom:10px;
+}
 
 .l-main {
     width: 700px;

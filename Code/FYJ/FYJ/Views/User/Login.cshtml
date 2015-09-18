@@ -1,11 +1,13 @@
-﻿@{
+﻿@model FYJ.Model.RegisterModel
+@{
     Layout = null;
 }
+
 <!DOCTYPE html>
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>用户注册</title>
+    <title>用户登录</title>
     @Styles.Render("~/Content/logincss")
 </head>
 <body>
@@ -17,7 +19,7 @@
                     <img src="/Image/login_logo.png" />
                 </div>
                 <div class="l-info">
-                    用户注册
+                    用户登录
                 </div>
 
             </div>
@@ -25,17 +27,17 @@
                 <div id="test" class="form-horizontal" style="width:210px; float:left;">
                     <div class="form-group">
                         <div class="col-md-12">
-                            <input type="text" class="form-control" name="email" placeholder="邮箱" />
+                            @Html.TextBoxFor(model => model.Email, new { @class = "form-control", @placeholder = "邮箱" })
                         </div>
                     </div>
                     <div class="form-group">
                         <div class="col-md-12">
-                            <input type="password" class="form-control" placeholder="密码" />
+                            @Html.PasswordFor(model => model.Password, new { @class = "form-control", @placeholder = "密码" })
                         </div>
                     </div>
                     <div class="form-group">
                         <div class="col-md-7">
-                            <input type="text" class="form-control" placeholder="验证码" id="vCode" name="code" />
+                            @Html.TextBoxFor(model => model.VerifyCode, new { @class = "form-control", @placeholder = "验证码" })
                         </div>
                         <div class="col-md-5 clear-col-pad">
                             <img id="imgVerify" src="/AjaxHandler/VerifyCode.aspx?" class="verify-code" alt="看不清？点击更换" onclick="this.src=this.src+'?'" />
@@ -43,7 +45,7 @@
                     </div>
                     <div class="form-group">
                         <div class="col-md-5">
-                            <button type="submit" class="btn btn-success btn-i">注册</button>
+                            <button type="submit" class="btn btn-success btn-i">登录</button>
                         </div>
                     </div>
                 </div>
@@ -53,7 +55,12 @@
                     <img src="/Image/adroid.png" class="m-img" />
                 </div>
             </div>
-            <div class="l-message" id="errorMsg"></div>
+            @if (!string.IsNullOrEmpty(ViewBag.Message))
+            {
+                <div class="l-message_login">
+                    @ViewBag.Message
+                </div>
+            }
             <div class="row">
                 <div class="l-main">
                     <div class="bot-div">梵游记，记录您旅途中的点点滴滴</div>
