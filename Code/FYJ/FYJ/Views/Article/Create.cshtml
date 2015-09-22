@@ -1,0 +1,120 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Create</title>
+    @Styles.Render("~/Content/Index")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/Index")
+</head>
+<body>
+    @Html.Partial("../Shared/BannerPartial")
+    <div class="container content">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="row">
+                    <textarea class="form-control" rows="3" style="height:150px;margin-top:12px; margin-bottom:10px;"></textarea>
+                </div>
+                <div class="row">
+                    <a onclick="fileHidden.click()">上传图片</a><input type="file" id="fileHidden" onchange="UploadChange(this.value, this.files[0])" />
+                    <button type="button" class="btn btn-success" style="float:right;">发布</button>
+                </div>
+                <div class="row" id="imageList">
+                    @*<img id="fileImg" src="" style="width:50px; height:50px;"/>*@
+
+                </div>
+
+
+            </div>
+            <div class="col-md-4">
+                <div class="name-div">
+                    <div class="name-div-top">
+                        <div class="name-div-left">
+                            <a href=""><img src="SampleImage/s1.jpg" /></a>
+                        </div>
+                        <div class="name-div-right">
+                            <div class="name-div-right-top"><a href="">进击的巨人</a></div>
+                            <div class="name-div-right-bot">本人有点懒，什么也没留下</div>
+                        </div>
+
+                    </div>
+                    <div class="name-div-bot">
+                        <div class="name-div-bot-left">
+                            <div class="info-div">我的关注</div>
+                            <div class="info-div">我的粉丝</div>
+                            <div class="info-div">我的金币</div>
+                            <div class="info-div">我的消息</div>
+                        </div>
+
+                        <div class="name-div-bot-right">
+                            <div class="info-div"><a href="">26</a></div>
+                            <div class="info-div"><a href="">102</a></div>
+                            <div class="info-div"><a href="">200</a></div>
+                            <div class="info-div"><a href=""><span> 1 </span>条未读</a></div>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+                <div class="recom-div">
+                    <div class="recom-div-d">
+                        <div class="recom-img"><a href=""><img src="SampleImage/s1.png" /></a></div>
+                        <div class="recom-name">
+                            <div class="recom-name-top"><a href="">欢乐对对碰</a></div>
+                            <div class="recom-name-bot"><a href="">这是一个游戏</a></div>
+                        </div>
+                        <div class="recom-add"><a href=""><img src="Image/AddP.jpg" /></a></div>
+                    </div>
+                    <div class="recom-div-d">
+                        <div class="recom-img"><a href=""><img src="SampleImage/s1.png" /></a></div>
+                        <div class="recom-name">
+                            <div class="recom-name-top"><a href="">欢乐对对碰</a></div>
+                            <div class="recom-name-bot"><a href="">这是一个游戏</a></div>
+                        </div>
+                        <div class="recom-add"><a href=""><img src="Image/AddP.jpg" /></a></div>
+                    </div>
+                    <div class="recom-div-d">
+                        <div class="recom-img"><a href=""><img src="SampleImage/s1.png" /></a></div>
+                        <div class="recom-name">
+                            <div class="recom-name-top"><a href="">欢乐对对碰</a></div>
+                            <div class="recom-name-bot"><a href="">这是一个游戏</a></div>
+                        </div>
+                        <div class="recom-add"><a href=""><img src="Image/AddP.jpg" /></a></div>
+                    </div>
+                    <div class="recom-div-d">
+                        <div class="recom-img"><a href=""><img src="SampleImage/s1.png" /></a></div>
+                        <div class="recom-name">
+                            <div class="recom-name-top"><a href="">欢乐对对碰</a></div>
+                            <div class="recom-name-bot"><a href="">这是一个游戏</a></div>
+                        </div>
+                        <div class="recom-add"><a href=""><img src="Image/AddP.jpg" /></a></div>
+                    </div>
+                    <div class="recom-div-d">
+                        <div class="recom-img"><a href=""><img src="SampleImage/s1.png" /></a></div>
+                        <div class="recom-name">
+                            <div class="recom-name-top"><a href="">欢乐对对碰</a></div>
+                            <div class="recom-name-bot"><a href="">这是一个游戏</a></div>
+                        </div>
+                        <div class="recom-add"><a href=""><img src="Image/AddP.jpg" /></a></div>
+                    </div>
+
+                </div>
+
+
+
+
+
+            </div>
+
+        </div>
+
+
+    </div>
+</body>
+</html>
