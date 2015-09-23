@@ -21,6 +21,13 @@ namespace FYJ.App_Start
                       "~/Style/bootstrapValidator.min.css",//form validate
                       "~/Style/Login.css"));
 
+            bundles.Add(new StyleBundle("~/Content/Index").Include(
+                    "~/Style/bootstrap.min.css",
+                    "~/Style/Fan.css"));
+
+            bundles.Add(new ScriptBundle("~/bundles/Index").Include(
+            "~/Script/Index.js"));
+
             BundleTable.EnableOptimizations = true;
         }
     }

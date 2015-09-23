@@ -13,5 +13,10 @@ namespace FYJ.Controllers
         {
             return View();
         }
+
+        public ActionResult Create()
+        {
+            return View();
+        }
     }
 }

@@ -24,5 +24,19 @@ namespace FYJ.BLL
             else
                 return false;
         }
+
+        /// <summary>
+        /// Get userid by email
+        /// </summary>
+        /// <param name="email"></param>
+        /// <returns></returns>
+        public int GetUserIdByEmail(string email)
+        {
+            var userModel = db.User.Where(c => c.Email == email).FirstOrDefault();
+            if (userModel != null)
+                return userModel.UserId;
+            else
+                return 0;
+        }
     }
 }

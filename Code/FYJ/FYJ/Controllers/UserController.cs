@@ -29,14 +29,24 @@ namespace FYJ.Controllers
         public ActionResult Login(RegisterModel model)
         {
             UserLoginRepository userLogin = new UserLoginRepository();
+            UserRepository useRep = new UserRepository();
+
             string message = string.Empty;
 
             if (userLogin.ValidateLogin(model.Email, model.VerifyCode, ref message))
             {
                 if (userLogin.IsLogin(model.Email, model.Password))
                 {
-                    Session[SystemSession.USER_SESSION] = model.Email;
-                    return RedirectToAction("../Article/Index");
+                    int userId = useRep.GetUserIdByEmail(model.Email);
+                    if (userId != 0)
+                    {
+                        Session[SystemSession.USER_SESSION] = userId;
+                        return RedirectToAction("../Article/Index");
+                    }
+                    else
+                    {
+                        message = "用户名密码错误";
+                    }
                 }
                 else
                 {

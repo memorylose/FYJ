@@ -17,13 +17,14 @@ namespace FYJ.BLL
             bool result = false;
             message = string.Empty;
 
-            string code = System.Web.HttpContext.Current.Request.Cookies["CheckCode"].Value.ToLower();
+            string systemCode = System.Web.HttpContext.Current.Request.Cookies["CheckCode"].Value.ToLower();
+            string userCode = verifyCode == null ? "" : verifyCode.ToLower();
 
             if (System.Web.HttpContext.Current.Request.Cookies["CheckCode"] == null)
             {
                 message = "您浏览器的cookie已被禁止，登录失败";
             }
-            else if (!string.Equals(System.Web.HttpContext.Current.Request.Cookies["CheckCode"].Value.ToLower(), verifyCode.ToLower()))
+            else if (!string.Equals(systemCode, userCode))
             {
                 message = "验证码错误";
             }

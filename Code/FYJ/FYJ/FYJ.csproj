@@ -114,9 +114,11 @@
     <Content Include="Image\login_logo.png" />
     <Content Include="Image\logo.png" />
     <Content Include="Image\search.png" />
+    <Content Include="Image\user_close.png" />
     <Content Include="Script\bootstrap.min.js" />
     <Content Include="Script\bootstrapValidator.min.js" />
     <Content Include="Script\Common.js" />
+    <Content Include="Script\Index.js" />
     <Content Include="Script\jquery-1.11.3.min.js" />
     <Content Include="Script\Login.js" />
     <Content Include="Style\bootstrap.min.css" />
@@ -157,8 +159,9 @@
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="AjaxHandler\UserHandler.ashx" />
     <Content Include="Views\Article\Index.cshtml" />
-    <Content Include="Views\Shared\Partial1.cshtml" />
+    <Content Include="Views\Shared\BannerPartial.cshtml" />
     <Content Include="Views\User\Login.cshtml" />
+    <Content Include="Views\Article\Create.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
