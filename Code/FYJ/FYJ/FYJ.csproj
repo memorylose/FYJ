@@ -114,6 +114,7 @@
     <Content Include="Image\login_logo.png" />
     <Content Include="Image\logo.png" />
     <Content Include="Image\search.png" />
+    <Content Include="Image\user_close.png" />
     <Content Include="Script\bootstrap.min.js" />
     <Content Include="Script\bootstrapValidator.min.js" />
     <Content Include="Script\Common.js" />

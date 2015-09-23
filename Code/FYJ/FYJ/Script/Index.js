@@ -2,7 +2,7 @@
     var objUrl = getObjectURL(files);
     console.log("objUrl = " + objUrl);
     if (objUrl) {
-        $('#imageList').append('<img src="' + objUrl + '" style="width:50px; height:50px;" onclick="$(this).remove()"/>');
+        $('#imageList').append('<div style="background-image:url(\'' + objUrl + '\');" class="user-up-img"><a href=""><img src="/Image/user_close.png" class="user-image-icon" /></a></div>');
     }
 }
 function getObjectURL(file) {
