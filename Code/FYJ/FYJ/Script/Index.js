@@ -2,7 +2,7 @@
     var objUrl = getObjectURL(files);
     console.log("objUrl = " + objUrl);
     if (objUrl) {
-        $('#imageList').append('<div style="background-image:url(\'' + objUrl + '\');" class="user-up-img"><a href=""><img src="/Image/user_close.png" class="user-image-icon" /></a></div>');
+        $('#imageList').append('<div style="background-image:url(\'' + objUrl + '\');" class="user-up-img"><img src="/Image/user_close.png" class="user-image-icon" onclick="CloseUserImg(this)" /></div>');
     }
 }
 function getObjectURL(file) {
@@ -15,4 +15,7 @@ function getObjectURL(file) {
         url = window.webkitURL.createObjectURL(file);
     }
     return url;
+}
+function CloseUserImg(obj) {
+    $(obj).parent().hide();
 }
