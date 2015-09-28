@@ -129,6 +129,9 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AjaxHandler\ArticleHandler.ashx.cs">
+      <DependentUpon>ArticleHandler.ashx</DependentUpon>
+    </Compile>
     <Compile Include="AjaxHandler\UserHandler.ashx.cs">
       <DependentUpon>UserHandler.ashx</DependentUpon>
     </Compile>
@@ -162,6 +165,7 @@
     <Content Include="Views\Shared\BannerPartial.cshtml" />
     <Content Include="Views\User\Login.cshtml" />
     <Content Include="Views\Article\Create.cshtml" />
+    <Content Include="AjaxHandler\ArticleHandler.ashx" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -172,6 +176,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
+    <Folder Include="UserImage\" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />

@@ -18,5 +18,17 @@ namespace FYJ.Controllers
         {
             return View();
         }
+
+        [HttpPost]
+        public ActionResult Create(IEnumerable<HttpPostedFileBase> files)
+        {
+            //TODO SHOW THE PICTURE(@Url.Content)
+            foreach (var file1 in files)
+            {
+                string test = file1.FileName;
+                file1.SaveAs(Server.MapPath("/UserImage/") + DateTime.Now.ToString("yyyyMMdd") + "-" + test);
+            }
+            return View();
+        }
     }
 }

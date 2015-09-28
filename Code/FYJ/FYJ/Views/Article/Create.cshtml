@@ -14,96 +14,113 @@
     @Scripts.Render("~/bundles/Index")
 </head>
 <body>
-    @Html.Partial("../Shared/BannerPartial")
-    <div class="container content">
-        <div class="row">
-            <div class="col-md-8">
-                <div class="row">
-                    <textarea class="form-control" rows="3" style="height:150px;margin-top:12px; margin-bottom:10px;"></textarea>
-                </div>
-                <div class="row">
-                    <a onclick="fileHidden.click()">上传图片</a><input type="file" id="fileHidden" onchange="UploadChange(this.value, this.files[0])" style="display:none;" />
-                    <button type="button" class="btn btn-success" style="float:right;">发布</button>
-                </div>
-                <div class="row" id="imageList" style="width:680px; margin-top:10px;">
+    @using (Html.BeginForm("Create", "Article", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+        @Html.Partial("../Shared/BannerPartial")
+        <div class="container content">
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="row">
+                        <textarea class="form-control" rows="3" style="height:150px;margin-top:12px; margin-bottom:10px;"></textarea>
+                    </div>
+                    <div class="row">
+                        <a onclick="fileHidden.click()">上传图片</a><input type="file" id="fileHidden" onchange="UploadChange(this.value, this.files[0])" style="display:none;" name="files" />
+                        <button type="button" class="btn btn-success" style="float:right;" onclick="Submit()">发布</button>
+                        <input type="submit" value="Create" class="btn btn-default" />
+
+                    </div>
+                    <div class="row" id="imageList" style="width:680px; margin-top:10px;">
+
+                    </div>
+                    <div id="FileList" style="display:block;">
+                        <div>
+                            @*<input type="file" id="file0" name="file0" />*@
+                        </div>
+                    </div>
+                    <p>
+                        <a onclick="AddFile();" style="color: Blue; text-decoration: underline">新增文件</a>
+                    </p>
+                    <p>
+                        <input type="submit" value="上传" />
+                    </p>
 
                 </div>
+                <div class="col-md-4">
+                    <div class="name-div">
+                        <div class="name-div-top">
+                            <div class="name-div-left">
+                                <a href=""><img src="SampleImage/s1.jpg" /></a>
+                            </div>
+                            <div class="name-div-right">
+                                <div class="name-div-right-top"><a href="">进击的巨人</a></div>
+                                <div class="name-div-right-bot">本人有点懒，什么也没留下</div>
+                            </div>
+
+                        </div>
+                        <div class="name-div-bot">
+                            <div class="name-div-bot-left">
+                                <div class="info-div">我的关注</div>
+                                <div class="info-div">我的粉丝</div>
+                                <div class="info-div">我的金币</div>
+                                <div class="info-div">我的消息</div>
+                            </div>
+
+                            <div class="name-div-bot-right">
+                                <div class="info-div"><a href="">26</a></div>
+                                <div class="info-div"><a href="">102</a></div>
+                                <div class="info-div"><a href="">200</a></div>
+                                <div class="info-div"><a href=""><span> 1 </span>条未读</a></div>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                    <div class="recom-div">
+                        <div class="recom-div-d">
+                            <div class="recom-img"><a href=""><img src="SampleImage/s1.png" /></a></div>
+                            <div class="recom-name">
+                                <div class="recom-name-top"><a href="">欢乐对对碰</a></div>
+                                <div class="recom-name-bot"><a href="">这是一个游戏</a></div>
+                            </div>
+                            <div class="recom-add"><a href=""><img src="Image/AddP.jpg" /></a></div>
+                        </div>
+                        <div class="recom-div-d">
+                            <div class="recom-img"><a href=""><img src="SampleImage/s1.png" /></a></div>
+                            <div class="recom-name">
+                                <div class="recom-name-top"><a href="">欢乐对对碰</a></div>
+                                <div class="recom-name-bot"><a href="">这是一个游戏</a></div>
+                            </div>
+                            <div class="recom-add"><a href=""><img src="Image/AddP.jpg" /></a></div>
+                        </div>
+                        <div class="recom-div-d">
+                            <div class="recom-img"><a href=""><img src="SampleImage/s1.png" /></a></div>
+                            <div class="recom-name">
+                                <div class="recom-name-top"><a href="">欢乐对对碰</a></div>
+                                <div class="recom-name-bot"><a href="">这是一个游戏</a></div>
+                            </div>
+                            <div class="recom-add"><a href=""><img src="Image/AddP.jpg" /></a></div>
+                        </div>
+                        <div class="recom-div-d">
+                            <div class="recom-img"><a href=""><img src="SampleImage/s1.png" /></a></div>
+                            <div class="recom-name">
+                                <div class="recom-name-top"><a href="">欢乐对对碰</a></div>
+                                <div class="recom-name-bot"><a href="">这是一个游戏</a></div>
+                            </div>
+                            <div class="recom-add"><a href=""><img src="Image/AddP.jpg" /></a></div>
+                        </div>
+                        <div class="recom-div-d">
+                            <div class="recom-img"><a href=""><img src="SampleImage/s1.png" /></a></div>
+                            <div class="recom-name">
+                                <div class="recom-name-top"><a href="">欢乐对对碰</a></div>
+                                <div class="recom-name-bot"><a href="">这是一个游戏</a></div>
+                            </div>
+                            <div class="recom-add"><a href=""><img src="Image/AddP.jpg" /></a></div>
+                        </div>
+
+                    </div>
+                </div>
+
             </div>
-            <div class="col-md-4">
-                <div class="name-div">
-                    <div class="name-div-top">
-                        <div class="name-div-left">
-                            <a href=""><img src="SampleImage/s1.jpg" /></a>
-                        </div>
-                        <div class="name-div-right">
-                            <div class="name-div-right-top"><a href="">进击的巨人</a></div>
-                            <div class="name-div-right-bot">本人有点懒，什么也没留下</div>
-                        </div>
-
-                    </div>
-                    <div class="name-div-bot">
-                        <div class="name-div-bot-left">
-                            <div class="info-div">我的关注</div>
-                            <div class="info-div">我的粉丝</div>
-                            <div class="info-div">我的金币</div>
-                            <div class="info-div">我的消息</div>
-                        </div>
-
-                        <div class="name-div-bot-right">
-                            <div class="info-div"><a href="">26</a></div>
-                            <div class="info-div"><a href="">102</a></div>
-                            <div class="info-div"><a href="">200</a></div>
-                            <div class="info-div"><a href=""><span> 1 </span>条未读</a></div>
-                        </div>
-                        <div class="clear"></div>
-                    </div>
-                </div>
-                <div class="recom-div">
-                    <div class="recom-div-d">
-                        <div class="recom-img"><a href=""><img src="SampleImage/s1.png" /></a></div>
-                        <div class="recom-name">
-                            <div class="recom-name-top"><a href="">欢乐对对碰</a></div>
-                            <div class="recom-name-bot"><a href="">这是一个游戏</a></div>
-                        </div>
-                        <div class="recom-add"><a href=""><img src="Image/AddP.jpg" /></a></div>
-                    </div>
-                    <div class="recom-div-d">
-                        <div class="recom-img"><a href=""><img src="SampleImage/s1.png" /></a></div>
-                        <div class="recom-name">
-                            <div class="recom-name-top"><a href="">欢乐对对碰</a></div>
-                            <div class="recom-name-bot"><a href="">这是一个游戏</a></div>
-                        </div>
-                        <div class="recom-add"><a href=""><img src="Image/AddP.jpg" /></a></div>
-                    </div>
-                    <div class="recom-div-d">
-                        <div class="recom-img"><a href=""><img src="SampleImage/s1.png" /></a></div>
-                        <div class="recom-name">
-                            <div class="recom-name-top"><a href="">欢乐对对碰</a></div>
-                            <div class="recom-name-bot"><a href="">这是一个游戏</a></div>
-                        </div>
-                        <div class="recom-add"><a href=""><img src="Image/AddP.jpg" /></a></div>
-                    </div>
-                    <div class="recom-div-d">
-                        <div class="recom-img"><a href=""><img src="SampleImage/s1.png" /></a></div>
-                        <div class="recom-name">
-                            <div class="recom-name-top"><a href="">欢乐对对碰</a></div>
-                            <div class="recom-name-bot"><a href="">这是一个游戏</a></div>
-                        </div>
-                        <div class="recom-add"><a href=""><img src="Image/AddP.jpg" /></a></div>
-                    </div>
-                    <div class="recom-div-d">
-                        <div class="recom-img"><a href=""><img src="SampleImage/s1.png" /></a></div>
-                        <div class="recom-name">
-                            <div class="recom-name-top"><a href="">欢乐对对碰</a></div>
-                            <div class="recom-name-bot"><a href="">这是一个游戏</a></div>
-                        </div>
-                        <div class="recom-add"><a href=""><img src="Image/AddP.jpg" /></a></div>
-                    </div>
-
-                </div>
-            </div>
-
         </div>
-    </div>
+    }
 </body>
 </html>
