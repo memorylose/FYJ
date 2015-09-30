@@ -1,4 +1,6 @@
-﻿using System;
+﻿using FYJ.BLL;
+using FYJ.Utility;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -20,14 +22,24 @@ namespace FYJ.Controllers
         }
 
         [HttpPost]
-        public ActionResult Create(IEnumerable<HttpPostedFileBase> files)
+        public ActionResult Create(string test222)
         {
+
+
+
+
+            //add user images
             //TODO SHOW THE PICTURE(@Url.Content)
-            foreach (var file1 in files)
+            foreach (string item in Request.Files)
             {
-                string test = file1.FileName;
-                file1.SaveAs(Server.MapPath("/UserImage/") + DateTime.Now.ToString("yyyyMMdd") + "-" + test);
+                if (!string.IsNullOrEmpty(item))
+                {
+                    UserArticleRepository userRep = new UserArticleRepository();
+                    HttpPostedFileBase file = Request.Files[item] as HttpPostedFileBase;
+                    userRep.UploadArticleUserImage(file);
+                }
             }
+            
             return View();
         }
     }

@@ -1,8 +1,8 @@
-﻿function UploadChange(value, files) {
+﻿function UploadChange(value, files, i_index) {
     var objUrl = getObjectURL(files);
     console.log("objUrl = " + objUrl);
     if (objUrl) {
-        $('#imageList').append('<div style="background-image:url(\'' + objUrl + '\');" class="user-up-img"><img src="/Image/user_close.png" class="user-image-icon" onclick="CloseUserImg(this)" /></div>');
+        $('#imageList').append('<div style="background-image:url(\'' + objUrl + '\');" class="user-up-img" id="imgdiv_' + i_index + '"><img src="/Image/user_close.png" class="user-image-icon" onclick="CloseUserImg(this)" /></div>');
     }
 }
 function getObjectURL(file) {
@@ -18,6 +18,8 @@ function getObjectURL(file) {
 }
 function CloseUserImg(obj) {
     $(obj).parent().hide();
+    var fileIndex = $(obj).parent().attr('id').substring(7);
+    $('#div' + fileIndex).remove();
 }
 function Submit() {
     //$(".user-up-img").each(function () {
@@ -44,21 +46,9 @@ function AddFile() {
     file.setAttribute("type", "file");
     file.setAttribute("id", "file" + index);
     file.setAttribute("name", "file" + index);
-    file.setAttribute("onchange", "UploadChange(this.value, this.files[0])");
-
-    var btnDel = document.createElement("input");
-    btnDel.setAttribute("type", "button");
-    btnDel.setAttribute("value", "删除");
-    btnDel.setAttribute("Id", index);
-    btnDel.onclick = function () {
-        inputDiv.removeChild(file);
-        inputDiv.removeChild(btnDel);
-        ul.removeChild(inputDiv);
-    }
+    file.setAttribute("onchange", "UploadChange(this.value, this.files[0]," + index + ")");
     inputDiv.appendChild(file);
-    inputDiv.appendChild(btnDel);
     ul.appendChild(inputDiv);
-
     $('#file' + index).click();
     index++;
 }

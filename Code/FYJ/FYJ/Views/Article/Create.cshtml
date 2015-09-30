@@ -24,26 +24,17 @@
                         <textarea class="form-control" rows="3" style="height:150px;margin-top:12px; margin-bottom:10px;"></textarea>
                     </div>
                     <div class="row">
-                        <a onclick="fileHidden.click()">上传图片</a><input type="file" id="fileHidden" onchange="UploadChange(this.value, this.files[0])" style="display:none;" name="files" />
-                        <button type="button" class="btn btn-success" style="float:right;" onclick="Submit()">发布</button>
-                        <input type="submit" value="Create" class="btn btn-default" />
-
+                        <a onclick="AddFile();" style="color: Blue; text-decoration: underline">新增文件</a>
+                        <input type="submit" value="Create" class="btn btn-default" style="float:right;" />
                     </div>
                     <div class="row" id="imageList" style="width:680px; margin-top:10px;">
 
                     </div>
-                    <div id="FileList" style="display:block;">
+                    <div id="FileList" style="display:none;">
                         <div>
-                            @*<input type="file" id="file0" name="file0" />*@
+
                         </div>
                     </div>
-                    <p>
-                        <a onclick="AddFile();" style="color: Blue; text-decoration: underline">新增文件</a>
-                    </p>
-                    <p>
-                        <input type="submit" value="上传" />
-                    </p>
-
                 </div>
                 <div class="col-md-4">
                     <div class="name-div">
