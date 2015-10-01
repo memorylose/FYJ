@@ -28,7 +28,7 @@ namespace FYJ.BLL
                 try
                 {
                     string ext = Path.GetExtension(Path.GetFileName(file.FileName));
-                    file.SaveAs(imgPath + DateTime.Now.ToString("yyyyMMddHHmmss") + Path.GetExtension(Path.GetFileName(file.FileName)));
+                    file.SaveAs(imgPath + FileOperator.GenerateImageFileName() + Path.GetExtension(Path.GetFileName(file.FileName)));
                 }
                 catch (Exception ex)
                 {

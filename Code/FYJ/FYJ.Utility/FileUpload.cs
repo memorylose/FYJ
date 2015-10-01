@@ -98,5 +98,17 @@ namespace FYJ.Utility
             }
             imagePath = System.Web.HttpContext.Current.Server.MapPath(folderPath + "/" + currentFolder + "/");
         }
+
+        /// <summary>
+        /// Generate image file name
+        /// </summary>
+        /// <returns></returns>
+        public static string GenerateImageFileName()
+        {
+            Random random = new Random();
+            int randomName = random.Next(10000, 99999);
+            string dateName = DateTime.Now.ToString("yyyyMMddHHmmss");
+            return randomName.ToString() + dateName;
+        }
     }
 }
