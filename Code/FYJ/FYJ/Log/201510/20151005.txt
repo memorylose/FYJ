@@ -1,0 +1,162 @@
+----------------------- 2015/10/05 21:18:07 -----------------------
+Error:test
+----------------------- 2015/10/05 21:20:40 -----------------------
+Information:begin upload
+----------------------- 2015/10/05 21:20:40 -----------------------
+Error:Check image extension failed.System.IO.EndOfStreamException: Unable to read beyond the end of the stream.
+   at System.IO.BinaryReader.ReadByte()
+   at FYJ.Utility.FileOperator.CheckImageExtension(Stream fs) in E:\Personal\MyGit\FYJ\Code\FYJ\FYJ.Utility\FileUpload.cs:line 23
+----------------------- 2015/10/05 21:20:40 -----------------------
+Information:2.jpgsuccess
+----------------------- 2015/10/05 21:20:40 -----------------------
+Information:1.jpgsuccess
+----------------------- 2015/10/05 22:14:27 -----------------------
+Information:begin upload
+----------------------- 2015/10/05 22:14:27 -----------------------
+Error:Check image extension failed.System.IO.EndOfStreamException: Unable to read beyond the end of the stream.
+   at System.IO.BinaryReader.ReadByte()
+   at FYJ.Utility.FileOperator.CheckImageExtension(Stream fs) in E:\Personal\MyGit\FYJ\Code\FYJ\FYJ.Utility\FileUpload.cs:line 23
+----------------------- 2015/10/05 22:14:27 -----------------------
+Information:2.jpgsuccess
+----------------------- 2015/10/05 22:14:27 -----------------------
+Information:1.jpgsuccess
+----------------------- 2015/10/05 22:14:51 -----------------------
+Information:begin upload
+----------------------- 2015/10/05 22:14:51 -----------------------
+Error:Check image extension failed.System.IO.EndOfStreamException: Unable to read beyond the end of the stream.
+   at System.IO.BinaryReader.ReadByte()
+   at FYJ.Utility.FileOperator.CheckImageExtension(Stream fs) in E:\Personal\MyGit\FYJ\Code\FYJ\FYJ.Utility\FileUpload.cs:line 23
+----------------------- 2015/10/05 22:14:51 -----------------------
+Information:2.jpgsuccess
+----------------------- 2015/10/05 22:14:51 -----------------------
+Information:1.jpgsuccess
+----------------------- 2015/10/05 22:14:56 -----------------------
+Information:begin upload
+----------------------- 2015/10/05 22:14:56 -----------------------
+Error:Check image extension failed.System.IO.EndOfStreamException: Unable to read beyond the end of the stream.
+   at System.IO.BinaryReader.ReadByte()
+   at FYJ.Utility.FileOperator.CheckImageExtension(Stream fs) in E:\Personal\MyGit\FYJ\Code\FYJ\FYJ.Utility\FileUpload.cs:line 23
+----------------------- 2015/10/05 22:14:56 -----------------------
+Information:2.jpgsuccess
+----------------------- 2015/10/05 22:14:56 -----------------------
+Information:1.jpgsuccess
+----------------------- 2015/10/05 22:14:59 -----------------------
+Information:begin upload
+----------------------- 2015/10/05 22:14:59 -----------------------
+Error:Check image extension failed.System.IO.EndOfStreamException: Unable to read beyond the end of the stream.
+   at System.IO.BinaryReader.ReadByte()
+   at FYJ.Utility.FileOperator.CheckImageExtension(Stream fs) in E:\Personal\MyGit\FYJ\Code\FYJ\FYJ.Utility\FileUpload.cs:line 23
+----------------------- 2015/10/05 22:14:59 -----------------------
+Information:2.jpgsuccess
+----------------------- 2015/10/05 22:14:59 -----------------------
+Information:1.jpgsuccess
+----------------------- 2015/10/05 22:15:20 -----------------------
+Information:begin upload
+----------------------- 2015/10/05 22:15:20 -----------------------
+Error:Check image extension failed.System.IO.EndOfStreamException: Unable to read beyond the end of the stream.
+   at System.IO.BinaryReader.ReadByte()
+   at FYJ.Utility.FileOperator.CheckImageExtension(Stream fs) in E:\Personal\MyGit\FYJ\Code\FYJ\FYJ.Utility\FileUpload.cs:line 23
+----------------------- 2015/10/05 22:15:20 -----------------------
+Information:2.jpgsuccess
+----------------------- 2015/10/05 22:15:20 -----------------------
+Information:1.jpgsuccess
+----------------------- 2015/10/05 22:15:33 -----------------------
+Information:begin upload
+----------------------- 2015/10/05 22:15:33 -----------------------
+Error:Check image extension failed.System.IO.EndOfStreamException: Unable to read beyond the end of the stream.
+   at System.IO.BinaryReader.ReadByte()
+   at FYJ.Utility.FileOperator.CheckImageExtension(Stream fs) in E:\Personal\MyGit\FYJ\Code\FYJ\FYJ.Utility\FileUpload.cs:line 23
+----------------------- 2015/10/05 22:15:33 -----------------------
+Information:2.jpgsuccess
+----------------------- 2015/10/05 22:15:33 -----------------------
+Information:1.jpgsuccess
+----------------------- 2015/10/05 22:15:45 -----------------------
+Information:begin upload
+----------------------- 2015/10/05 22:15:45 -----------------------
+Error:Check image extension failed.System.IO.EndOfStreamException: Unable to read beyond the end of the stream.
+   at System.IO.BinaryReader.ReadByte()
+   at FYJ.Utility.FileOperator.CheckImageExtension(Stream fs) in E:\Personal\MyGit\FYJ\Code\FYJ\FYJ.Utility\FileUpload.cs:line 23
+----------------------- 2015/10/05 22:15:45 -----------------------
+Information:2.jpgsuccess
+----------------------- 2015/10/05 22:15:45 -----------------------
+Information:1.jpgsuccess
+----------------------- 2015/10/05 22:15:50 -----------------------
+Information:begin upload
+----------------------- 2015/10/05 22:15:50 -----------------------
+Error:Check image extension failed.System.IO.EndOfStreamException: Unable to read beyond the end of the stream.
+   at System.IO.BinaryReader.ReadByte()
+   at FYJ.Utility.FileOperator.CheckImageExtension(Stream fs) in E:\Personal\MyGit\FYJ\Code\FYJ\FYJ.Utility\FileUpload.cs:line 23
+----------------------- 2015/10/05 22:15:50 -----------------------
+Information:2.jpgsuccess
+----------------------- 2015/10/05 22:15:50 -----------------------
+Information:1.jpgsuccess
+----------------------- 2015/10/05 22:15:54 -----------------------
+Information:begin upload
+----------------------- 2015/10/05 22:15:54 -----------------------
+Error:Check image extension failed.System.IO.EndOfStreamException: Unable to read beyond the end of the stream.
+   at System.IO.BinaryReader.ReadByte()
+   at FYJ.Utility.FileOperator.CheckImageExtension(Stream fs) in E:\Personal\MyGit\FYJ\Code\FYJ\FYJ.Utility\FileUpload.cs:line 23
+----------------------- 2015/10/05 22:15:54 -----------------------
+Information:2.jpgsuccess
+----------------------- 2015/10/05 22:15:54 -----------------------
+Information:1.jpgsuccess
+----------------------- 2015/10/05 22:15:59 -----------------------
+Information:begin upload
+----------------------- 2015/10/05 22:15:59 -----------------------
+Error:Check image extension failed.System.IO.EndOfStreamException: Unable to read beyond the end of the stream.
+   at System.IO.BinaryReader.ReadByte()
+   at FYJ.Utility.FileOperator.CheckImageExtension(Stream fs) in E:\Personal\MyGit\FYJ\Code\FYJ\FYJ.Utility\FileUpload.cs:line 23
+----------------------- 2015/10/05 22:15:59 -----------------------
+Information:2.jpgsuccess
+----------------------- 2015/10/05 22:15:59 -----------------------
+Information:1.jpgsuccess
+----------------------- 2015/10/05 22:18:24 -----------------------
+Information:begin upload
+----------------------- 2015/10/05 22:18:24 -----------------------
+Error:Check image extension failed.System.IO.EndOfStreamException: Unable to read beyond the end of the stream.
+   at System.IO.BinaryReader.ReadByte()
+   at FYJ.Utility.FileOperator.CheckImageExtension(Stream fs) in E:\Personal\MyGit\FYJ\Code\FYJ\FYJ.Utility\FileUpload.cs:line 23
+----------------------- 2015/10/05 22:18:25 -----------------------
+Information:2.jpgsuccess
+----------------------- 2015/10/05 22:18:25 -----------------------
+Information:1.jpgsuccess
+----------------------- 2015/10/05 22:18:33 -----------------------
+Information:begin upload
+----------------------- 2015/10/05 22:18:33 -----------------------
+Error:Check image extension failed.System.IO.EndOfStreamException: Unable to read beyond the end of the stream.
+   at System.IO.BinaryReader.ReadByte()
+   at FYJ.Utility.FileOperator.CheckImageExtension(Stream fs) in E:\Personal\MyGit\FYJ\Code\FYJ\FYJ.Utility\FileUpload.cs:line 23
+----------------------- 2015/10/05 22:18:33 -----------------------
+Information:2.jpgsuccess
+----------------------- 2015/10/05 22:18:33 -----------------------
+Information:1.jpgsuccess
+----------------------- 2015/10/05 22:18:47 -----------------------
+Information:begin upload
+----------------------- 2015/10/05 22:18:47 -----------------------
+Error:Check image extension failed.System.IO.EndOfStreamException: Unable to read beyond the end of the stream.
+   at System.IO.BinaryReader.ReadByte()
+   at FYJ.Utility.FileOperator.CheckImageExtension(Stream fs) in E:\Personal\MyGit\FYJ\Code\FYJ\FYJ.Utility\FileUpload.cs:line 23
+----------------------- 2015/10/05 22:18:47 -----------------------
+Information:2.jpgsuccess
+----------------------- 2015/10/05 22:18:47 -----------------------
+Information:1.jpgsuccess
+----------------------- 2015/10/05 22:19:05 -----------------------
+Information:begin upload
+----------------------- 2015/10/05 22:19:05 -----------------------
+Error:Check image extension failed.System.IO.EndOfStreamException: Unable to read beyond the end of the stream.
+   at System.IO.BinaryReader.ReadByte()
+   at FYJ.Utility.FileOperator.CheckImageExtension(Stream fs) in E:\Personal\MyGit\FYJ\Code\FYJ\FYJ.Utility\FileUpload.cs:line 23
+----------------------- 2015/10/05 22:19:05 -----------------------
+Information:2.jpgsuccess
+----------------------- 2015/10/05 22:19:05 -----------------------
+Information:1.jpgsuccess
+----------------------- 2015/10/05 22:22:13 -----------------------
+Information:begin upload
+----------------------- 2015/10/05 22:22:13 -----------------------
+Error:Check image extension failed.System.IO.EndOfStreamException: Unable to read beyond the end of the stream.
+   at System.IO.BinaryReader.ReadByte()
+   at FYJ.Utility.FileOperator.CheckImageExtension(Stream fs) in E:\Personal\MyGit\FYJ\Code\FYJ\FYJ.Utility\FileUpload.cs:line 23
+----------------------- 2015/10/05 22:22:13 -----------------------
+Information:2.jpgsuccess
+----------------------- 2015/10/05 22:22:14 -----------------------
+Information:1.jpgsuccess

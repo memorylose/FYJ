@@ -541,3 +541,14 @@ a, div {
 .user-input-up {
     display: none;
 }
+/*******************************Article create*******************************/
+.txt-input-user {
+    margin-top: 12px;
+    margin-bottom: 10px;
+}
+
+.img-upload {
+    width: 19px;
+    height: 15px;
+
+}

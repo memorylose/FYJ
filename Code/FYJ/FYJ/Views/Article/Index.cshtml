@@ -9,9 +9,142 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>Index</title>
+    @Styles.Render("~/Content/Index")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/Index")
 </head>
 <body>
-    <div> 
+    @Html.Partial("../Shared/BannerPartial")
+    <div class="container content">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="row">
+                    <div class="col-md-2 c-img-div"><a href=""><img src="SampleImage/s1.jpg" class="user-img" /></a></div>
+                    <div class="col-md-10 col-pad-left">
+                        <div class="c-img"></div>
+                        <div class="c-div">
+                            <div class="c-title"><a href="">每日梵游记推荐</a></div>
+                            <div class="row c-content">
+                                <div class="col-md-4">
+                                    <a href=""> <img src="SampleImage/s2.png" class="u-img" /></a>
+                                </div>
+                                <div class="col-md-8 word-p">
+                                    <a href="" class="content-a">【今日推荐】一个还在上大学的男生。今年伊始，喜欢上烹饪，恋上在厨房里“瞎鼓捣”的感觉。而且，能为自己和家人做出好的食物，心中也会洋溢着满满的温暖与成就感。他每天会在前一天想好要做的菜，准备好所需的食材，临睡前构思好摆盘。每天早上7点左右起床(最近放暑假，5:40起床跑步)，花20-30分钟的时间做饭，听着锅炉伴着闪烁的火光微微作响，仿佛在欣他每天会在前一天想好要做的菜，准备好所需的食材，临睡前构思好摆盘。每天早上7点左右起床(最近放暑假，5:40起床跑步)，花20-30分钟的时间做饭，听着锅炉伴着闪烁的火光微微作响，仿佛在欣</a>
+                                </div>
+                            </div>
+                            <div class="c-content-op">
+                                <div class="op-word">2015/08/16</div>
+                                <div class="op-word">来自360浏览器</div>
+                                <a href="" class="op-user">删除</a>
+                                <a href="" class="op-user">编辑</a>
+                                <a href="" class="op-user">评论(10)</a>
+                                <a href="" class="op-user">转发(2)</a>
+                            </div>
+                        </div>
+                        <div class="c-div-b"></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-2 c-img-div"><a href=""><img src="SampleImage/s1.jpg" class="user-img" /></a></div>
+                    <div class="col-md-10 col-pad-left">
+                        <div class="c-img"></div>
+                        <div class="c-div">
+                            <div class="c-title"><a href="">每日梵游记推荐</a></div>
+                            <div class="row c-content">
+                                <div class="col-md-4">
+                                    <a href=""> <img src="SampleImage/s3.png" class="u-img" /></a>
+                                </div>
+                                <div class="col-md-8 word-p">
+                                    <a href="" class="content-a">【今日推荐】一个还在上大学的男生。今年伊始，喜欢上烹饪，恋上在厨房里“瞎鼓捣”的感觉。而且，能为自己和家人做出好的食物，心中也会洋溢着满满的温暖与成就感。</a>
+                                </div>
+                            </div>
+                            <div class="c-content-op">
+                                <div class="op-word">2015/08/16</div>
+                                <div class="op-word">来自360浏览器</div>
+                                <a href="" class="op-user">删除</a>
+                                <a href="" class="op-user">编辑</a>
+                                <a href="" class="op-user">评论(10)</a>
+                                <a href="" class="op-user">转发(2)</a>
+                            </div>
+                        </div>
+                        <div class="c-div-b"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="name-div">
+                    <div class="name-div-top">
+                        <div class="name-div-left">
+                            <a href=""><img src="SampleImage/s1.jpg" /></a>
+                        </div>
+                        <div class="name-div-right">
+                            <div class="name-div-right-top"><a href="">进击的巨人</a></div>
+                            <div class="name-div-right-bot">本人有点懒，什么也没留下</div>
+                        </div>
+
+                    </div>
+                    <div class="name-div-bot">
+                        <div class="name-div-bot-left">
+                            <div class="info-div">我的关注</div>
+                            <div class="info-div">我的粉丝</div>
+                            <div class="info-div">我的金币</div>
+                            <div class="info-div">我的消息</div>
+                        </div>
+
+                        <div class="name-div-bot-right">
+                            <div class="info-div"><a href="">26</a></div>
+                            <div class="info-div"><a href="">102</a></div>
+                            <div class="info-div"><a href="">200</a></div>
+                            <div class="info-div"><a href=""><span> 1 </span>条未读</a></div>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+                <div class="recom-div">
+                    <div class="recom-div-d">
+                        <div class="recom-img"><a href=""><img src="SampleImage/s1.png" /></a></div>
+                        <div class="recom-name">
+                            <div class="recom-name-top"><a href="">欢乐对对碰</a></div>
+                            <div class="recom-name-bot"><a href="">这是一个游戏</a></div>
+                        </div>
+                        <div class="recom-add"><a href=""><img src="Image/AddP.jpg" /></a></div>
+                    </div>
+                    <div class="recom-div-d">
+                        <div class="recom-img"><a href=""><img src="SampleImage/s1.png" /></a></div>
+                        <div class="recom-name">
+                            <div class="recom-name-top"><a href="">欢乐对对碰</a></div>
+                            <div class="recom-name-bot"><a href="">这是一个游戏</a></div>
+                        </div>
+                        <div class="recom-add"><a href=""><img src="Image/AddP.jpg" /></a></div>
+                    </div>
+                    <div class="recom-div-d">
+                        <div class="recom-img"><a href=""><img src="SampleImage/s1.png" /></a></div>
+                        <div class="recom-name">
+                            <div class="recom-name-top"><a href="">欢乐对对碰</a></div>
+                            <div class="recom-name-bot"><a href="">这是一个游戏</a></div>
+                        </div>
+                        <div class="recom-add"><a href=""><img src="Image/AddP.jpg" /></a></div>
+                    </div>
+                    <div class="recom-div-d">
+                        <div class="recom-img"><a href=""><img src="SampleImage/s1.png" /></a></div>
+                        <div class="recom-name">
+                            <div class="recom-name-top"><a href="">欢乐对对碰</a></div>
+                            <div class="recom-name-bot"><a href="">这是一个游戏</a></div>
+                        </div>
+                        <div class="recom-add"><a href=""><img src="Image/AddP.jpg" /></a></div>
+                    </div>
+                    <div class="recom-div-d">
+                        <div class="recom-img"><a href=""><img src="SampleImage/s1.png" /></a></div>
+                        <div class="recom-name">
+                            <div class="recom-name-top"><a href="">欢乐对对碰</a></div>
+                            <div class="recom-name-bot"><a href="">这是一个游戏</a></div>
+                        </div>
+                        <div class="recom-add"><a href=""><img src="Image/AddP.jpg" /></a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 </html>

@@ -48,6 +48,7 @@ namespace FYJ.BLL
                 }
                 catch (Exception ex)
                 {
+                    Log.Error("Register user failed." + ex.ToString());
                     dbContextTransaction.Rollback();
                 }
             }

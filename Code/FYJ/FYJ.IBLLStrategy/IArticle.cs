@@ -1,13 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using FYJ.Model;
 
 namespace FYJ.IBLLStrategy
 {
     public interface IArticle
     {
-        void AddArticle();
+        int AddArticle(Article viewModel);
     }
 }

@@ -19,26 +19,26 @@ namespace FYJ.AjaxHandler
             context.Response.Charset = "utf-8";
 
             string AjaxMethod = context.Request.Params["Method"];
-            switch (AjaxMethod)
-            {
-                case "AddArticle":
-                    AddArticle(context);
-                    break;
-            }
+            //switch (AjaxMethod)
+            //{
+            //    case "AddArticle":
+            //        AddArticle(context);
+            //        break;
+            //}
         }
 
-        public void AddArticle(HttpContext context)
-        {
-            //HttpPostedFile test = context.Request.
-            //string test1 = test.FileName;
-            HttpFileCollection hfc = System.Web.HttpContext.Current.Request.Files;
+        //public void AddArticle(HttpContext context)
+        //{
+        //    //HttpPostedFile test = context.Request.
+        //    //string test1 = test.FileName;
+        //    HttpFileCollection hfc = System.Web.HttpContext.Current.Request.Files;
 
 
 
-            //TODO NINJECT
-            IArticle article = new UserArticleRepository();
-            article.AddArticle();
-        }
+        //    //TODO NINJECT
+        //    IArticle article = new UserArticleRepository();
+        //    article.AddArticle();
+        //}
         public bool IsReusable
         {
             get

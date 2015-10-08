@@ -8,30 +8,12 @@ using System.Threading.Tasks;
 
 namespace FYJ.Utility
 {
-    public class Log
+    public class FileLog : ILog
     {
-        private static string GetLogPath()
-        {
-            string logPath = "~/" + LogPath.LOG_FOLDER_PATH;
-            string folderPath = string.Empty;
-            FileOperator.CheckFileFolder(logPath, ref folderPath);
-            string fileName = DateTime.Now.ToString("yyyyMMdd") + ".txt";
-            return folderPath + fileName;
-        }
-
-        private enum MessageType
-        {
-            Unknown,
-            Information,
-            Warning,
-            Error,
-            Success
-        }
-
-        private void WriteLog(string logType, string content)
+        public void WriteLog(string logType, string content)
         {
             //log path
-            string logPath = Log.GetLogPath();
+            string logPath = LogUtility.GetLogPath();
 
             //check log exist
             FileInfo finfo = new FileInfo(logPath);
@@ -52,11 +34,20 @@ namespace FYJ.Utility
                 w.Close();
             }
         }
+    }
 
+    public class Log
+    {
         public static void Error(string content)
         {
-            Log _log = new Log();
-            _log.WriteLog(MessageType.Error.ToString(), content);
+            ILog _log = new FileLog();
+            _log.WriteLog(LogUtility.MessageType.Error.ToString(), content);
+        }
+
+        public static void Info(string content)
+        {
+            ILog _log = new FileLog();
+            _log.WriteLog(LogUtility.MessageType.Information.ToString(), content);
         }
     }
 }

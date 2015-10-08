@@ -1,7 +1,10 @@
 ﻿using FYJ.BLL;
+using FYJ.IBLLStrategy;
+using FYJ.Model;
 using FYJ.Utility;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -22,11 +25,12 @@ namespace FYJ.Controllers
         }
 
         [HttpPost]
-        public ActionResult Create(string test222)
+        public ActionResult Create(Article viewModel)
         {
+            //TODO add tran
 
-
-
+            IArticle article = new UserArticleRepository();
+            int articleId = article.AddArticle(viewModel);
 
             //add user images
             //TODO SHOW THE PICTURE(@Url.Content)
@@ -34,12 +38,13 @@ namespace FYJ.Controllers
             {
                 if (!string.IsNullOrEmpty(item))
                 {
+                    string dbPath = string.Empty;
                     UserArticleRepository userRep = new UserArticleRepository();
                     HttpPostedFileBase file = Request.Files[item] as HttpPostedFileBase;
-                    userRep.UploadArticleUserImage(file);
+                    userRep.UploadArticleUserImage(file, ref dbPath);
+                    userRep.AddImageInDb(articleId, dbPath);
                 }
             }
-            
             return View();
         }
     }

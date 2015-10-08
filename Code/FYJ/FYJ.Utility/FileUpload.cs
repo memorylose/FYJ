@@ -25,8 +25,9 @@ namespace FYJ.Utility
                 buffer = r.ReadByte();
                 fileclass += buffer.ToString();
             }
-            catch
+            catch (Exception ex)
             {
+                Log.Error("Check image extension failed." + ex.ToString());
                 return false;
             }
             //r.Close();
@@ -68,35 +69,47 @@ namespace FYJ.Utility
             return ret;
         }
 
-        public static void CheckFileFolder(string folderPath, ref string imagePath)
+        public static void CheckImageFileFolder(string folderPath, ref string rtnPath, ref string datePath)
         {
-            imagePath = string.Empty;
-            if (!Directory.Exists(System.Web.HttpContext.Current.Server.MapPath(folderPath)))
+            rtnPath = string.Empty;
+            datePath = string.Empty;
+
+            if (!Directory.Exists(System.Web.HttpContext.Current.Server.MapPath(folderPath + "/" + DateTime.Now.ToString("yyyyMM") + "/" + DateTime.Now.ToString("dd"))))
             {
                 try
                 {
-                    Directory.CreateDirectory(System.Web.HttpContext.Current.Server.MapPath(folderPath));
+                    Directory.CreateDirectory(System.Web.HttpContext.Current.Server.MapPath(folderPath + "/" + DateTime.Now.ToString("yyyyMM") + "/" + DateTime.Now.ToString("dd")));
                 }
                 catch (Exception ex)
                 {
-                    //TODO log
+                    Log.Error("Create year/month folder failed." + ex.ToString());
                 }
             }
 
-            //Get current date folder
-            string currentFolder = DateTime.Now.ToString("yyyyMM");
-            if (!Directory.Exists(System.Web.HttpContext.Current.Server.MapPath(folderPath + "/" + currentFolder)))
+            //full path
+            rtnPath = System.Web.HttpContext.Current.Server.MapPath(folderPath + "/" + DateTime.Now.ToString("yyyyMM") + "/" + DateTime.Now.ToString("dd") + "/");
+
+            //date folderd
+            datePath = DateTime.Now.ToString("yyyyMM") + "/" + DateTime.Now.ToString("dd") + "/";
+        }
+
+        public static void CheckLogFileFolder(string folderPath, ref string rtnPath)
+        {
+            rtnPath = string.Empty;
+
+            if (!Directory.Exists(System.Web.HttpContext.Current.Server.MapPath(folderPath + "/" + DateTime.Now.ToString("yyyyMM"))))
             {
                 try
                 {
-                    Directory.CreateDirectory(System.Web.HttpContext.Current.Server.MapPath(folderPath + "/" + currentFolder));
+                    Directory.CreateDirectory(System.Web.HttpContext.Current.Server.MapPath(folderPath + "/" + DateTime.Now.ToString("yyyyMM")));
                 }
                 catch (Exception ex)
                 {
-                    //TODO log
+                    Log.Error("Create year/month folder failed." + ex.ToString());
                 }
             }
-            imagePath = System.Web.HttpContext.Current.Server.MapPath(folderPath + "/" + currentFolder + "/");
+
+            rtnPath = System.Web.HttpContext.Current.Server.MapPath(folderPath + "/" + DateTime.Now.ToString("yyyyMM") + "/");
         }
 
         /// <summary>
@@ -105,7 +118,7 @@ namespace FYJ.Utility
         /// <returns></returns>
         public static string GenerateImageFileName()
         {
-            Random random = new Random();
+            Random random = new Random((int)DateTime.Now.Ticks);
             int randomName = random.Next(10000, 99999);
             string dateName = DateTime.Now.ToString("yyyyMMddHHmmss");
             return randomName.ToString() + dateName;

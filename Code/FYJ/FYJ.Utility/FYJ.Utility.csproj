@@ -42,7 +42,9 @@
   <ItemGroup>
     <Compile Include="Encryption.cs" />
     <Compile Include="FileUpload.cs" />
+    <Compile Include="ILog.cs" />
     <Compile Include="Log.cs" />
+    <Compile Include="LogUtility.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RegExp.cs" />
     <Compile Include="StringTool.cs" />
