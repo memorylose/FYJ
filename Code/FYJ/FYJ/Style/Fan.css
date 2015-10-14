@@ -357,6 +357,31 @@ a, div {
         font-size: 12px;
         text-decoration: none;
     }
+
+.loading-b {
+    height: 50px;
+    background-color: white;
+    text-align: center;
+    line-height: 50px;
+    margin-top: 13px;
+    font-size: 16px;
+    display: none;
+}
+
+.loading-m {
+    width: 100%;
+    height: 100px;
+    background-color: #E7E7E7;
+    display: block;
+}
+
+.loading-word {
+    margin: 0 auto;
+    width: 450px;
+    height: 100px;
+    line-height: 100px;
+    font-size: 20px;
+}
 /*******************************Details*******************************/
 .d-left {
     background-color: white;
@@ -550,5 +575,4 @@ a, div {
 .img-upload {
     width: 19px;
     height: 15px;
-
 }

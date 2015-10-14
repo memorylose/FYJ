@@ -52,3 +52,113 @@ function AddFile() {
     $('#file' + index).click();
     index++;
 }
+
+$(document).ready(function () {
+    $.ajax({
+        url: 'AjaxHandler.ashx',
+        dataType: 'json',
+        data: { Method: 'GetBlog', Count: '0' },
+        beforeSend: function (XMLHttpRequest) {
+            $("#beginLoading").css('display', 'block');
+        },
+        success: function (msg) {
+            $(msg).each(function (i) {
+                var divs = '';
+                divs += '<div class="row" id="rowId">';
+                divs += '<div class="col-md-2 c-img-div"><a href=""><img src="SampleImage/s1.jpg" class="user-img" /></a></div>';
+                divs += '<div class="col-md-10 col-pad-left">';
+                divs += '<div class="c-img"></div>';
+                divs += '<div class="c-div">';
+                divs += '<div class="c-title"><a href="" id="txtTitle">' + msg[i].Title + '</a></div>';
+                divs += '<div class="row c-content">';
+                divs += '<div class="col-md-4">';
+                divs += '<a href=""> <img src="SampleImage/s3.png" class="u-img" /></a>';
+                divs += '</div>';
+                divs += '<div class="col-md-8 word-p">';
+                divs += '<a href="" class="content-a" id="txtContent">' + msg[i].Contents + '</a>';
+                divs += '</div>';
+                divs += '</div>';
+                divs += '<div class="c-content-op">';
+                divs += '<div class="op-word">2015/08/16</div>';
+                divs += '<div class="op-word">来自360浏览器</div>';
+                divs += '<a href="" class="op-user">删除</a>';
+                divs += '<a href="" class="op-user">编辑</a>';
+                divs += '<a href="" class="op-user">评论(10)</a>';
+                divs += '<a href="" class="op-user">转发(2)</a>';
+                divs += '</div>';
+                divs += '</div>';
+                divs += '';
+                divs += '<div class="c-div-b"></div>';
+                divs += '</div>';
+                divs += '';
+                divs += '</div>';
+
+                $("#a_content").append(divs);
+                $('#hdCount').prop('value', '0');
+                $("#beginLoading").css('display', 'none');
+            });
+        },
+        complete: function (msg) {
+            $("#beginLoading").css('display', 'none');
+        }
+    });
+
+    $(window).scroll(function () {
+        if ($(document).scrollTop() >= $(document).height() - $(window).height()) {
+            var count = $('#hdCount').val();
+            count = parseInt(count) + 10;
+
+            $.ajax({
+                url: 'AjaxHandler.ashx',
+                dataType: 'json',
+                data: { Method: 'GetBlog', Count: count },
+                beforeSend: function (XMLHttpRequest) {
+                    $("#divLoading").css('display', 'block');
+                    //setTimeout("alert('5 seconds!')", 5000)
+                },
+                success: function (msg) {
+                    $(msg).each(function (i) {
+                        var divs = '';
+                        divs += '<div class="row" id="rowId">';
+                        divs += '<div class="col-md-2 c-img-div"><a href=""><img src="SampleImage/s1.jpg" class="user-img" /></a></div>';
+                        divs += '<div class="col-md-10 col-pad-left">';
+                        divs += '<div class="c-img"></div>';
+                        divs += '<div class="c-div">';
+                        divs += '<div class="c-title"><a href="" id="txtTitle">' + msg[i].Title + '</a></div>';
+                        divs += '<div class="row c-content">';
+                        divs += '<div class="col-md-4">';
+                        divs += '<a href=""> <img src="SampleImage/s3.png" class="u-img" /></a>';
+                        divs += '</div>';
+                        divs += '<div class="col-md-8 word-p">';
+                        divs += '<a href="" class="content-a" id="txtContent">' + msg[i].Contents + '</a>';
+                        divs += '</div>';
+                        divs += '</div>';
+                        divs += '<div class="c-content-op">';
+                        divs += '<div class="op-word">2015/08/16</div>';
+                        divs += '<div class="op-word">来自360浏览器</div>';
+                        divs += '<a href="" class="op-user">删除</a>';
+                        divs += '<a href="" class="op-user">编辑</a>';
+                        divs += '<a href="" class="op-user">评论(10)</a>';
+                        divs += '<a href="" class="op-user">转发(2)</a>';
+                        divs += '</div>';
+                        divs += '</div>';
+                        divs += '';
+                        divs += '<div class="c-div-b"></div>';
+                        divs += '</div>';
+                        divs += '';
+                        divs += '</div>';
+
+                        $("#testAjax").append(divs);
+                        //$(divs).appendTo($("#testAjax"));
+                        $('#hdCount').prop('value', count);
+                        $("#divLoading").css('display', 'none');
+                    });
+                },
+                complete: function (msg) {
+                    // alert('远程调用成功，状态文本值：'+textStatus); 
+                    $("#divLoading").css('display', 'none');
+                }
+            });
+        }
+    });
+});
