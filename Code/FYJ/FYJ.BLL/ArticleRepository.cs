@@ -54,9 +54,10 @@ namespace FYJ.BLL
                 FileOperator.CheckImageFileFolder(userImageFolder, ref imgPath, ref imgDatePath);
                 try
                 {
-                    string fullPath = imgPath + FileOperator.GenerateImageFileName() + Path.GetExtension(Path.GetFileName(file.FileName));
+                    string imageFileName = FileOperator.GenerateImageFileName();
+                    string fullPath = imgPath + imageFileName + Path.GetExtension(Path.GetFileName(file.FileName));
                     file.SaveAs(fullPath);
-                    dbPath = imgDatePath + FileOperator.GenerateImageFileName() + Path.GetExtension(Path.GetFileName(file.FileName));
+                    dbPath = imgDatePath + imageFileName + Path.GetExtension(Path.GetFileName(file.FileName));
                 }
                 catch (Exception ex)
                 {
@@ -69,12 +70,13 @@ namespace FYJ.BLL
             }
         }
 
-        public void AddImageInDb(int articleId, string path)
+        public void AddImageInDb(int articleId, string path, bool isIndex)
         {
             ArticlePicture picModel = new ArticlePicture();
             picModel.ArticleId = articleId;
             picModel.IsDelete = false;
             picModel.Path = path;
+            picModel.IsIndex = isIndex;
 
             db.Entry(picModel).State = EntityState.Added;
             db.SaveChanges();

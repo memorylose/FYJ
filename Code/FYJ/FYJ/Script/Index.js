@@ -55,9 +55,9 @@ function AddFile() {
 
 $(document).ready(function () {
     $.ajax({
-        url: 'AjaxHandler.ashx',
+        url: '/AjaxHandler/ArticleHandler.ashx',
         dataType: 'json',
-        data: { Method: 'GetBlog', Count: '0' },
+        data: { Method: 'GetArticle', Count: '0' },
         beforeSend: function (XMLHttpRequest) {
             $("#beginLoading").css('display', 'block');
         },
@@ -69,10 +69,9 @@ $(document).ready(function () {
                 divs += '<div class="col-md-10 col-pad-left">';
                 divs += '<div class="c-img"></div>';
                 divs += '<div class="c-div">';
-                divs += '<div class="c-title"><a href="" id="txtTitle">' + msg[i].Title + '</a></div>';
                 divs += '<div class="row c-content">';
                 divs += '<div class="col-md-4">';
-                divs += '<a href=""> <img src="SampleImage/s3.png" class="u-img" /></a>';
+                divs += '<a href=""> <img src="/UserImage/' + msg[i].Image + '" class="u-img" /></a>';
                 divs += '</div>';
                 divs += '<div class="col-md-8 word-p">';
                 divs += '<a href="" class="content-a" id="txtContent">' + msg[i].Contents + '</a>';
@@ -111,10 +110,9 @@ $(document).ready(function () {
             $.ajax({
                 url: 'AjaxHandler.ashx',
                 dataType: 'json',
-                data: { Method: 'GetBlog', Count: count },
+                data: { Method: 'GetArticle', Count: count },
                 beforeSend: function (XMLHttpRequest) {
                     $("#divLoading").css('display', 'block');
-                    //setTimeout("alert('5 seconds!')", 5000)
                 },
                 success: function (msg) {
                     $(msg).each(function (i) {
@@ -124,7 +122,7 @@ $(document).ready(function () {
                         divs += '<div class="col-md-10 col-pad-left">';
                         divs += '<div class="c-img"></div>';
                         divs += '<div class="c-div">';
-                        divs += '<div class="c-title"><a href="" id="txtTitle">' + msg[i].Title + '</a></div>';
+                        //divs += '<div class="c-title"><a href="" id="txtTitle">' + msg[i].Title + '</a></div>';
                         divs += '<div class="row c-content">';
                         divs += '<div class="col-md-4">';
                         divs += '<a href=""> <img src="SampleImage/s3.png" class="u-img" /></a>';
@@ -148,14 +146,12 @@ $(document).ready(function () {
                         divs += '';
                         divs += '</div>';
 
-                        $("#testAjax").append(divs);
-                        //$(divs).appendTo($("#testAjax"));
+                        $("#a_content").append(divs);
                         $('#hdCount').prop('value', count);
                         $("#divLoading").css('display', 'none');
                     });
                 },
                 complete: function (msg) {
-                    // alert('远程调用成功，状态文本值：'+textStatus); 
                     $("#divLoading").css('display', 'none');
                 }
             });

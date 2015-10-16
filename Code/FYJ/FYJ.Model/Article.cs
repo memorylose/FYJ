@@ -55,6 +55,7 @@ namespace FYJ.Model
         [MaxLength(100)]
         public string Path { get; set; }
         public bool? IsDelete { get; set; }
+        public bool? IsIndex { get; set; }
     }
 
     [Table("FYJ_ArticleComment")]

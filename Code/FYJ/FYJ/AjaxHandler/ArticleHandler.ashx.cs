@@ -1,5 +1,7 @@
 ﻿using FYJ.BLL;
 using FYJ.IBLLStrategy;
+using FYJ.Model;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,33 +14,42 @@ namespace FYJ.AjaxHandler
     /// </summary>
     public class ArticleHandler : IHttpHandler
     {
+        private ApplicationContext db = new ApplicationContext();
 
         public void ProcessRequest(HttpContext context)
         {
             context.Response.ContentType = "text/html";
             context.Response.Charset = "utf-8";
 
-            string AjaxMethod = context.Request.Params["Method"];
-            //switch (AjaxMethod)
-            //{
-            //    case "AddArticle":
-            //        AddArticle(context);
-            //        break;
-            //}
+            string Method = context.Request.Params["Method"];
+            string Count = context.Request.Params["Count"];
+
+            switch (Method)
+            {
+                case "GetArticle":
+                    GetArticle(context, Count);
+                    break;
+            }
         }
 
-        //public void AddArticle(HttpContext context)
-        //{
-        //    //HttpPostedFile test = context.Request.
-        //    //string test1 = test.FileName;
-        //    HttpFileCollection hfc = System.Web.HttpContext.Current.Request.Files;
+        private void GetArticle(HttpContext context, string count)
+        {
+            //Thread.Sleep(3000);
+            List<ArticleModel> blogList = (from c in db.Article
+                                           join p in db.ArticlePicture on c.ArticleId equals p.ArticleId
+                                           select new ArticleModel()
+                                           {
+                                               ArticleId = c.ArticleId,
+                                               Contents = c.Contents,
+                                               Image = p.Path,
+                                               IsArticleDel = c.IsDelete,
+                                               IsPicDel = p.IsDelete,
+                                               IsIndex = p.IsIndex
+                                           }).Where(p => p.IsArticleDel == false && p.IsPicDel == false && p.IsIndex == true).OrderByDescending(c => c.ArticleId).Skip(Convert.ToInt32(count)).Take(10).ToList();
+            string json = JsonConvert.SerializeObject(blogList);
+            context.Response.Write(json);
+        }
 
-
-
-        //    //TODO NINJECT
-        //    IArticle article = new UserArticleRepository();
-        //    article.AddArticle();
-        //}
         public bool IsReusable
         {
             get

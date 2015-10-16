@@ -1,0 +1,113 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Detail</title>
+    @Styles.Render("~/Content/Index")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/Index")
+</head>
+<body>
+    @Html.Partial("../Shared/BannerPartial")
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="d-title d-left">
+                    <div class="d-title-w">2015-08-20 / 热度(220) / 评论(20)</div>
+                </div>
+                <div class="d-content">
+                    <img src="SampleImage/s5.jpg" />
+                    <img src="SampleImage/s6.jpg" />
+
+                    <div class="d-content-w">
+                        成长的一部分就是这样，你不断地跟熟悉的东西告别，跟熟悉的人告别，做一些以前从来不会做的事情，爱一个可能没有结果的人。成长的一个副作用就是，无论看到谁和谁分开都不会太奇怪。但换个角度来看，这也许是一个正作用：无论谁离开，你都能足够的勇气去面对新的一天。这不好也不坏，我们必经的一程而已。
+                        在某个阶段，尤其当你寂寞太久的时候，有太多的冲动，把喜欢当成爱，把一秒当成永恒。然而如果不是这么地折腾，你也不会知道自己真的想要的是什么。每个人的青春里都有一条弯路，谁也没法替你走完，但未来总还在。
+
+                        曾经我在愿有人陪你颠沛流离写：愿有人陪你一起颠沛流离，一起走到出头天的那天，走到你一生那一次发光的那天。曾经也有人给我留言说他已经看我的文看了三年了，突然也会感觉时光飞逝，我只希望这么多年过去了，你没有觉得这些年白白度过。
+
+                        所以今天想再那么一句：愿有人陪你颠沛流离，如果没有，愿你成为自己的太阳。
+                    </div>
+                </div>
+                <div class="d-comment-div">
+                    <div class="d-comment-w">评论(20)</div>
+                    <textarea class="form-control" rows="3"></textarea>
+                    <div class="d-comment-btn-div"><button type="button" class="btn btn-primary d-comment-btn">发布</button></div>
+                    <div class="d-comment">
+                        <img src="SampleImage/s1.jpg" />
+                        <div class="d-comment-content"><a href="" class="d-comment-name">时空之雨 :</a>之前看过你的画后来就找不到，还好终于又找到了之前看过你的画后来就找不到，还好终于又找到了之前看过你的画后来就找不到，还好终于又找到了。</div>
+                        <div class="d-comment-op"><a href="">拉黑</a><a href="">回复</a></div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="d-comment">
+                        <img src="SampleImage/s2.png" />
+                        <div class="d-comment-content"><a href="" class="d-comment-name">梵游记 :</a>之前看过你的画后来就找不到。</div>
+                        <div class="d-comment-op"><a href="">拉黑</a><a href="">回复</a></div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="d-comment">
+                        <img src="SampleImage/s3.png" />
+                        <div class="d-comment-content"><a href="" class="d-comment-name">新浪体育 :</a>之前看过你的画后来就找不到之前看过你。</div>
+                        <div class="d-comment-op"><a href="">拉黑</a><a href="">回复</a></div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="d-comment">
+                        <img src="SampleImage/s5.jpg" />
+                        <div class="d-comment-content"><a href="" class="d-comment-name">腾讯新闻 :</a>之前看过你的画后来就找不到之前看过你之前看过你。</div>
+                        <div class="d-comment-op"><a href="">拉黑</a><a href="">回复</a></div>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="col-md-4">
+                <div class="d-number">
+                    <div class="d-numbe-div">
+                        <div class="d-numbe-d1"><a href="">494</a></div>
+                        <div class="d-numbe-d1"><a href="">关注</a></div>
+                    </div>
+                    <div class="d-numbe-div">
+                        <div class="d-numbe-d1"><a href="">360</a></div>
+                        <div class="d-numbe-d1"><a href="">粉丝</a></div>
+                    </div>
+                    <div class="d-numbe-div" style="border:0;">
+                        <div class="d-numbe-d1"><a href="">20</a></div>
+                        <div class="d-numbe-d1"><a href="">文章</a></div>
+                    </div>
+
+                </div>
+                <div class="name-div">
+                    <div class="name-div-top">
+                        <div class="name-div-left">
+                            <a href=""><img src="SampleImage/s1.jpg" /></a>
+                        </div>
+                        <div class="name-div-right">
+                            <div class="name-div-right-top"><a href="">进击的巨人</a></div>
+                            <div class="name-div-right-bot">本人有点懒，什么也没留下</div>
+                        </div>
+
+                    </div>
+                    <div class="name-div-bot">
+                        <button type="button" class="btn btn-danger">喜欢</button><button type="button" class="btn btn-info">私信</button>
+
+                    </div>
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+
+    </div>
+    <div class="container footer"></div>
+</body>
+</html>
