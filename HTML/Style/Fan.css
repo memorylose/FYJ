@@ -493,15 +493,16 @@ a, div {
 .d-numbe-d1 {
     height: 15px;
     text-align: center;
-    line-height:15px;
+    line-height: 15px;
 }
 
     .d-numbe-d1 a {
         font-size: 12px;
         color: black;
     }
+
         .d-numbe-d1 a:hover {
-            text-decoration:none;
+            text-decoration: none;
         }
 
 .footer {
@@ -509,4 +510,35 @@ a, div {
     width: 100%;
     margin-top: 15px;
     background-color: #5E6571;
+}
+/*******************************Account*******************************/
+.d-title-acc {
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.d-content-acc {
+    margin-top: 10px;
+    background-color: white;
+    width: 750px;
+    margin-left: 0px;
+    border: 1px solid #DDDDDD;
+}
+
+.d-content-label-acc {
+    margin-top: 9px;
+    margin-left:20px;
+}
+
+.d-content-input-acc {
+    height: 40px;
+}
+
+.d-acc-row {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.d-acc-btn {
+    float:right;
 }

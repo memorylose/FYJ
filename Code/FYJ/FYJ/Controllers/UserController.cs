@@ -40,6 +40,7 @@ namespace FYJ.Controllers
                     int userId = useRep.GetUserIdByEmail(model.Email);
                     if (userId != 0)
                     {
+                        
                         Session[SystemSession.USER_SESSION] = userId;
                         return RedirectToAction("../Article/Index");
                     }

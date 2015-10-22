@@ -71,10 +71,10 @@ $(document).ready(function () {
                 divs += '<div class="c-div">';
                 divs += '<div class="row c-content">';
                 divs += '<div class="col-md-4">';
-                divs += '<a href=""> <img src="/UserImage/' + msg[i].Image + '" class="u-img" /></a>';
+                divs += '<a href="/Article/Detail/' + msg[i].ArticleId + '"> <img src="/UserImage/' + msg[i].Image + '" class="u-img" /></a>';
                 divs += '</div>';
                 divs += '<div class="col-md-8 word-p">';
-                divs += '<a href="" class="content-a" id="txtContent">' + msg[i].Contents + '</a>';
+                divs += '<a href="/Article/Detail/' + msg[i].ArticleId + '" class="content-a" id="txtContent">' + msg[i].Contents + '</a>';
                 divs += '</div>';
                 divs += '</div>';
                 divs += '<div class="c-content-op">';

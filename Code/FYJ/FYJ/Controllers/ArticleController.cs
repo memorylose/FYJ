@@ -57,11 +57,22 @@ namespace FYJ.Controllers
         }
 
         // GET: Article Detial
-        public ActionResult Detail(int articleId)
+        public ActionResult Detail(int id)
         {
-            List<Article> details = (from c in db.Article select c).Where(c => c.ArticleId == articleId).ToList();
+            //TODO check format
+            ArticleModel articlesD = (from c in db.Article
+                                      select new ArticleModel()
+                                      {
+                                          ArticleId = c.ArticleId,
+                                          Contents = c.Contents,
+                                          CrDate = c.CrDate,
+                                      }).Where(c => c.ArticleId == id).FirstOrDefault();
 
-            return View(details);
+            //get content picture
+            List<ArticlePicture> imageList = (from c in db.ArticlePicture select c).Where(c => c.ArticleId == id && c.IsDelete == false).ToList();
+            ViewBag.ImageList = imageList;
+
+            return View(articlesD);
         }
     }
 }

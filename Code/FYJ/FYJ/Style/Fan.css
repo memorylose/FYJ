@@ -372,7 +372,7 @@ a, div {
     width: 100%;
     height: 100px;
     background-color: #E7E7E7;
-    margin-top:10px;
+    margin-top: 10px;
     display: block;
 }
 
@@ -576,4 +576,36 @@ a, div {
 .img-upload {
     width: 19px;
     height: 15px;
+}
+/*******************************Account*******************************/
+.d-title-acc {
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.d-content-acc {
+    margin-top: 10px;
+    background-color: white;
+    width: 750px;
+    margin-left: 0px;
+    border: 1px solid #DDDDDD;
+}
+
+.d-content-label-acc {
+    margin-top: 9px;
+    margin-left: 20px;
+}
+
+.d-content-input-acc {
+    height: 40px;
+}
+
+.d-acc-row {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.d-acc-btn {
+    float: right;
 }
