@@ -1,6 +1,7 @@
 ﻿
 @{
     Layout = null;
+    string nick = ViewBag.NickName;
 }
 
 <!DOCTYPE html>
@@ -30,7 +31,7 @@
                                 <a href=""><img src="SampleImage/s1.jpg" /></a>
                             </div>
                             <div class="name-div-right">
-                                <div class="name-div-right-top"><a href="">进击的巨人</a></div>
+                                <div class="name-div-right-top"><a href="/Account/Index">@nick</a></div>
                                 <div class="name-div-right-bot">本人有点懒，什么也没留下</div>
                             </div>
                         </div>

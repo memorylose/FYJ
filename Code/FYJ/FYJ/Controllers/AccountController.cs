@@ -49,16 +49,26 @@ namespace FYJ.Controllers
                 //TODO check model format
                 int userId = Convert.ToInt32(Session[SystemSession.USER_SESSION]);
                 UserInfo userInfo = db.UserInfo.Where(c => c.UserId == userId).FirstOrDefault();
-                if (userInfo.UserId > 0)
+
+                //modify
+                if (userInfo != null)
                 {
-                    model.UserId = userId;
-                    db.Entry(model).State = EntityState.Modified;
+                    userInfo.City = model.City;
+                    userInfo.Contact = model.Contact;
+                    userInfo.Description = model.Description;
+                    userInfo.Favorite = model.Favorite;
+                    userInfo.NickName = model.NickName;
+                    userInfo.Photo = model.Photo;
+
+                    db.Entry(userInfo).State = EntityState.Modified;
                 }
+                //add
                 else
                 {
                     model.UserId = userId;
                     db.Entry(model).State = EntityState.Added;
                 }
+
                 db.SaveChanges();
                 return View();
             }

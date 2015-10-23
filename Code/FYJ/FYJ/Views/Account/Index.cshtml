@@ -64,7 +64,7 @@
                                 <label class="d-content-label-acc">常住城市</label>
                             </div>
                             <div class="col-md-5">
-                                <input type="text" class="form-control d-content-input-acc" placeholder="常住城市">
+                                @Html.EditorFor(model => model.City, new { htmlAttributes = new { @class = "form-control d-content-input-acc", @placeholder = "常住城市" } })
                             </div>
                         </div>
                         <div class="row d-acc-row">
@@ -72,7 +72,7 @@
                                 <label class="d-content-label-acc">联系方式</label>
                             </div>
                             <div class="col-md-5">
-                                <input type="text" class="form-control d-content-input-acc" placeholder="QQ/微信">
+                                @Html.EditorFor(model => model.Contact, new { htmlAttributes = new { @class = "form-control d-content-input-acc", @placeholder = "QQ/微信" } })
                             </div>
                         </div>
                         <div class="row d-acc-row">
@@ -80,7 +80,7 @@
                                 <label class="d-content-label-acc">爱好</label>
                             </div>
                             <div class="col-md-5">
-                                <input type="text" class="form-control d-content-input-acc" placeholder="爱好">
+                                @Html.EditorFor(model => model.Favorite, new { htmlAttributes = new { @class = "form-control d-content-input-acc", @placeholder = "爱好" } })
                             </div>
                         </div>
                         <div class="row d-acc-row">
@@ -88,7 +88,7 @@
                                 <label class="d-content-label-acc">描述</label>
                             </div>
                             <div class="col-md-5">
-                                <input type="text" class="form-control d-content-input-acc" placeholder="描述">
+                                @Html.EditorFor(model => model.Description, new { htmlAttributes = new { @class = "form-control d-content-input-acc", @placeholder = "描述" } })
                             </div>
                         </div>
                         <div class="row d-acc-row">
@@ -133,7 +133,7 @@
                 </div>
             </div>
         </div>
-            <div class="container footer"></div>
+        <div class="container footer"></div>
     }
 </body>
 </html>

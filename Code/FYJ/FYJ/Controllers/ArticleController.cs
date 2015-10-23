@@ -1,4 +1,5 @@
 ﻿using FYJ.BLL;
+using FYJ.Constant;
 using FYJ.IBLLStrategy;
 using FYJ.Model;
 using FYJ.Utility;
@@ -13,11 +14,28 @@ namespace FYJ.Controllers
 {
     public class ArticleController : Controller
     {
-        private ApplicationContext db = new ApplicationContext();
+        private ApplicationContext db;
+
+        public ArticleController()
+        {
+            db = new ApplicationContext();
+        }
 
         // GET: Article
         public ActionResult Index()
         {
+            //TODO CHECK TOKEN
+
+            string nickName = string.Empty;
+
+            if (Session[SystemSession.USER_SESSION] != null)
+            {
+                int userId = Convert.ToInt32(Session[SystemSession.USER_SESSION]);
+                UserInfo userInfo = db.UserInfo.Where(c => c.UserId == userId).FirstOrDefault();
+                nickName = userInfo.NickName;
+            }
+
+            ViewBag.NickName = nickName;
             return View();
         }
 
