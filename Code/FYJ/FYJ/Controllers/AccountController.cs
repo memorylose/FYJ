@@ -27,18 +27,28 @@ namespace FYJ.Controllers
             }
             else
             {
+                //get username and mail
                 int userId = Convert.ToInt32(Session[SystemSession.USER_SESSION]);
                 var userModel = db.User.Where(c => c.UserId == userId).FirstOrDefault();
                 ViewBag.UserName = userModel.UserName;
                 ViewBag.UserMail = userModel.Email;
 
+                //get user info
                 UserInfo userInfo = db.UserInfo.Where(c => c.UserId == userId).FirstOrDefault();
+                if (userInfo != null)
+                {
+                    //set sex
+                    if (userInfo.Sex == 1)
+                        ViewBag.SexM = "selected=\"selected\"";
+                    if (userInfo.Sex == 2)
+                        ViewBag.SexF = "selected=\"selected\"";
+                }
                 return View(userInfo);
             }
         }
 
         [HttpPost]
-        public ActionResult Index(UserInfo model)
+        public ActionResult Index(UserInfo model, FormCollection collection)
         {   //TODO check session
             if (Session[SystemSession.USER_SESSION] == null)
             {
@@ -50,6 +60,17 @@ namespace FYJ.Controllers
                 int userId = Convert.ToInt32(Session[SystemSession.USER_SESSION]);
                 UserInfo userInfo = db.UserInfo.Where(c => c.UserId == userId).FirstOrDefault();
 
+                //set sex
+                string sex = collection.GetValue("selSex").AttemptedValue;
+                if (string.Equals(sex, Portal.SEX_MAIL) || string.Equals(sex, Portal.SEX_FEMAIL))
+                {
+                    model.Sex = Convert.ToInt32(sex);
+                }
+                else
+                {
+                    //TODO failed
+                }
+
                 //modify
                 if (userInfo != null)
                 {
@@ -59,18 +80,19 @@ namespace FYJ.Controllers
                     userInfo.Favorite = model.Favorite;
                     userInfo.NickName = model.NickName;
                     userInfo.Photo = model.Photo;
+                    userInfo.Sex = model.Sex;
 
                     db.Entry(userInfo).State = EntityState.Modified;
+                    db.SaveChanges();
                 }
                 //add
                 else
                 {
                     model.UserId = userId;
                     db.Entry(model).State = EntityState.Added;
+                    db.SaveChanges();
                 }
-
-                db.SaveChanges();
-                return View();
+                return RedirectToAction("../Account/Index");
             }
         }
     }

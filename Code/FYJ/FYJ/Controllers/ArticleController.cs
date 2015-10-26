@@ -32,7 +32,10 @@ namespace FYJ.Controllers
             {
                 int userId = Convert.ToInt32(Session[SystemSession.USER_SESSION]);
                 UserInfo userInfo = db.UserInfo.Where(c => c.UserId == userId).FirstOrDefault();
-                nickName = userInfo.NickName;
+                if (userInfo != null)
+                {
+                    nickName = userInfo.NickName;
+                }
             }
 
             ViewBag.NickName = nickName;

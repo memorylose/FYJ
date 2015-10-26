@@ -13,6 +13,14 @@ a, div {
 .test {
     border: 1px solid red;
 }
+
+.b-clear {
+    padding: 0;
+}
+
+.b-label-clear {
+    font-weight: normal;
+}
 /*******************************Index*******************************/
 .header {
     height: 60px;
@@ -601,6 +609,12 @@ a, div {
     height: 40px;
 }
 
+.d-content-txtera-acc {
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid #CCCCCC;
+}
+
 .d-acc-row {
     margin-top: 15px;
     margin-bottom: 15px;
@@ -608,4 +622,16 @@ a, div {
 
 .d-acc-btn {
     float: right;
+}
+
+.d-acc-img {
+    width: 50px;
+    height: 50px;
+}
+
+.d-acc-sel {
+    border-radius: 3px;
+    margin-top: 7px;
+    border: 1px solid #CCCCCC;
+    width: 50px;
 }

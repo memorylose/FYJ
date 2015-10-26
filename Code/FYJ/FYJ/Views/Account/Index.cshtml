@@ -3,6 +3,8 @@
     Layout = null;
     string name = ViewBag.UserName;
     string mail = ViewBag.UserMail;
+    string sexM = ViewBag.SexM;
+    string sexF = ViewBag.SexF;
 }
 
 <!DOCTYPE html>
@@ -29,26 +31,29 @@
                     <div class="d-content-acc">
                         <div class="row d-acc-row">
                             <div class="col-md-3">
-                                <label class="d-content-label-acc">头像</label>
-                            </div>
-                            <div class="col-md-5">
-                                <input type="text" class="form-control d-content-input-acc" placeholder="用户名">
-                            </div>
-                        </div>
-                        <div class="row d-acc-row">
-                            <div class="col-md-3">
                                 <label class="d-content-label-acc">用户名</label>
                             </div>
-                            <div class="col-md-5">
-                                <label class="d-content-label-acc">@name</label>
+                            <div class="col-md-5 b-clear">
+                                <label class="d-content-label-acc b-label-clear">@name</label>
                             </div>
                         </div>
                         <div class="row d-acc-row">
                             <div class="col-md-3">
                                 <label class="d-content-label-acc">邮箱</label>
                             </div>
+                            <div class="col-md-5 b-clear">
+                                <label class="d-content-label-acc b-label-clear">@mail</label>
+                            </div>
+                        </div>
+                        <div class="row d-acc-row">
+                            <div class="col-md-3">
+                                <label class="d-content-label-acc">性别</label>
+                            </div>
                             <div class="col-md-5">
-                                <label class="d-content-label-acc">@mail</label>
+                                <select id="selSex" class="d-acc-sel" name="selSex">
+                                    <option value="1" @sexM>男</option>
+                                    <option value="2" @sexF>女</option>
+                                </select>
                             </div>
                         </div>
                         <div class="row d-acc-row">
@@ -88,7 +93,7 @@
                                 <label class="d-content-label-acc">描述</label>
                             </div>
                             <div class="col-md-5">
-                                @Html.EditorFor(model => model.Description, new { htmlAttributes = new { @class = "form-control d-content-input-acc", @placeholder = "描述" } })
+                                @Html.TextAreaFor(model => model.Description, new { rows = "5", @class = "d-content-txtera-acc", @placeholder = "限30字" })
                             </div>
                         </div>
                         <div class="row d-acc-row">

@@ -56,6 +56,7 @@ namespace FYJ.Model
         [Column(TypeName = "nvarchar")]
         [MaxLength(30)]
         public string NickName { get; set; }
+        public int Sex { get; set; }
     }
 
     [Table("FYJ_UserLogin")]
