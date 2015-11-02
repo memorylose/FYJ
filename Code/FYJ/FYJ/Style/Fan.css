@@ -410,7 +410,7 @@ a, div {
 }
 .d-banner-t {
     height:50px;
-    background-color:yellowgreen;
+    text-align:center;
 
 }
 
@@ -522,8 +522,8 @@ a, div {
 }
 
 .d-banner {
-    height:400px;
     padding:0;
+    height:200px;
 }
 
 .d-numbe-div {
