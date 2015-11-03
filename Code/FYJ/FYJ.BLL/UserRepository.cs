@@ -38,5 +38,49 @@ namespace FYJ.BLL
             else
                 return 0;
         }
+
+
+        /// <summary>
+        /// check verify code
+        /// </summary>
+        /// <param name="verifyCode"></param>
+        /// <returns></returns>
+        public static bool CheckValidateCode(string verifyCode)
+        {
+            bool result = false;
+            string userCode = verifyCode == null ? "" : verifyCode.ToLower();
+            string systemCode = System.Web.HttpContext.Current.Request.Cookies["CheckCode"].Value.ToLower();
+
+            if (System.Web.HttpContext.Current.Request.Cookies["CheckCode"] != null && string.Equals(systemCode, userCode))
+            {
+                result = true;
+            }
+            return result;
+        }
+
+        /// <summary>
+        /// Check user`s password
+        /// </summary>
+        /// <param name="userId"></param>
+        /// <param name="password"></param>
+        /// <returns></returns>
+        public bool CheckOldPassword(int userId, string password)
+        {
+            bool result = false;
+            User user = db.User.Where(c => c.UserId == userId).FirstOrDefault();
+            if (user != null && user.Password == password)
+            {
+                result = true;
+            }
+            return result;
+        }
+
+        /// <summary>
+        /// Change user password
+        /// </summary>
+        public void ChangePassword(int userId, string password)
+        {
+
+        }
     }
 }

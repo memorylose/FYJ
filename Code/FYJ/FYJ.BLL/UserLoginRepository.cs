@@ -17,6 +17,7 @@ namespace FYJ.BLL
             bool result = false;
             message = string.Empty;
 
+            //TODO need to change to the common function in userrep
             string systemCode = System.Web.HttpContext.Current.Request.Cookies["CheckCode"].Value.ToLower();
             string userCode = verifyCode == null ? "" : verifyCode.ToLower();
 

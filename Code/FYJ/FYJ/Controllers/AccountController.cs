@@ -1,4 +1,5 @@
-﻿using FYJ.Constant;
+﻿using FYJ.BLL;
+using FYJ.Constant;
 using FYJ.Model;
 using System;
 using System.Collections.Generic;
@@ -93,6 +94,41 @@ namespace FYJ.Controllers
                     db.SaveChanges();
                 }
                 return RedirectToAction("../Account/Index");
+            }
+        }
+
+        // GET: ChangePassword
+        public ActionResult ChangePassword()
+        {
+            //TODO check token
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult ChangePassword(ChangePassword model)
+        {
+            //TODO check token
+            if (!UserRepository.CheckValidateCode(model.VerifyCode))
+            {
+                ModelState.AddModelError("", "验证码错误");
+                return View();
+            }
+            else if (!ModelState.IsValid)
+            {
+                return View();
+            }
+            else
+            {
+                UserRepository userRep = new UserRepository();
+                if (!userRep.CheckOldPassword(Convert.ToInt32(Session[SystemSession.USER_SESSION]), model.Password))
+                {
+                    ModelState.AddModelError("", "密码错误");
+                }
+                else
+                {
+
+                }
+                return View();
             }
         }
     }

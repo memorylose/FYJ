@@ -1,4 +1,6 @@
-﻿namespace FYJ.Model
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace FYJ.Model
 {
     public class AccountModel
     {
@@ -10,5 +12,18 @@
         public string Description { get; set; }
         public string NickName { get; set; }
 
+    }
+
+    public class ChangePassword
+    {
+        [Required(ErrorMessage = "原始密码不能为空")]
+        public string Password { get; set; }
+        [Required(ErrorMessage = "新密码不能为空")]
+        [Compare("ConfirmPassword", ErrorMessage = "两次密码不一致")]
+        public string NewPassword { get; set; }
+        [Required(ErrorMessage = "确认密码不能为空")]
+        public string ConfirmPassword { get; set; }
+        [Required(ErrorMessage = "验证码不能为空")]
+        public string VerifyCode { get; set; }
     }
 }

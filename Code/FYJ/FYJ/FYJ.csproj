@@ -169,6 +169,7 @@
     <Content Include="AjaxHandler\ArticleHandler.ashx" />
     <Content Include="Views\Article\Detail.cshtml" />
     <Content Include="Views\Account\Index.cshtml" />
+    <Content Include="Views\Account\ChangePassword.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
