@@ -104,6 +104,7 @@ namespace FYJ.Controllers
             return View();
         }
 
+        [ValidateAntiForgeryToken]
         [HttpPost]
         public ActionResult ChangePassword(ChangePassword model)
         {
@@ -126,6 +127,7 @@ namespace FYJ.Controllers
                 }
                 else
                 {
+                    //update new password
 
                 }
                 return View();
