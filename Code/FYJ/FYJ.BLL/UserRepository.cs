@@ -1,6 +1,9 @@
-﻿using FYJ.Model;
+﻿using FYJ.Constant;
+using FYJ.Model;
+using FYJ.Utility;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -68,7 +71,7 @@ namespace FYJ.BLL
         {
             bool result = false;
             User user = db.User.Where(c => c.UserId == userId).FirstOrDefault();
-            if (user != null && user.Password == password)
+            if (user != null && user.Password == Encryption.CreateSHA256HashString(user.Password + user.Salt))
             {
                 result = true;
             }
@@ -78,9 +81,19 @@ namespace FYJ.BLL
         /// <summary>
         /// Change user password
         /// </summary>
-        public void ChangePassword(int userId, string password)
+        public bool ChangePassword(int userId, string password)
         {
-
+            bool result = false;
+            User user = db.User.Where(c => c.UserId == userId).FirstOrDefault();
+            if (user != null)
+            {
+                string salt = Encryption.GetRandomSalt(Security.SALT_BYTE_NUMBER);
+                user.Password = Encryption.CreateSHA256HashString(password + salt);
+                db.Entry(user).State = EntityState.Modified;
+                db.SaveChanges();
+                result = true;
+            }
+            return result;
         }
     }
 }

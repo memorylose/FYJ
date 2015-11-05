@@ -123,12 +123,19 @@ namespace FYJ.Controllers
                 UserRepository userRep = new UserRepository();
                 if (!userRep.CheckOldPassword(Convert.ToInt32(Session[SystemSession.USER_SESSION]), model.Password))
                 {
-                    ModelState.AddModelError("", "密码错误");
+                    ModelState.AddModelError("", "原始密码错误");
                 }
                 else
                 {
                     //update new password
-
+                    if (userRep.ChangePassword(Convert.ToInt32(Session[SystemSession.USER_SESSION]), model.Password))
+                    {
+                        //success
+                    }
+                    else
+                    {
+                        ModelState.AddModelError("", "修改密码错误，请联系客服");
+                    }
                 }
                 return View();
             }
