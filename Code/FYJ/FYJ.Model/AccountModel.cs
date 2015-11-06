@@ -18,7 +18,9 @@ namespace FYJ.Model
     {
         [Required(ErrorMessage = "原始密码不能为空")]
         public string Password { get; set; }
+
         [Required(ErrorMessage = "新密码不能为空")]
+        [StringLength(16, MinimumLength = 6, ErrorMessage = "密码长度为6 - 16位")]
         [Compare("ConfirmPassword", ErrorMessage = "两次密码不一致")]
         public string NewPassword { get; set; }
         [Required(ErrorMessage = "确认密码不能为空")]

@@ -101,6 +101,14 @@ namespace FYJ.Controllers
         public ActionResult ChangePassword()
         {
             //TODO check token
+
+            UserRepository userRep = new UserRepository();
+            int userId = Convert.ToInt32(Session[SystemSession.USER_SESSION]);
+            UserInfo userInfo = userRep.GetUserInfo(userId);
+            if (userInfo != null)
+            {
+                ViewBag.NickName = userInfo.NickName;
+            }
             return View();
         }
 
@@ -120,6 +128,7 @@ namespace FYJ.Controllers
             }
             else
             {
+                //TODO 需要给错误类型分开，如果没登陆跳到登录页面
                 UserRepository userRep = new UserRepository();
                 if (!userRep.CheckOldPassword(Convert.ToInt32(Session[SystemSession.USER_SESSION]), model.Password))
                 {
@@ -128,9 +137,9 @@ namespace FYJ.Controllers
                 else
                 {
                     //update new password
-                    if (userRep.ChangePassword(Convert.ToInt32(Session[SystemSession.USER_SESSION]), model.Password))
+                    if (userRep.ChangePassword(Convert.ToInt32(Session[SystemSession.USER_SESSION]), model.NewPassword))
                     {
-                        //success
+                        //TODO success
                     }
                     else
                     {

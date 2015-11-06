@@ -71,7 +71,7 @@ namespace FYJ.BLL
         {
             bool result = false;
             User user = db.User.Where(c => c.UserId == userId).FirstOrDefault();
-            if (user != null && user.Password == Encryption.CreateSHA256HashString(user.Password + user.Salt))
+            if (user != null && user.Password == Encryption.CreateSHA256HashString(password + user.Salt))
             {
                 result = true;
             }
@@ -88,12 +88,41 @@ namespace FYJ.BLL
             if (user != null)
             {
                 string salt = Encryption.GetRandomSalt(Security.SALT_BYTE_NUMBER);
+                user.Salt = salt;
                 user.Password = Encryption.CreateSHA256HashString(password + salt);
                 db.Entry(user).State = EntityState.Modified;
                 db.SaveChanges();
                 result = true;
             }
             return result;
+        }
+
+        /// <summary>
+        /// Get user
+        /// </summary>
+        /// <param name="userId"></param>
+        /// <returns></returns>
+        public User GetUser(int userId)
+        {
+            User user = db.User.Where(c => c.UserId == userId).FirstOrDefault();
+            if (user != null)
+                return user;
+            else
+                return null;
+        }
+
+        /// <summary>
+        /// Get user
+        /// </summary>
+        /// <param name="userId"></param>
+        /// <returns></returns>
+        public UserInfo GetUserInfo(int userId)
+        {
+            UserInfo userInfo = db.UserInfo.Where(c => c.UserId == userId).FirstOrDefault();
+            if (userInfo != null)
+                return userInfo;
+            else
+                return null;
         }
     }
 }
