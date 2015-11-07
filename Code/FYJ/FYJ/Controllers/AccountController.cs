@@ -149,5 +149,11 @@ namespace FYJ.Controllers
                 return View();
             }
         }
+
+        [HttpGet]
+        public ActionResult UploadImage()
+        {
+            return View();
+        }
     }
 }

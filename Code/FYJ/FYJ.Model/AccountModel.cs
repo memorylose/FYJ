@@ -28,4 +28,10 @@ namespace FYJ.Model
         [Required(ErrorMessage = "验证码不能为空")]
         public string VerifyCode { get; set; }
     }
+
+    public class Picture
+    {
+        [Required(ErrorMessage = "图片不能为空")]
+        public string Phote { get; set; }
+    }
 }

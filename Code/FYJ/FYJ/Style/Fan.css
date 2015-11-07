@@ -685,3 +685,22 @@ a, div {
     height: 32px;
     width: 85px;
 }
+.ph-btn {
+    padding-left:40px;
+}
+.ph-image {
+    margin:0 auto;
+    display:block;
+    width:200px;
+    height:200px;
+    margin-top:10px;
+}
+.ph-btn-div {
+    width:200px;
+    margin-left:30px;
+    margin-top:10px;
+}
+.ph-btn-sub {
+    width:50px;
+    height:35px;
+}

@@ -1,0 +1,58 @@
+﻿@model FYJ.Model.Picture
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>UploadImage</title>
+    @Styles.Render("~/Content/Index")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/Index")
+</head>
+<body>
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        @Html.Partial("../Shared/BannerPartial")
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    @Html.Partial("../Shared/AccountPartial")
+                </div>
+                <div class="col-md-8">
+                    <div class="d-title d-left">
+                        <div class="d-title-acc">修改头像</div>
+                    </div>
+                    <div class="d-content-acc">
+                        <div class="errorMsg">@Html.ValidationSummary()</div>
+
+                        <div class="row d-acc-row">
+                            <div class="row ph-btn">
+                                <button type="button" class="btn btn-default">本地上传</button>
+                                <button type="button" class="btn btn-default">在线选择</button>
+
+                            </div>
+
+                            <div class="row">
+                                <img src="/UserImage/20150927-s1.png" class="ph-image" />
+
+                            </div>
+                            <div class="row ph-btn-div">
+                                <button type="button" class="btn btn-success">保存</button>
+                                <button type="button" class="btn btn-default">取消</button>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container footer"></div>
+    }
+</body>
+</html>
