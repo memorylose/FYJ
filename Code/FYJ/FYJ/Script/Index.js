@@ -5,6 +5,15 @@
         $('#imageList').append('<div style="background-image:url(\'' + objUrl + '\');" class="user-up-img" id="imgdiv_' + i_index + '"><img src="/Image/user_close.png" class="user-image-icon" onclick="CloseUserImg(this)" /></div>');
     }
 }
+
+function UploadUserImage(files) {
+    var objUrl = getObjectURL(files);
+    console.log("objUrl = " + objUrl);
+    if (objUrl) {
+        $('#userImg').prop('src', objUrl);
+    }
+}
+
 function getObjectURL(file) {
     var url = null;
     if (window.createObjectURL != undefined) { // basic
@@ -52,6 +61,8 @@ function AddFile() {
     $('#file' + index).click();
     index++;
 }
+
+
 
 $(document).ready(function () {
     $.ajax({
