@@ -1,0 +1,6 @@
+----------------------- 2015/11/18 10:18:36 -----------------------
+Error:Check image extension failed.System.IO.EndOfStreamException: Unable to read beyond the end of the stream.
+   at System.IO.BinaryReader.ReadByte()
+   at FYJ.Utility.FileOperator.CheckImageExtension(Stream fs) in E:\Personal\MyGit\FYJ\Code\FYJ\FYJ.Utility\FileUpload.cs:line 23
+----------------------- 2015/11/18 10:18:36 -----------------------
+Error:Check image extension failed.System.Web.HttpInputStream
