@@ -19,7 +19,7 @@ namespace FYJ.Model
 
         protected override void Seed(ApplicationContext context)
         {
-            string salt = Encryption.GetRandomSalt(Security.SALT_BYTE_NUMBER);
+            string salt = Encryption.GetRandomSalt(Security.SALT_BYTE_NUMBER); 
 
             //users
             context.User.AddOrUpdate(
