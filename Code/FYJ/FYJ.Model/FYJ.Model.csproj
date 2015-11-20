@@ -60,6 +60,20 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DbEntity\" />
+    <Folder Include="ViewModel\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FYJ.Constant\FYJ.Constant.csproj">
+      <Project>{9c9c3c83-2392-47d3-a2ad-97a65d2f6351}</Project>
+      <Name>FYJ.Constant</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FYJ.Utility\FYJ.Utility.csproj">
+      <Project>{a5bf6db2-85a9-48b4-a630-e613c3fbd9c6}</Project>
+      <Name>FYJ.Utility</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

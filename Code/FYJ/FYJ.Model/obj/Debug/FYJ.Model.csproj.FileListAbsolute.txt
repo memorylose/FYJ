@@ -38,3 +38,17 @@ E:\Personal\MyGit\FYJ\Code\FYJ\FYJ.Model\bin\Debug\EntityFramework.SqlServer.xml
 E:\Personal\MyGit\FYJ\Code\FYJ\FYJ.Model\obj\Debug\FYJ.Model.csprojResolveAssemblyReference.cache
 E:\Personal\MyGit\FYJ\Code\FYJ\FYJ.Model\obj\Debug\FYJ.Model.dll
 E:\Personal\MyGit\FYJ\Code\FYJ\FYJ.Model\obj\Debug\FYJ.Model.pdb
+E:\MyGit\MyGit\FYJ\Code\FYJ\FYJ.Model\bin\Debug\FYJ.Model.dll.config
+E:\MyGit\MyGit\FYJ\Code\FYJ\FYJ.Model\bin\Debug\FYJ.Model.dll
+E:\MyGit\MyGit\FYJ\Code\FYJ\FYJ.Model\bin\Debug\FYJ.Model.pdb
+E:\MyGit\MyGit\FYJ\Code\FYJ\FYJ.Model\bin\Debug\EntityFramework.dll
+E:\MyGit\MyGit\FYJ\Code\FYJ\FYJ.Model\bin\Debug\EntityFramework.SqlServer.dll
+E:\MyGit\MyGit\FYJ\Code\FYJ\FYJ.Model\bin\Debug\EntityFramework.xml
+E:\MyGit\MyGit\FYJ\Code\FYJ\FYJ.Model\bin\Debug\EntityFramework.SqlServer.xml
+E:\MyGit\MyGit\FYJ\Code\FYJ\FYJ.Model\obj\Debug\FYJ.Model.csprojResolveAssemblyReference.cache
+E:\MyGit\MyGit\FYJ\Code\FYJ\FYJ.Model\obj\Debug\FYJ.Model.dll
+E:\MyGit\MyGit\FYJ\Code\FYJ\FYJ.Model\obj\Debug\FYJ.Model.pdb
+E:\MyGit\MyGit\FYJ\Code\FYJ\FYJ.Model\bin\Debug\FYJ.Constant.dll
+E:\MyGit\MyGit\FYJ\Code\FYJ\FYJ.Model\bin\Debug\FYJ.Utility.dll
+E:\MyGit\MyGit\FYJ\Code\FYJ\FYJ.Model\bin\Debug\FYJ.Constant.pdb
+E:\MyGit\MyGit\FYJ\Code\FYJ\FYJ.Model\bin\Debug\FYJ.Utility.pdb

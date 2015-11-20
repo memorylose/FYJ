@@ -1,4 +1,6 @@
-﻿using System;
+﻿using FYJ.Constant;
+using FYJ.Utility;
+using System;
 using System.Collections.Generic;
 using System.Data.Entity.Migrations;
 using System.Linq;
@@ -17,9 +19,11 @@ namespace FYJ.Model
 
         protected override void Seed(ApplicationContext context)
         {
+            string salt = Encryption.GetRandomSalt(Security.SALT_BYTE_NUMBER);
+
             //users
             context.User.AddOrUpdate(
-                new User() { UserName = "admin", Password = "admin", Email = "admin@fyj.com", EmailCode = "", EmailConfirm = true, IsLock = false, IsDelete = false, LockDate = null, RoleId = 1, CrDate = DateTime.Now, CrUserId = 0 }
+                new User() { UserName = "admin@fyj.com", Password = Encryption.CreateSHA256HashString("admin" + salt), Salt = salt, Email = "admin@fyj.com", EmailCode = "", EmailConfirm = true, IsLock = false, IsDelete = false, LockDate = null, RoleId = 1, CrDate = DateTime.Now, CrUserId = 0 }
             );
 
             //user role
