@@ -26,3 +26,10 @@ E:\Personal\MyGit\FYJ\Code\FYJ\FYJ.Utility\bin\Debug\FYJ.Constant.pdb
 E:\Personal\MyGit\FYJ\Code\FYJ\FYJ.Utility\obj\Debug\FYJ.Utility.csprojResolveAssemblyReference.cache
 E:\Personal\MyGit\FYJ\Code\FYJ\FYJ.Utility\obj\Debug\FYJ.Utility.dll
 E:\Personal\MyGit\FYJ\Code\FYJ\FYJ.Utility\obj\Debug\FYJ.Utility.pdb
+E:\MyGit\MyGit\FYJ\Code\FYJ\FYJ.Utility\bin\Debug\FYJ.Utility.dll
+E:\MyGit\MyGit\FYJ\Code\FYJ\FYJ.Utility\bin\Debug\FYJ.Utility.pdb
+E:\MyGit\MyGit\FYJ\Code\FYJ\FYJ.Utility\bin\Debug\FYJ.Constant.dll
+E:\MyGit\MyGit\FYJ\Code\FYJ\FYJ.Utility\bin\Debug\FYJ.Constant.pdb
+E:\MyGit\MyGit\FYJ\Code\FYJ\FYJ.Utility\obj\Debug\FYJ.Utility.csprojResolveAssemblyReference.cache
+E:\MyGit\MyGit\FYJ\Code\FYJ\FYJ.Utility\obj\Debug\FYJ.Utility.dll
+E:\MyGit\MyGit\FYJ\Code\FYJ\FYJ.Utility\obj\Debug\FYJ.Utility.pdb
