@@ -56,5 +56,13 @@ namespace FYJ.Controllers
             ViewBag.Message = message;
             return View();
         }
+
+        [HttpGet]
+        public ActionResult LogOff()
+        {
+            Session.Abandon();
+            Session.Clear();
+            return RedirectToAction("Index", "Article");
+        }
     }
 }

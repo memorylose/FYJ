@@ -83,13 +83,25 @@ a, div {
 }
 
 .search-div {
-    width: 210px;
+    width: 240px;
     height: 34px;
     background-color: #25282E;
     margin-top: 13px;
     border-radius: 5px;
     padding-top: 5px;
 }
+.search-div-quit {
+    color:white;
+    font-size:12px;
+    display:block;
+    float:left;
+    margin-top:3px;
+    margin-left:5px;
+}
+    .search-div-quit:hover {
+        text-decoration:none;
+        color:white;
+    }
 
 .search-input {
     width: 173px;
@@ -99,12 +111,12 @@ a, div {
     line-height: 25px;
     color: #9A9DA3;
     background-color: #25282E;
-    border: 0;
+    border:0;
     font-size: 14px;
 }
 
 .search-img {
-    float: right;
+    float: left;
     width: 25px;
     height: 25px;
     cursor: pointer;

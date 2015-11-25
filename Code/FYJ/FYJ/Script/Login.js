@@ -83,7 +83,7 @@
                         $('#errorMsg').text('验证信息有误，请重试');
                     }
                     else if (result[i] == 'success') {
-                        location.href = '/Article/Index';
+                        location.href = '/User/Login';
                     }
                 }
             }, 'json');

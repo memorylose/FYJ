@@ -30,5 +30,7 @@ namespace FYJ.Model
         public DbSet<ArticleFavorite> ArticleFavorite { get; set; }
         public DbSet<ArticlePicture> ArticlePicture { get; set; }
         public DbSet<ArticleComment> ArticleComment { get; set; }
+        public DbSet<CA> CA { get; set; }
+
     }
 }

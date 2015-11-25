@@ -28,6 +28,12 @@ namespace FYJ.Model
                 new Role() { RoleName = "admin" },
                 new Role() { RoleName = "user" }
             );
+
+            //Controller and action
+            context.CA.AddOrUpdate(
+                new CA() { CAId = 1, Name = "Article", Type = 0, RoleId = "" },
+                new CA() { CAId = 2, Name = "Create", Type = 1, RoleId = "3" }
+            );
         }
     }
 }
