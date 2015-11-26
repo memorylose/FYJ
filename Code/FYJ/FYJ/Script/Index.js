@@ -74,6 +74,10 @@ $(document).ready(function () {
         },
         success: function (msg) {
             $(msg).each(function (i) {
+                var contents = msg[i].Contents;
+                if (contents == null) {
+                    contents = '';
+                }
                 var divs = '';
                 divs += '<div class="row" id="rowId">';
                 divs += '<div class="col-md-2 c-img-div"><a href=""><img src="SampleImage/s1.jpg" class="user-img" /></a></div>';
@@ -85,7 +89,7 @@ $(document).ready(function () {
                 divs += '<a href="/Article/Detail/' + msg[i].ArticleId + '"> <img src="/UserImage/' + msg[i].Image + '" class="u-img" /></a>';
                 divs += '</div>';
                 divs += '<div class="col-md-8 word-p">';
-                divs += '<a href="/Article/Detail/' + msg[i].ArticleId + '" class="content-a" id="txtContent">' + msg[i].Contents + '</a>';
+                divs += '<a href="/Article/Detail/' + msg[i].ArticleId + '" class="content-a" id="txtContent">' + contents + '</a>';
                 divs += '</div>';
                 divs += '</div>';
                 divs += '<div class="c-content-op">';

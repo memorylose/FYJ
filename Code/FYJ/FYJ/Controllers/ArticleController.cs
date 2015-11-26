@@ -2,6 +2,7 @@
 using FYJ.Constant;
 using FYJ.IBLLStrategy;
 using FYJ.Model;
+using FYJ.Model.ViewModel;
 using FYJ.Utility;
 using System;
 using System.Collections.Generic;
@@ -24,21 +25,36 @@ namespace FYJ.Controllers
         // GET: Article
         public ActionResult Index()
         {
-            //TODO CHECK TOKEN
-
-            string nickName = string.Empty;
 
             if (Session[SystemSession.USER_SESSION] != null)
             {
                 int userId = Convert.ToInt32(Session[SystemSession.USER_SESSION]);
-                UserInfo userInfo = db.UserInfo.Where(c => c.UserId == userId).FirstOrDefault();
+                ArticleUserModel userInfo = (from t in db.User
+                                             join t0 in db.UserInfo on t.UserId equals t0.UserId into t0_join
+                                             from t0 in t0_join.DefaultIfEmpty()
+                                             where
+                                               t.UserId == userId
+                                             select new ArticleUserModel()
+                                             {
+                                                 UserId = t.UserId,
+                                                 UserName = t.UserName,
+                                                 Description = t0.Description,
+                                                 NickName = t0.NickName,
+                                                 Photo = t0.Photo
+                                             }).FirstOrDefault();
+
                 if (userInfo != null)
                 {
-                    nickName = userInfo.NickName;
-                }
-            }
+                    //get nickname
+                    if (string.IsNullOrEmpty(userInfo.NickName))
+                        userInfo.NickName = userInfo.UserName;
 
-            ViewBag.NickName = nickName;
+                    //get photo
+                    if (string.IsNullOrEmpty(userInfo.Photo))
+                        userInfo.Photo = Server.MapPath("/Image/Ano.png");
+                }
+                ViewBag.ArticleUser = userInfo;
+            }
             return View();
         }
 
@@ -81,8 +97,8 @@ namespace FYJ.Controllers
         public ActionResult Detail(int id)
         {
             //TODO check format
-            ArticleModel articlesD = (from c in db.Article
-                                      select new ArticleModel()
+            FYJ.Model.ArticleModel articlesD = (from c in db.Article
+                                      select new FYJ.Model.ArticleModel()
                                       {
                                           ArticleId = c.ArticleId,
                                           Contents = c.Contents,

@@ -1,7 +1,7 @@
 ﻿
 @{
     Layout = null;
-    string nick = ViewBag.NickName;
+    FYJ.Model.ViewModel.ArticleUserModel articleUser = ViewBag.ArticleUser;
 }
 
 <!DOCTYPE html>
@@ -25,14 +25,19 @@
             @if (Session["LoginSession"] != null)
             {
                 <div class="col-md-4">
+                    <div class="create-div">
+                        <a href="/Article/Create"><input type="submit" value="发游记" class="btn btn-primary create-div-btn" /></a>
+                    </div>
+
+
                     <div class="name-div">
                         <div class="name-div-top">
                             <div class="name-div-left">
-                                <a href=""><img src="SampleImage/s1.jpg" /></a>
+                                <a href=""><img src="@articleUser.Photo" /></a>
                             </div>
                             <div class="name-div-right">
-                                <div class="name-div-right-top"><a href="/Account/Index">@nick</a></div>
-                                <div class="name-div-right-bot">本人有点懒，什么也没留下</div>
+                                <div class="name-div-right-top"><a href="/Account/Index">@articleUser.NickName</a></div>
+                                <div class="name-div-right-bot">@articleUser.Description</div>
                             </div>
                         </div>
                         <div class="name-div-bot">

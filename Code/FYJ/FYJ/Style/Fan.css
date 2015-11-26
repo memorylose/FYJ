@@ -25,20 +25,23 @@ a, div {
 .b-label-clear {
     font-weight: normal;
 }
+
 .errorMsg {
-    list-style:none;
+    list-style: none;
 }
+
     .errorMsg ul {
-        padding:0;
+        padding: 0;
     }
-    .errorMsg ul li {
-        list-style-type:none;
-        font-size:13px;
-        color:red;
-        font-weight:bold;
-        padding-top:10px;
-        padding-left:17px;
-    }
+
+        .errorMsg ul li {
+            list-style-type: none;
+            font-size: 13px;
+            color: red;
+            font-weight: bold;
+            padding-top: 10px;
+            padding-left: 17px;
+        }
 /*******************************Index*******************************/
 .header {
     height: 60px;
@@ -82,7 +85,7 @@ a, div {
     height: 60px;
 }
 
-.search-div {
+name-div-right-top .search-div {
     width: 240px;
     height: 34px;
     background-color: #25282E;
@@ -90,17 +93,19 @@ a, div {
     border-radius: 5px;
     padding-top: 5px;
 }
+
 .search-div-quit {
-    color:white;
-    font-size:12px;
-    display:block;
-    float:left;
-    margin-top:3px;
-    margin-left:5px;
+    color: white;
+    font-size: 12px;
+    display: block;
+    float: left;
+    margin-top: 3px;
+    margin-left: 5px;
 }
+
     .search-div-quit:hover {
-        text-decoration:none;
-        color:white;
+        text-decoration: none;
+        color: white;
     }
 
 .search-input {
@@ -111,7 +116,7 @@ a, div {
     line-height: 25px;
     color: #9A9DA3;
     background-color: #25282E;
-    border:0;
+    border: 0;
     font-size: 14px;
 }
 
@@ -230,6 +235,15 @@ a, div {
     padding-left: 30px;
 }
 
+.create-div {
+    width: 220px;
+    margin-top:11px;
+}
+.create-div-btn {
+    width:220px;
+    height:40px;
+}
+
 .name-div {
     width: 220px;
     margin-top: 12px;
@@ -274,11 +288,12 @@ a, div {
 
 .name-div-right-top {
     height: 30px;
-    font-size: 14px;
     line-height: 30px;
+    padding-top: 1px;
 }
 
     .name-div-right-top a {
+        font-size: 13px;
         color: #568BC9;
     }
 
@@ -693,26 +708,31 @@ a, div {
 .cp_btn {
     float: right;
 }
+
 .verify-code {
     height: 32px;
     width: 85px;
 }
+
 .ph-btn {
-    padding-left:40px;
+    padding-left: 40px;
 }
+
 .ph-image {
-    margin:0 auto;
-    display:block;
-    width:200px;
-    height:200px;
-    margin-top:10px;
+    margin: 0 auto;
+    display: block;
+    width: 200px;
+    height: 200px;
+    margin-top: 10px;
 }
+
 .ph-btn-div {
-    width:200px;
-    margin-left:30px;
-    margin-top:10px;
+    width: 200px;
+    margin-left: 30px;
+    margin-top: 10px;
 }
+
 .ph-btn-sub {
-    width:50px;
-    height:35px;
+    width: 50px;
+    height: 35px;
 }
