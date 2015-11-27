@@ -13,13 +13,4 @@ namespace FYJ.Model
         [MaxLength(20)]
         public string RoleName { get; set; }
     }
-
-    [Table("FYJ_CARole")]
-    public class CARole
-    {
-        public int CAId { get; set; }
-        public string CAName { get; set; }
-        public int CAType { get; set; }
-        public string RoleId { get; set; }
-    }
 }

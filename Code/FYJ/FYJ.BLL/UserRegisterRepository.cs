@@ -9,7 +9,12 @@ namespace FYJ.BLL
 {
     public class UserRegisterRepository : IRegister
     {
-        private ApplicationContext db = new ApplicationContext();
+        private ApplicationContext db;
+
+        public UserRegisterRepository()
+        {
+            db = new ApplicationContext();
+        }
 
         /// <summary>
         /// User regist
@@ -31,7 +36,7 @@ namespace FYJ.BLL
                     dbUser.IsLock = false;
                     dbUser.IsDelete = false;
                     dbUser.LockDate = null;
-                    dbUser.RoleId = 3;//User
+                    dbUser.RoleId = "3";//User
                     dbUser.CrDate = DateTime.Now;
                     dbUser.CrUserId = 0;
 

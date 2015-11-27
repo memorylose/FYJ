@@ -1,6 +1,7 @@
 ﻿using FYJ.BLL;
 using FYJ.IBLLStrategy;
 using FYJ.Model;
+using FYJ.Model.ViewModel;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -34,9 +35,10 @@ namespace FYJ.AjaxHandler
 
         private void GetArticle(HttpContext context, string count)
         {
-            //Thread.Sleep(3000);
             List<ArticleModel> blogList = (from c in db.Article
                                            join p in db.ArticlePicture on c.ArticleId equals p.ArticleId
+                                           join t0 in db.UserInfo on new { CrUserId = c.CrUserId } equals new { CrUserId = t0.UserId } into t0_join
+                                           from t0 in t0_join.DefaultIfEmpty()
                                            select new ArticleModel()
                                            {
                                                ArticleId = c.ArticleId,
@@ -44,7 +46,8 @@ namespace FYJ.AjaxHandler
                                                Image = p.Path,
                                                IsArticleDel = c.IsDelete,
                                                IsPicDel = p.IsDelete,
-                                               IsIndex = p.IsIndex
+                                               IsIndex = p.IsIndex,
+                                               UserPhoto = t0.Photo
                                            }).Where(p => p.IsArticleDel == false && p.IsPicDel == false && p.IsIndex == true).OrderByDescending(c => c.ArticleId).Skip(Convert.ToInt32(count)).Take(10).ToList();
             string json = JsonConvert.SerializeObject(blogList);
             context.Response.Write(json);

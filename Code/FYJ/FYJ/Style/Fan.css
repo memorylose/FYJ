@@ -243,6 +243,11 @@ name-div-right-top .search-div {
     width:220px;
     height:40px;
 }
+.create-div-btn-un {
+    width:100px;
+    height:40px;
+    margin-left:5px;
+}
 
 .name-div {
     width: 220px;

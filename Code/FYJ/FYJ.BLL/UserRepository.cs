@@ -12,7 +12,12 @@ namespace FYJ.BLL
 {
     public class UserRepository
     {
-        private ApplicationContext db = new ApplicationContext();
+        private ApplicationContext db;
+
+        public UserRepository()
+        {
+            db = new ApplicationContext();
+        }
 
         /// <summary>
         /// Check user mail exists
@@ -41,7 +46,6 @@ namespace FYJ.BLL
             else
                 return 0;
         }
-
 
         /// <summary>
         /// check verify code
@@ -123,6 +127,22 @@ namespace FYJ.BLL
                 return userInfo;
             else
                 return null;
+        }
+
+        /// <summary>
+        /// Get current user role id
+        /// </summary>
+        /// <param name="userId"></param>
+        /// <returns></returns>
+        public string GetUserRole()
+        {
+            string roleId = string.Empty;
+            if (System.Web.HttpContext.Current.Session[SystemSession.USER_SESSION] != null)
+            {
+                int userId = Convert.ToInt32(System.Web.HttpContext.Current.Session[SystemSession.USER_SESSION]);
+                roleId = db.User.Where(c => c.UserId == userId).Select(p => p.RoleId).FirstOrDefault();
+            }
+            return roleId;
         }
     }
 }

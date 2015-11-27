@@ -27,7 +27,7 @@ namespace FYJ.Model
         public bool? IsLock { get; set; }
         public bool? IsDelete { get; set; }
         public DateTime? LockDate { get; set; }
-        public int? RoleId { get; set; }
+        public string RoleId { get; set; }
         public DateTime? CrDate { get; set; }
         public int? CrUserId { get; set; }
     }

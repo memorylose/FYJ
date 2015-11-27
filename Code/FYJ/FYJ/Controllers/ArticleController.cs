@@ -51,7 +51,7 @@ namespace FYJ.Controllers
 
                     //get photo
                     if (string.IsNullOrEmpty(userInfo.Photo))
-                        userInfo.Photo = Server.MapPath("/Image/Ano.png");
+                        userInfo.Photo = "/Image/Ano.png";
                 }
                 ViewBag.ArticleUser = userInfo;
             }
@@ -97,8 +97,8 @@ namespace FYJ.Controllers
         public ActionResult Detail(int id)
         {
             //TODO check format
-            FYJ.Model.ArticleModel articlesD = (from c in db.Article
-                                      select new FYJ.Model.ArticleModel()
+            ArticleModel articlesD = (from c in db.Article
+                                      select new ArticleModel()
                                       {
                                           ArticleId = c.ArticleId,
                                           Contents = c.Contents,

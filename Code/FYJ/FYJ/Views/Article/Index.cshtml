@@ -33,7 +33,7 @@
                     <div class="name-div">
                         <div class="name-div-top">
                             <div class="name-div-left">
-                                <a href=""><img src="@articleUser.Photo" /></a>
+                                <a href=""><img src="@Url.Content(articleUser.Photo)" /></a>
                             </div>
                             <div class="name-div-right">
                                 <div class="name-div-right-top"><a href="/Account/Index">@articleUser.NickName</a></div>
@@ -99,6 +99,61 @@
                         </div>
                     </div>
                 </div>
+            }
+
+            @if (Session["LoginSession"] == null)
+            {
+                <div class="col-md-4">
+                    <div class="create-div">
+                        <a href="/User/Register"><input type="submit" value="注册" class="btn btn-primary create-div-btn-un" /></a>
+                        <a href="/User/Login"><input type="submit" value="登录" class="btn btn-primary create-div-btn-un" /></a>
+                    </div>
+
+                    <div class="recom-div">
+                        <div class="recom-div-d">
+                            <div class="recom-img"><a href=""><img src="SampleImage/s1.png" /></a></div>
+                            <div class="recom-name">
+                                <div class="recom-name-top"><a href="">欢乐对对碰</a></div>
+                                <div class="recom-name-bot"><a href="">这是一个游戏</a></div>
+                            </div>
+                            <div class="recom-add"><a href=""><img src="Image/AddP.jpg" /></a></div>
+                        </div>
+                        <div class="recom-div-d">
+                            <div class="recom-img"><a href=""><img src="SampleImage/s1.png" /></a></div>
+                            <div class="recom-name">
+                                <div class="recom-name-top"><a href="">欢乐对对碰</a></div>
+                                <div class="recom-name-bot"><a href="">这是一个游戏</a></div>
+                            </div>
+                            <div class="recom-add"><a href=""><img src="Image/AddP.jpg" /></a></div>
+                        </div>
+                        <div class="recom-div-d">
+                            <div class="recom-img"><a href=""><img src="SampleImage/s1.png" /></a></div>
+                            <div class="recom-name">
+                                <div class="recom-name-top"><a href="">欢乐对对碰</a></div>
+                                <div class="recom-name-bot"><a href="">这是一个游戏</a></div>
+                            </div>
+                            <div class="recom-add"><a href=""><img src="Image/AddP.jpg" /></a></div>
+                        </div>
+                        <div class="recom-div-d">
+                            <div class="recom-img"><a href=""><img src="SampleImage/s1.png" /></a></div>
+                            <div class="recom-name">
+                                <div class="recom-name-top"><a href="">欢乐对对碰</a></div>
+                                <div class="recom-name-bot"><a href="">这是一个游戏</a></div>
+                            </div>
+                            <div class="recom-add"><a href=""><img src="Image/AddP.jpg" /></a></div>
+                        </div>
+                        <div class="recom-div-d">
+                            <div class="recom-img"><a href=""><img src="SampleImage/s1.png" /></a></div>
+                            <div class="recom-name">
+                                <div class="recom-name-top"><a href="">欢乐对对碰</a></div>
+                                <div class="recom-name-bot"><a href="">这是一个游戏</a></div>
+                            </div>
+                            <div class="recom-add"><a href=""><img src="Image/AddP.jpg" /></a></div>
+                        </div>
+                    </div>
+                </div>
+                
+
             }
 
         </div>

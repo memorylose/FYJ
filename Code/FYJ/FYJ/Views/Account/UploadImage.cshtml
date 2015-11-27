@@ -33,14 +33,13 @@
 
                         <div class="row d-acc-row">
                             <div class="row ph-btn">
-                                <button type="button" class="btn btn-default" onclick="">本地上传</button>
+                                <button type="button" class="btn btn-default" onclick="OpenUserPhoto()">本地上传</button>
                                 <button type="button" class="btn btn-default">在线选择</button>
-
+                                <input type="file" id="fileId" style="float:right; display:none;" onchange="ShowPhoto(this.files[0])" />
                             </div>
 
                             <div class="row">
-                                <img src="/UserImage/20150927-s1.png" class="ph-image" id="userImg" />
-
+                                <img src="" class="ph-image" id="userImg" />
                             </div>
                             <div class="row ph-btn-div">
                                 <button type="button" class="btn btn-success">保存</button>

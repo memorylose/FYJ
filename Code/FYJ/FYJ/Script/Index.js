@@ -78,9 +78,15 @@ $(document).ready(function () {
                 if (contents == null) {
                     contents = '';
                 }
+
+                var photo = msg[i].UserPhoto;
+                if (photo == null) {
+                    photo = '/Image/Ano.png';
+                }
+
                 var divs = '';
                 divs += '<div class="row" id="rowId">';
-                divs += '<div class="col-md-2 c-img-div"><a href=""><img src="SampleImage/s1.jpg" class="user-img" /></a></div>';
+                divs += '<div class="col-md-2 c-img-div"><a href=""><img src="' + photo + '" class="user-img" /></a></div>';
                 divs += '<div class="col-md-10 col-pad-left">';
                 divs += '<div class="c-img"></div>';
                 divs += '<div class="c-div">';
@@ -173,3 +179,15 @@ $(document).ready(function () {
         }
     });
 });
+
+function OpenUserPhoto() {
+    $('#fileId').click();
+}
+
+function ShowPhoto(files) {
+    var objUrl = getObjectURL(files);
+    console.log("objUrl = " + objUrl);
+    if (objUrl) {
+        $('#userImg').prop('src', objUrl);
+    }
+};
