@@ -17,14 +17,13 @@ namespace FYJ.BLL
     {
         private ApplicationContext db = new ApplicationContext();
 
-        public int AddArticle(Article viewModel)
+        public int AddArticle(Article viewModel, int userId)
         {
             Article articleModel = new Article();
             articleModel.ArticleTypeId = string.Empty;
             articleModel.Contents = viewModel.Contents;
             articleModel.CrDate = DateTime.Now;
-            //TODO
-            articleModel.CrUserId = 0;
+            articleModel.CrUserId = userId;
             articleModel.IsDelete = false;
             articleModel.Title = "";
 

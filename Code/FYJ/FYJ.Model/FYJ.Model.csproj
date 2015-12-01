@@ -57,6 +57,7 @@
     <Compile Include="User.cs" />
     <Compile Include="UserRole.cs" />
     <Compile Include="ViewModel\ArticleModel.cs" />
+    <Compile Include="ViewModel\DetailModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

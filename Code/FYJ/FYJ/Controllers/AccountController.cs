@@ -1,9 +1,11 @@
 ﻿using FYJ.BLL;
 using FYJ.Constant;
 using FYJ.Model;
+using FYJ.Utility;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -21,31 +23,26 @@ namespace FYJ.Controllers
         // GET: Account
         public ActionResult Index()
         {
-            //TODO check session
-            if (Session[SystemSession.USER_SESSION] == null)
-            {
-                return RedirectToAction("../Article/Index");
-            }
-            else
-            {
-                //get username and mail
-                int userId = Convert.ToInt32(Session[SystemSession.USER_SESSION]);
-                var userModel = db.User.Where(c => c.UserId == userId).FirstOrDefault();
-                ViewBag.UserName = userModel.UserName;
-                ViewBag.UserMail = userModel.Email;
 
-                //get user info
-                UserInfo userInfo = db.UserInfo.Where(c => c.UserId == userId).FirstOrDefault();
-                if (userInfo != null)
-                {
-                    //set sex
-                    if (userInfo.Sex == 1)
-                        ViewBag.SexM = "selected=\"selected\"";
-                    if (userInfo.Sex == 2)
-                        ViewBag.SexF = "selected=\"selected\"";
-                }
-                return View(userInfo);
+            //get username and mail
+            int userId = Convert.ToInt32(Session[SystemSession.USER_SESSION]);
+            var userModel = db.User.Where(c => c.UserId == userId).FirstOrDefault();
+            ViewBag.UserName = userModel.UserName;
+            ViewBag.UserMail = userModel.Email;
+
+            //get user info
+            UserInfo userInfo = db.UserInfo.Where(c => c.UserId == userId).FirstOrDefault();
+            if (userInfo != null)
+            {
+                //set sex
+                if (userInfo.Sex == 1)
+                    ViewBag.SexM = "selected=\"selected\"";
+                if (userInfo.Sex == 2)
+                    ViewBag.SexF = "selected=\"selected\"";
             }
+            ViewBag.NickName = userInfo.NickName;
+            return View(userInfo);
+
         }
 
         [HttpPost]
@@ -92,7 +89,7 @@ namespace FYJ.Controllers
                     model.UserId = userId;
                     db.Entry(model).State = EntityState.Added;
                     db.SaveChanges();
-                }
+                }                
                 return RedirectToAction("../Account/Index");
             }
         }
@@ -153,6 +150,52 @@ namespace FYJ.Controllers
         [HttpGet]
         public ActionResult UploadImage()
         {
+            UserRepository userRep = new UserRepository();
+            int userId = Convert.ToInt32(Session[SystemSession.USER_SESSION]);
+            UserInfo userInfo = userRep.GetUserInfo(userId);
+            if (userInfo != null)
+            {
+                ViewBag.NickName = userInfo.NickName;
+            }
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult UploadImage(string path)
+        {
+            if (Session[SystemSession.USER_SESSION] != null)
+            {
+                foreach (string item in Request.Files)
+                {
+                    HttpPostedFileBase file = Request.Files[item] as HttpPostedFileBase;
+                    if (FileOperator.CheckImageExtension(file.InputStream))
+                    {
+                        string imageFileName = FileOperator.GenerateImageFileName();
+                        string fileName = imageFileName + Path.GetExtension(file.FileName);
+                        try
+                        {
+                            file.SaveAs(Server.MapPath(FilePath.USER_PHOTO_FOLDER + "/" + fileName));
+                            int userId = Convert.ToInt32(Session[SystemSession.USER_SESSION]);
+                            var userModel = db.UserInfo.Where(c => c.UserId == userId).FirstOrDefault();
+                            userModel.Photo = fileName;
+
+                            //TODO delete old photo?
+                            db.Entry(userModel).State = EntityState.Modified;
+                            db.SaveChanges();
+
+                            return RedirectToAction("../Article/Index");
+                        }
+                        catch (Exception ex)
+                        {
+                            Log.Error("Upload user photo failed." + ex.ToString());
+                        }
+                    }
+                    else
+                    {
+
+                    }
+                }
+            }
             return View();
         }
     }

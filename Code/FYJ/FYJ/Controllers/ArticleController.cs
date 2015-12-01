@@ -25,7 +25,6 @@ namespace FYJ.Controllers
         // GET: Article
         public ActionResult Index()
         {
-
             if (Session[SystemSession.USER_SESSION] != null)
             {
                 int userId = Convert.ToInt32(Session[SystemSession.USER_SESSION]);
@@ -52,9 +51,15 @@ namespace FYJ.Controllers
                     //get photo
                     if (string.IsNullOrEmpty(userInfo.Photo))
                         userInfo.Photo = "/Image/Ano.png";
+                    else
+                        userInfo.Photo = "../UserPhoto/" + userInfo.Photo;
                 }
+
+
                 ViewBag.ArticleUser = userInfo;
             }
+            List<UserInfo> userList = db.UserInfo.Where(c => c.NickName != "").OrderByDescending(c => c.UserId).Take(5).ToList();
+            ViewBag.UserList = userList;
             return View();
         }
 
@@ -69,7 +74,7 @@ namespace FYJ.Controllers
             //TODO add tran
 
             IArticle article = new UserArticleRepository();
-            int articleId = article.AddArticle(viewModel);
+            int articleId = article.AddArticle(viewModel, Convert.ToInt32(Session[SystemSession.USER_SESSION]));
 
             int index = 0;
             bool indexFlag = false;
@@ -97,19 +102,54 @@ namespace FYJ.Controllers
         public ActionResult Detail(int id)
         {
             //TODO check format
-            ArticleModel articlesD = (from c in db.Article
-                                      select new ArticleModel()
-                                      {
-                                          ArticleId = c.ArticleId,
-                                          Contents = c.Contents,
-                                          CrDate = c.CrDate,
-                                      }).Where(c => c.ArticleId == id).FirstOrDefault();
+            DetailModel articlesD = (from c in db.Article
+                                     select new DetailModel()
+                                     {
+                                         ArticleId = c.ArticleId,
+                                         Contents = c.Contents,
+                                         CrDate = c.CrDate,
+                                     }).Where(c => c.ArticleId == id).FirstOrDefault();
 
             //get content picture
             List<ArticlePicture> imageList = (from c in db.ArticlePicture select c).Where(c => c.ArticleId == id && c.IsDelete == false).ToList();
             ViewBag.ImageList = imageList;
 
+            //get comment list
+            List<DetailModel> commentList = (from t in db.ArticleComment
+                                             join t0 in db.UserInfo on new { UserId = t.CrUserId } equals new { UserId = t0.UserId }
+                                             where
+                                               t.ArticleId == 1003
+                                             select new DetailModel()
+                                             {
+                                                 CrCommentDate = t.CrDate,
+                                                 Photo = t0.Photo,
+                                                 UserName = t0.NickName,
+                                             }).ToList();
+            ViewBag.CommentsList = commentList;
             return View(articlesD);
+        }
+
+        [HttpPost]
+        public ActionResult Detail(int id, DetailModel detailModel)
+        {
+            if (Session[SystemSession.USER_SESSION] == null)
+            {
+                return RedirectToAction("Login", "User");
+            }
+            else
+            {
+                int userId = Convert.ToInt32(Session[SystemSession.USER_SESSION]);
+                ArticleComment comment = new ArticleComment();
+                comment.ArticleId = id;
+                comment.Comments = detailModel.Comments;
+                comment.CrDate = DateTime.Now;
+                comment.CrUserId = userId;
+                comment.IsDelete = false;
+
+                db.Entry(comment).State = EntityState.Added;
+                db.SaveChanges();
+                return RedirectToAction("Detail", "Article", new { id = id });
+            }
         }
     }
 }

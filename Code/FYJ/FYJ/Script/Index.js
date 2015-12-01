@@ -83,6 +83,9 @@ $(document).ready(function () {
                 if (photo == null) {
                     photo = '/Image/Ano.png';
                 }
+                else {
+                    photo = '/UserPhoto/' + photo;
+                }
 
                 var divs = '';
                 divs += '<div class="row" id="rowId">';

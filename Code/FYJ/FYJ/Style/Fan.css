@@ -85,7 +85,7 @@ a, div {
     height: 60px;
 }
 
-name-div-right-top .search-div {
+.search-div {
     width: 240px;
     height: 34px;
     background-color: #25282E;
@@ -354,7 +354,6 @@ name-div-right-top .search-div {
     border-left: 1px solid #DFE1E4;
     border-right: 1px solid #DFE1E4;
     border-bottom: 1px solid #DFE1E4;
-    height: 283px;
     margin-top: 20px;
     background-color: #FFFFFF;
 }
@@ -431,7 +430,7 @@ name-div-right-top .search-div {
     height: 100px;
     background-color: #E7E7E7;
     margin-top: 10px;
-    display: block;
+    display: none;
 }
 
 .loading-word {
