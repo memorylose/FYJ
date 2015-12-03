@@ -34,7 +34,7 @@
                     <div class="name-div">
                         <div class="name-div-top">
                             <div class="name-div-left">
-                                <a href="/Account/Index"><img src="@Url.Content(articleUser.Photo)" /></a>
+                                <a href="/Account/Index"><img src="/UserPhoto/@articleUser.Photo" /></a>
                             </div>
                             <div class="name-div-right">
                                 <div class="name-div-right-top"><a href="/Account/Index">@articleUser.NickName</a></div>
@@ -61,7 +61,7 @@
                         @foreach (var item in UserList)
                         {
                             <div class="recom-div-d">
-                                <div class="recom-img"><a href=""><img src="../UserPhoto/@item.Photo" /></a></div>
+                                <div class="recom-img"><a href=""><img src="/UserPhoto/@item.Photo" /></a></div>
                                 <div class="recom-name">
                                     <div class="recom-name-top"><a href="">@item.NickName</a></div>
                                     <div class="recom-name-bot"><a href="">@item.Description</a></div>
@@ -84,7 +84,7 @@
                         @foreach (var item in UserList)
                         {
                             <div class="recom-div-d">
-                                <div class="recom-img"><a href=""><img src="UserPhoto/@item.Photo" /></a></div>
+                                <div class="recom-img"><a href=""><img src="/UserPhoto/@item.Photo" /></a></div>
                                 <div class="recom-name">
                                     <div class="recom-name-top"><a href="">@item.NickName</a></div>
                                     <div class="recom-name-bot"><a href="">@item.Description</a></div>

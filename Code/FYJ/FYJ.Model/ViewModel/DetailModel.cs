@@ -15,5 +15,7 @@ namespace FYJ.Model.ViewModel
         public DateTime CrCommentDate { get; set; }
         public string UserName { get; set; }
         public string Photo { get; set; }
+        public int CommentId { get; set; }
+        public string Desc { get; set; }
     }
 }

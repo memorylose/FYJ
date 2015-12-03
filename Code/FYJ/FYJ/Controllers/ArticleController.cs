@@ -52,7 +52,7 @@ namespace FYJ.Controllers
                     if (string.IsNullOrEmpty(userInfo.Photo))
                         userInfo.Photo = "/Image/Ano.png";
                     else
-                        userInfo.Photo = "../UserPhoto/" + userInfo.Photo;
+                        userInfo.Photo = userInfo.Photo;
                 }
 
 
@@ -102,13 +102,13 @@ namespace FYJ.Controllers
         public ActionResult Detail(int id)
         {
             //TODO check format
-            DetailModel articlesD = (from c in db.Article
-                                     select new DetailModel()
-                                     {
-                                         ArticleId = c.ArticleId,
-                                         Contents = c.Contents,
-                                         CrDate = c.CrDate,
-                                     }).Where(c => c.ArticleId == id).FirstOrDefault();
+            //DetailModel articlesD = (from c in db.Article
+            //                         select new DetailModel()
+            //                         {
+            //                             ArticleId = c.ArticleId,
+            //                             Contents = c.Contents,
+            //                             CrDate = c.CrDate,
+            //                         }).Where(c => c.ArticleId == id).FirstOrDefault();
 
             //get content picture
             List<ArticlePicture> imageList = (from c in db.ArticlePicture select c).Where(c => c.ArticleId == id && c.IsDelete == false).ToList();
@@ -118,15 +118,32 @@ namespace FYJ.Controllers
             List<DetailModel> commentList = (from t in db.ArticleComment
                                              join t0 in db.UserInfo on new { UserId = t.CrUserId } equals new { UserId = t0.UserId }
                                              where
-                                               t.ArticleId == 1003
+                                               t.ArticleId == id
                                              select new DetailModel()
                                              {
                                                  CrCommentDate = t.CrDate,
                                                  Photo = t0.Photo,
                                                  UserName = t0.NickName,
-                                             }).ToList();
+                                                 Comments = t.Comments,
+                                                 CommentId = t.CommentId
+                                             }).OrderByDescending(c => c.CommentId).ToList();
             ViewBag.CommentsList = commentList;
-            return View(articlesD);
+
+            //get user information
+            DetailModel details = (from t in db.Article
+                                   join t0 in db.UserInfo on new { UserId = t.CrUserId } equals new { UserId = t0.UserId }
+                                   where
+                                     t.ArticleId == id
+                                   select new DetailModel()
+                                   {
+                                       ArticleId = t.ArticleId,
+                                       Contents = t.Contents,
+                                       CrDate = t.CrDate,
+                                       Photo = t0.Photo,
+                                       Desc = t0.Description,
+                                       UserName = t0.NickName,
+                                   }).FirstOrDefault();
+            return View(details);
         }
 
         [HttpPost]

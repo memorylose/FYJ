@@ -237,16 +237,18 @@ a, div {
 
 .create-div {
     width: 220px;
-    margin-top:11px;
+    margin-top: 11px;
 }
+
 .create-div-btn {
-    width:220px;
-    height:40px;
+    width: 220px;
+    height: 40px;
 }
+
 .create-div-btn-un {
-    width:100px;
-    height:40px;
-    margin-left:5px;
+    width: 100px;
+    height: 40px;
+    margin-left: 5px;
 }
 
 .name-div {
@@ -268,7 +270,7 @@ a, div {
 }
 
     .name-div-bot button {
-        margin-left: 10px;
+        margin-left: 13px;
         width: 90px;
     }
 
@@ -554,7 +556,9 @@ a, div {
 .d-comment-op {
     height: 40px;
     float: right;
-    padding-top: 8px;
+    padding-top: 12px;
+    color: #C6C7C9;
+    font-size: 12px;
 }
 
     .d-comment-op a {
@@ -564,7 +568,7 @@ a, div {
     }
 
         .d-comment-op a:hover {
-            text-decoration: underline;
+            text-decoration: none;
         }
 
 .d-number {

@@ -2,6 +2,7 @@
 @{
     Layout = null;
     var imageList = ViewBag.ImageList;
+    List<FYJ.Model.ViewModel.DetailModel> commentList = ViewBag.CommentsList;
 }
 
 <!DOCTYPE html>
@@ -24,7 +25,7 @@
             <div class="row">
                 <div class="col-md-8">
                     <div class="d-title d-left">
-                        <div class="d-title-w">@Model.CrDate / 热度(220) / 评论(20)</div>
+                        <div class="d-title-w">@Model.CrDate / 热度(220) / 评论(@commentList.Count)</div>
                     </div>
                     <div class="d-content">
                         @foreach (var item in imageList)
@@ -36,34 +37,18 @@
                         </div>
                     </div>
                     <div class="d-comment-div">
-                        <div class="d-comment-w">评论(20)</div>
+                        <div class="d-comment-w">评论(@commentList.Count)</div>
                         @Html.TextAreaFor(model => model.Comments, new { @class = "form-control", @rows = "3" })
-
                         <div class="d-comment-btn-div"><input type="submit" value="发布" class="btn btn-primary d-comment-btn" /></div>
-                        <div class="d-comment">
-                            <img src="SampleImage/s1.jpg" />
-                            <div class="d-comment-content"><a href="" class="d-comment-name">时空之雨 :</a>之前看过你的画后来就找不到，还好终于又找到了之前看过你的画后来就找不到，还好终于又找到了之前看过你的画后来就找不到，还好终于又找到了。</div>
-                            <div class="d-comment-op"><a href="">拉黑</a><a href="">回复</a></div>
-                            <div class="clear"></div>
-                        </div>
-                        <div class="d-comment">
-                            <img src="SampleImage/s2.png" />
-                            <div class="d-comment-content"><a href="" class="d-comment-name">梵游记 :</a>之前看过你的画后来就找不到。</div>
-                            <div class="d-comment-op"><a href="">拉黑</a><a href="">回复</a></div>
-                            <div class="clear"></div>
-                        </div>
-                        <div class="d-comment">
-                            <img src="SampleImage/s3.png" />
-                            <div class="d-comment-content"><a href="" class="d-comment-name">新浪体育 :</a>之前看过你的画后来就找不到之前看过你。</div>
-                            <div class="d-comment-op"><a href="">拉黑</a><a href="">回复</a></div>
-                            <div class="clear"></div>
-                        </div>
-                        <div class="d-comment">
-                            <img src="SampleImage/s5.jpg" />
-                            <div class="d-comment-content"><a href="" class="d-comment-name">腾讯新闻 :</a>之前看过你的画后来就找不到之前看过你之前看过你。</div>
-                            <div class="d-comment-op"><a href="">拉黑</a><a href="">回复</a></div>
-                            <div class="clear"></div>
-                        </div>
+                        @foreach (var item in commentList)
+                        {
+                            <div class="d-comment">
+                                <img src="/UserPhoto/@item.Photo" />
+                                <div class="d-comment-content"><a href="" class="d-comment-name">@item.UserName :</a>@item.Comments</div>
+                                <div class="d-comment-op">@item.CrCommentDate.ToString("yyyy/MM/dd")@*<a href="">回复</a>*@</div>
+                                <div class="clear"></div>
+                            </div>
+                        }
                     </div>
                 </div>
                 <div class="col-md-4">
@@ -84,11 +69,11 @@
                     <div class="name-div">
                         <div class="name-div-top">
                             <div class="name-div-left">
-                                <a href=""><img src="SampleImage/s1.jpg" /></a>
+                                <a href=""><img src="/UserPhoto/@Model.Photo" /></a>
                             </div>
                             <div class="name-div-right">
-                                <div class="name-div-right-top"><a href="">进击的巨人</a></div>
-                                <div class="name-div-right-bot">本人有点懒，什么也没留下</div>
+                                <div class="name-div-right-top"><a href="">@Model.UserName</a></div>
+                                <div class="name-div-right-bot">@Model.Desc</div>
                             </div>
 
                         </div>
