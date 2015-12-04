@@ -259,6 +259,35 @@ a, div {
     background-color: #FFFFFF;
 }
 
+.userinfo-div {
+    width: 220px;
+    margin-top: 12px;
+    border: 1px solid #DFE1E4;
+    background-color: #FFFFFF;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
+.userinfo-div-title {
+    float: left;
+    width: 70px;
+    height: 30px;
+    line-height: 30px;
+    padding-left: 10px;
+    font-size: 12px;
+    color: black;
+}
+
+.userinfo-div-con {
+    float: left;
+    width: 135px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 12px;
+    color: black;
+    margin-left: 10px;
+}
+
 .name-div-top {
     height: 95px;
     border-bottom: 1px solid #DFE1E4;

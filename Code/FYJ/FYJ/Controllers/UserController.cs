@@ -39,7 +39,7 @@ namespace FYJ.Controllers
                 {
                     int userId = useRep.GetUserIdByEmail(model.Email);
                     if (userId != 0)
-                    {           
+                    {
                         Session[SystemSession.USER_SESSION] = userId;
                         return RedirectToAction("../Article/Index");
                     }
@@ -63,6 +63,12 @@ namespace FYJ.Controllers
             Session.Abandon();
             Session.Clear();
             return RedirectToAction("Index", "Article");
+        }
+
+        [HttpGet]
+        public ActionResult Home()
+        {
+            return View();
         }
     }
 }
