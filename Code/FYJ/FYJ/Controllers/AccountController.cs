@@ -39,8 +39,9 @@ namespace FYJ.Controllers
                     ViewBag.SexM = "selected=\"selected\"";
                 if (userInfo.Sex == 2)
                     ViewBag.SexF = "selected=\"selected\"";
+                ViewBag.NickName = userInfo.NickName;
             }
-            ViewBag.NickName = userInfo.NickName;
+            
             return View(userInfo);
 
         }

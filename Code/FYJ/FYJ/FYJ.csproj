@@ -177,6 +177,7 @@
     <Content Include="Views\Admin\Test.cshtml" />
     <Content Include="Views\User\LogOff.cshtml" />
     <Content Include="Views\User\Home.cshtml" />
+    <None Include="Properties\PublishProfiles\FYJ.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
